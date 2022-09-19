@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="magisk">Magisk</button>
+    <button id="lsp">Lsposed</button>
+    <!-- src是图片的地址 title是鼠标放在上面的信息 -->
+    <img id="pt" src="https://img1.baidu.com/it/u=1439446415,2126916189&fm=253&fmt=auto&app=138&f=JPG?w=500&h=352" title="Magisk">
+    <script>
+     var mag = document.getElementById('magisk');
+     var lsp  =document.getElementById('lsp');
+     var picture = document.getElementById('pt');
+
+     mag.onclick = function(){
+         picture.src = 'https://img1.baidu.com/it/u=1439446415,2126916189&fm=253&fmt=auto&app=138&f=JPG?w=500&h=352'
+         picture.title = 'Magisk';
+     }
+
+     lsp.onclick = function(){
+         picture.src = 'https://img2.baidu.com/it/u=868734160,3507036065&fm=253&fmt=auto&app=138&f=JPEG?w=886&h=500'
+         picture.title = 'Lsposed';
+     }
+    </script>           
+    
+</body>
+</html>

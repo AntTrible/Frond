@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function wz(name,type,blood,attack){
+            this.name = name;     //王者荣耀英雄姓名
+            this.type = type;     //王者荣耀英雄分路
+            this.blood = blood;   //王者荣耀英雄血量
+            this.attack = attack  //王者荣耀英雄攻击
+            this.cuipi = function(bloods){
+                console.log(bloods)
+            }
+        }
+        var lp = new wz('廉颇','对抗路','5000血','近战攻击');
+        var hy = new wz('后裔','发育路','3000血','远程攻击');
+        for(var i in lp){
+            console.log(lp[i]);
+        }
+        lp.cuipi('肉比');
+        for(var k in hy){
+            console.log(hy[k]);
+        }
+        hy.cuipi('脆皮');
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

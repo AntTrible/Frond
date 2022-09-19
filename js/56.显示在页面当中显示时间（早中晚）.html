@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#time{
+     position: absolute;
+     top: 350px;
+     left: 650px;
+     width: 500px;
+     height: 100px;
+}
+</style>
+<body>
+    <div id="time">
+    <p>时间显示在这里噢</p>
+</div>
+
+<script>
+    var time = document.getElementById('time');
+    var nowdate = new Date();
+    var h = nowdate.getHours();  
+
+    function shuchudangqeshijian (){
+    var nowdate = new Date();
+    var year = nowdate.getFullYear();   //年
+    var mon = nowdate.getMonth()+1;       //月
+    var dat = nowdate.getDate();        //日
+    var can = ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'];
+    var day = nowdate.getDay();         //星期
+   
+        var h = nowdate.getHours();           //时
+        h = h<10? '0'+h : h;
+        var m = nowdate.getMinutes();         //分
+        m = h<10? '0'+m : m;
+        var s = nowdate.getSeconds();         //秒
+        s = s<10? '0'+s : s;
+        return year +'年'+ mon +'月'+dat+'日'+can[day] + h+':'+m+':'+s;
+    }
+   if(h>=6&&h<=8){
+        time.innerHTML = '早上好，现在的时间是:'+'\n'+shuchudangqeshijian();
+   }else if(h>8 && h<=12){
+        time.innerHTML = '上午好，现在的时间是:'+'\n'+shuchudangqeshijian();
+   }else if(h>12 && h<=14){
+        time.innerHTML = '中午好，现在的时间是:'+'\n'+shuchudangqeshijian();
+   }else if(h>14&&h<=18){
+        time.innerHTML = '下午好，现在的时间是:'+'\n'+shuchudangqeshijian();
+   }else if(h>18&&h<=21){
+        time.innerHTML = '晚上好，现在的时间是:'+'\n'+shuchudangqeshijian();
+   }else{
+        time.innerHTML = '你还不睡觉吗，现在的时间是:'+'\n'+shuchudangqeshijian();
+   }
+
+</script>
+</body>
+</html>
+

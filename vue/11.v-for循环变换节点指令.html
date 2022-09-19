@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0px auto;
+        padding: 0px;
+    }
+    li{
+        list-style: none;
+    }
+</style>
+<body>
+
+    <div id="xiaomi">
+        <button v-on:click="appredmi">添加红米手机</button>
+        <button v-on:click="Delredmi" v-show="look">删除小米手机</button>
+        <ul>
+            <li v-for="(mi,index) in arr">
+                {{mi}} {{index +1}}
+            </li>
+        </ul>
+        <h2 v-for="red in arrmi">
+            手机:{{red.redmi}}
+        </h2>
+    </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+       var phone = new Vue({
+           el:"#xiaomi",
+           data:{
+               arr:["小米10","小米9","小米8","小米6","小米5","小米4","小米3","小米2"],
+               
+               arrmi:[
+               {redmi:"红米1"},
+               {redmi:"红米2"},
+               {redmi:"红米3"},
+               {redmi:"红米4"},
+               {redmi:"红米5"},
+               {redmi:"红米6"},
+               {redmi:"红米7"},
+               {redmi:"红米8"},
+               {redmi:"红米9"},
+               {redmi:"红米10"},
+               ],
+               phones:0,
+               look:false
+           },
+           methods:{
+               appredmi:function(){
+                   this.phones++;
+                   this.arrmi.push({redmi:"红米手机"+this.phones});
+                   this.look=true;
+               },
+               Delredmi:function(){
+                this.phones--;
+                this.arrmi.pop()
+               }
+           }
+       })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-html="xiaomi"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var mi = new Vue({
+            el:"#app",
+            data:{
+                xiaomi:"<a href='https://www.mi.com/shop'>登录小米官网</a>"
+            }
+        })
+        //v-html和v-text的区别是一个可以去解析里面自带的节点text就不行
+        //v-html相当于innerHTML
+    </script>
+</body>
+</html>

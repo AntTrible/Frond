@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var math = 0;
+        var pri = [];
+        do{
+        var what = prompt('请选择你要操作的功能'+'\n'+'1.任意算术运算'+'\n'+'2.任意两数的最大值'+'\n'+'3.三个不同数字的最大值'+'\n'+'4.判断是否为素数'+'\n'+'5.退出程序');
+        function computer1(num1,num2,what1){            //computer1实现功能1
+            if(what1 == 1){
+                return parseInt(num1)+parseInt(num2);
+            }else if(what1 ==2){
+                return parseInt(num1)-parseInt(num2);
+            }else if(what1 ==3){
+                return parseInt(num1)*parseInt(num2);
+            }else if(what1 ==4){
+                return parseFloat(num1)/parseFloat(num2);
+            }else{
+                alert('不存在该数值')
+            }
+        }
+        function computer2(num3,num4){                  //computer2实现功能2
+            if(num3>num4){
+                return num3;
+            }else{
+                return num4;
+            }
+        }
+        function computer3(num5,num6,num7){             //computer3实现功能3
+            var Array =[num5,num6,num7];
+            for (var i = 0 ;i<=Array.length - 1;i++){
+                for(var j = 0 ;j<=Array.length -1 -i;j++){
+                    if(Array[j]<Array[j+1]){
+                    var temp = Array[j];
+                    Array[j] = Array[j+1];
+                    Array[j+1]= temp;  
+                  }
+                }
+            }
+            return Array[0];
+        }
+        function computer4(num8){                      //computer4实现功能4
+            if(num8==1||num8==0){
+                return alert(num8+'既不是质数也不是合数');
+            }
+            for(var i = 1,p = 0;i<=num8 ; i++){
+                var wtf = num8/i;
+                if(num8%i == 0){
+                    pri[p]=wtf;
+                    p++
+                }
+                else if(num8==1||num8==0){
+                    return alert(num8+'既不是素数也不是合数');
+                }
+                else if(num8%i != 0){
+                    continue;
+                }
+            }
+            if(pri.length>=3){
+                return alert(num8+'这个数字不是素数');
+            }else{
+                return alert(num8+'这个数字是素数');
+            }
+        }
+
+        if(what == 1){                                  
+            var num1 = prompt('请输入第一个数');
+            var num2 = prompt('请输入第二个数');
+            var what1 = prompt('请输入你要的数学运算'+'\n'+'1.加法'+'\n'+'2.减法'+'\n'+'3.乘法'+'\n'+'4.除法');
+            var output = computer1(num1,num2,what1);
+            alert(output);
+        }else if(what ==2){
+            var num3 = prompt('请输入第一个数');
+            var num4 = prompt('请输入第二个数');
+            var output1 = computer2(num3,num4);
+            alert(num3+','+num4+'这两个数的最大值为'+output1);
+        }else if(what ==3){
+            var num5 = prompt('请输入第一个数');
+            var num6 = prompt('请输入第二个数');
+            var num7 = prompt('请输入第三个数');
+            var output2 =computer3(num5,num6,num7);
+            alert(num5+','+num6+','+num7+'这三个数的最大值为'+''+output2);
+        }else if(what == 4){
+            var num8 = prompt('请输入想要判断的素数')
+            computer4(num8);
+        }else{
+            alert('不存在该选项');
+        }
+
+    }while(what !=5 ){
+         alert('退出程序');
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

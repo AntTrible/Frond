@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0px auto;
+        padding: 0px;
+        background: #F4F4F4;
+       position: relative;
+    }
+    input{
+     display: inline-block;
+     box-sizing: content-box;
+     padding: 10px 100px 10px 20px;
+     border: 0 solid #b7b7b7;
+     border-bottom-width: 1px;
+     border-radius: 3px;
+     font: normal 16px/normal "Times New Roman", Times, serif;
+     color: #0CC4B2;
+     text-overflow: clip;
+     text-shadow: 1px 1px 0 rgba(255,255,255,0.66);
+   }
+ p{
+    padding: 6px 4px 13px 6px;
+    border-bottom: 1px solid #F4F4F4;
+    color: #0CC4B2;
+    background: #ffffff;
+    margin: 0px;
+ }
+ #text{
+     width: 313px;
+     height: 79px;
+     margin: 100px auto;
+ }
+ a{
+     float: right;
+     text-decoration:none;
+     color: #ffffff;
+ }
+ a:hover{
+    color: rgb(204, 94, 94);
+ }
+ 
+</style>
+<body>
+<div id="text">
+    <input type="text" v-model="inputtext" v-on:keyup.enter="textup" placeholder="记录你想记录的东西吧">
+    
+    <p  v-for="(num,index) in numinput" > 
+        {{ num }}
+
+    <a href="javascript:;" v-on:click="del(index)"> X </a>
+    </p> 
+    
+    
+    <p v-if="look"> 一共有{{ numinput.length }}条记录<a href="javascript:;" v-on:click="delall">删除全部记录</a>  </p>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+     var can = new Vue({
+         el:"#text",
+        data:{
+            numinput:[],
+            look:false,
+        },
+         methods:{
+             textup:function(){
+               if(this.inputtext == undefined && this.inputtext !=""){
+                   alert('能不能写点东西进来');
+               }else{
+                    this.numinput.push(this.inputtext);
+                    this.look=true;
+                    this.inputtext=undefined;
+               }
+             },
+
+             del:function(index){
+                 this.numinput.splice(index,1);
+             },
+             delall:function(){
+                 this.numinput=[];
+                 this.look=false;
+             }
+         }
+         
+     })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#mima{
+    
+    width: 300px;
+    border-bottom: solid red;
+    margin: 339px auto;
+}
+#mima input{
+    position: relative;
+    border: none;
+    height: 24px;
+    margin: auto;
+    outline: none;
+}
+#mima img{
+    position: absolute;
+    width: 12px;
+    top: 347px;
+    right: 620px;
+}
+</style>
+<body>
+    <div id="mima">
+        <label><img src="picture\眼睛关.png"></label>
+        <input type="password"  placeholder="请输入密码" id="pwd">
+    </div>
+
+    <script>
+         var pwd = document.getElementById('pwd')
+         var pit = document.querySelector('img')
+
+         var i = 0;
+         pit.onclick = function (){
+             if(i == 0){
+             pit.src = "picture/眼睛开.png";
+             pwd.type = "text";
+             i = 1;
+             }else{
+                pit.src = "picture/眼睛关.png";
+                pwd.type = "password";
+                i = 0;  
+             }
+
+         }
+    </script>
+</body>
+</html>

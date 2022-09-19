@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function num(min,max){
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min); 
+        }
+        var what = prompt('请你猜一个数字1-10之间')
+        var num1 = num(1,10);
+        do{
+            if(what > num1){
+                alert('你猜的值大了');
+                var what = prompt('请重新猜');
+            }else if(what < num1){
+                alert('你猜的值小了');
+                var what = prompt('请重新猜');
+            }else if(what > 10 || what < 0){
+                alert('你超过了这个数值');
+            }
+        }while(what != num1){
+                alert('你猜对啦');
+                alert('游戏退出啦！');
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

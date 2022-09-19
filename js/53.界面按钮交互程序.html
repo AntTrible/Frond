@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 声明一个按钮在页面上 -->
+    <button id="btn">欢迎</button>
+
+    <script>
+        //document.querySelector可以直接匹配你想要的元素名 #是id的选择器
+        var dos = document.querySelector('#btn');   //获取界面中button这个元素对象
+        dos.onclick = function(){
+            alert('欢迎来到Magisk');
+        }
+    </script>
+    
+</body>
+</html>

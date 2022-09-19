@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var age = prompt('请输入您的年龄');
+        alert('您的年龄为'+Number(age));        //Number能将字符型直接转换成数字型
+
+        var age1 = prompt('请输入您出生日期'); 
+        var Num = 2022;                        //定义当前的年份
+        alert('您的年龄为'+parseInt(Num-age1)); //在perseint里面转换成数字型然后在当前的年份减去用户输入的年份直接转换成数字型 
+
+        //第二种方法
+        var age2 = prompt('请输入您出生年份');
+        var year = 2022 - age2;
+        alert('今年您'+parseInt(year)+'岁了');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

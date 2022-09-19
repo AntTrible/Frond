@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    th {
+        background: red;
+        
+    }
+    td{
+       border-bottom: 1px solid blue;
+    }
+</style>
+
+<body>
+    <!-- cellspacing取消表格间距 -->
+<table class="non" cellspacing="0" cellpadding="20">  
+
+<tr>
+  <th>英雄</th>
+  <th>分路</th>
+  <th>职业</th>
+  <th>血量</th>
+</tr>
+
+<tr>
+  <td>妲己</td>
+  <td>中路</td>
+  <td>法师</td>
+  <td>3000</td>
+</tr>
+
+<tr>
+    <td>后裔</td>
+    <td>发育路</td>
+    <td>射手</td>
+    <td>4000</td>
+  </tr>
+
+  <tr>
+    <td>露娜</td>
+    <td>打野</td>
+    <td>法师</td>
+    <td>6000</td>
+  </tr>
+
+  <tr>
+    <td>廉颇</td>
+    <td>对抗路</td>
+    <td>战士</td>
+    <td>8000</td>
+  </tr>
+</table>
+
+
+  <script>
+      var can = document.querySelectorAll('tr');
+      for(var i = 0 ; i<= can.length ;i++){
+          can[i].onmouseover=function(){
+              this.style.background = 'yellow';
+          }
+          
+          can[i].onmouseout=function(){
+              this.style.background = '';
+          }
+          
+      }
+
+      
+  </script>
+  
+</table>
+</body>
+</html>

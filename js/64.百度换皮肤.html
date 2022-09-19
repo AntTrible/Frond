@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background:url(picture/壁纸1.jpeg) no-repeat center top;
+    }
+    li{
+        list-style: none;
+        margin: 0 1px;
+        float: left;
+        cursor: pointer;
+    }
+    ul{
+        position:absolute;
+        top: -8px;
+        left: -28px;
+    }
+    img{
+        width: 19px;
+        height: 18px;
+    }
+    #pifu{
+        position: relative;
+        width: 127px;
+       height: 37px;
+       margin: 0px;
+       padding: 0px;
+       border: 1px solid red;
+    }
+</style>
+<body>
+    
+    <div id="pifu">
+        <ul>
+            <li><img src="picture/壁纸1.jpeg"></li>
+            <li><img src="picture/壁纸2.jpeg"></li>
+            <li><img src="picture/壁纸3.jpeg"></li>
+            <li><img src="picture/壁纸4.jpeg"></li>
+            <li><img src="picture/壁纸5.jpeg"></li>
+        </ul>
+<!-- 获取img的元素 -->
+        <script>
+               var picture =document.querySelectorAll('img');                           //获取文档中所有的图片
+               var color = document.querySelector('body');                              //获取整个页面中的body
+               for(var i = 0 ; i <= picture.length ; i++){                              //将每个图片都赋值上一个onclick的值
+                       picture[i].onclick = function(){
+                        for(var i = 0 ; i <= picture.length ; i++){
+                            color.style.background = 'url()';                          //无论点击哪一个都清除body上面的背景
+                        }
+                    color.style.background = 'url('+this.src+') no-repeat center top';   //点击第i个图片 然后this.src然后把这个值再给body的url，就可以实现换肤
+                   }
+               }
+        </script>
+    </div>
+</body>
+
+</html>

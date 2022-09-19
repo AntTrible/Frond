@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="class">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li>123</li>
+            <li></li>
+            <li></li>
+            <li>456</li>
+        </ul>
+    </div>
+
+    <script>
+        //1.第一步先要获取节点
+       var i = document.querySelectorAll('li');
+        var can = document.createElement('li');     //创建li节点（要把他加进去）
+        var ul = document.querySelector('ul');     //现在就可以操作ul里面的元素
+        ul.appendChild(can);                       //在ul当中添加一个li节点 和push一样从后面开始添加
+
+        ul.insertBefore(can,i[3]);                 //任意位置添加节点
+        //在ul这个元素里面 添加一个在123前面的 can == li 这个节点；
+
+
+    </script>
+</body>
+</html>

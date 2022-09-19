@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<body>
+    <div id="love"  love = "mua"  yiliwoligaogao="">宝贝我爱你</div>
+    
+    <script>
+        //获取自定义属性
+        var loves = document.getElementById('love');
+        console.log(loves.love);            //传统的获取属性的值不能获取程序员自己定义的love的值
+        console.log(loves.getAttribute('love'))      //使用getAttribute就可以获得程序员自己定义的属性值
+
+        //修改自定义属性
+        loves.love = 'sese';
+        loves.setAttribute('love',"sese")
+
+        //移出自定义属性
+        loves.removeAttribute('yiliwoligaogao');
+    </script>
+</body>
+</html>

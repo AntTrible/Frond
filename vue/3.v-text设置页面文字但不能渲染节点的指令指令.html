@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text">
+        <p v-text="messing">我靠</p>
+        <ul>
+            <!-- 使用v-text只能用单引号来加入东西 -->
+            <li v-text="只有我在里面+'!!'">你觉的我会显示出来吗</li>
+            <li>{{ pro }}，我是这里原来的东西</li>
+            <li>{{ pro }}</li>
+            <li>{{ pro }}</li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+    <script>
+     var i = new Vue({
+         el:"#text",
+         data:{
+             messing : "你好",
+             只有我在里面:"我靠",
+             pro : "只有插值表达式才不会把原来的东西给覆盖掉",
+         }
+     })
+    </script>
+</body>
+</html>

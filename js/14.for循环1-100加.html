@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var num = prompt('请输入一个一直加到的值');
+        // var i =1;
+        // var B = ((i+parseInt(num))*parseInt(num))/2;
+        // alert('他的值为'+B);   
+        // 1+....+100的第一种方法
+        
+        // for(var i =1 ; i<=100 ; i++){
+        //     if(i == 100){
+        //         var num = 1;
+        //         var go = ((1+i)*i)/2;
+        //     }
+        // }
+        // console.log(go);
+
+        //1.求1-100之间所有数的平均值
+        
+        for(var A =1,sum = 0;A<=100;A++){
+                sum = sum + A;
+        }
+        console.log(parseFloat(sum/A));
+        
+        //2.求1-100之间所有偶数和奇数的和
+        var roushuhe = 0;
+        var jishuhe = 0;
+        for(var B = 1 ; B<=100 ; B++){
+            if( B%2==0 ){
+                roushuhe += B;       
+            }else if(B%2 !=0){
+                jishuhe +=B;
+            }     
+        }
+        console.log('偶数和有'+ roushuhe);
+        console.log('奇数和'+ jishuhe);
+        //3.求1-100之间所有能被3整除的数字的和
+        for(var C = 1,jishu = 0; C<=100 ; C++){
+            if(C%3 == 0){
+                jishu += C;
+            }
+        }
+        console.log('1-100之间所有能被3整除的数字的和为：'+jishu);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

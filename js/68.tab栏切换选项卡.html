@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#outside{
+    position: relative;
+    width: 900px;
+    height: 61px;
+    background-color: blue;
+}
+#outside li{
+     float: left;
+     padding: 20px 80px 20px 80px;
+     list-style: none;
+     background: bisque;
+}
+#outside li:hover{
+    background: red;
+}
+#isbody{
+    position: absolute;
+    top: 77px;
+    left: 40px;
+    width: 769px;
+    height: 315px;
+    background-color: red;
+}
+#hero{
+    display: none;
+}
+
+</style>
+
+<body>
+    <div id="big">
+        <div id="outside">
+        <ul>
+            <li index="">英雄</li>
+            <li index="">技能</li>
+            <li index="">故事</li>
+            <li index="">商城</li>
+        </ul>
+    </div>
+      
+    <div id="isbody" >
+    
+    <div id="hero" style="display:block">
+        <img src="picture/后羿.jpeg">
+    </div>
+
+    <div id="hero" >
+        <img src="picture/后羿技能.jpeg">
+    </div>
+      
+    <div id="hero">
+        <img src="picture/后羿故事.jpeg">
+    </div>
+    
+    
+    <div id="hero">
+        <img src="picture/后羿皮肤.jpeg">
+    </div>
+    
+
+    </div>
+</div>
+
+    <script>
+       var look = document.querySelectorAll('#hero');
+       var dowmon = document.querySelectorAll('li');
+      
+       for(var i =0 ;i < dowmon.length;i++){
+          dowmon[i].setAttribute('index',i)
+          
+          dowmon[i].onmouseover =function(){
+               
+               for(var i = 0 ; i < look.length ; i++){
+                look[i].setAttribute("style","display:none");
+               }
+               var num = this.getAttribute('index');
+               look[num].setAttribute("style","display:block");
+
+           }
+       }
+    </script>
+
+
+</body>
+</html>

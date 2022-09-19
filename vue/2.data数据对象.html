@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text">
+        {{message}}
+       <p>{{school.name}},{{school.pwd}},{{school.dizhi}}</p>
+       <ul>
+           <li>{{gank[0]}}</li>
+           <li>{{gank[1]}}</li>
+           <li>{{gank[2]}}</li>
+           <li>{{gank[3]}}</li>
+           <li>{{gank[4]}}</li>
+       </ul>
+     
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var  i = new Vue({
+            el: "#text",
+            data:{
+                message : "你好，vue框架",
+                school : {
+                    name : "小明",
+                    pwd : 4995579980,
+                    dizhi : "广东省",
+                },
+                gank :["AK47","M4A1","AR15","95","SCAR"],
+            }
+        })
+       
+       
+    </script>
+</body>
+</html>

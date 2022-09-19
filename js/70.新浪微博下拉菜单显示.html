@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        position: relative;
+        background: #f5f5f5;
+    }
+    #index{
+        position: absolute;
+        top: 63px;
+        left: 365px;
+        width: 791px;
+        height: 54px;
+        background: #ffffff;
+    }
+    li{
+       -webkit-border-radius: 10em;
+        border-radius: 10em;
+        height: 25px;
+        list-style: none;
+        float: left;
+        padding: 0px 35px 0px 30px;
+    }
+    li:hover{
+        font-weight: 900;
+        color: orange;
+        background: #fff1e4;
+    }
+    #content{
+        position: absolute;
+        width: 791px;
+        height: 694px;
+        background: #fff1e4;
+        top: 117px;
+        left: 365px;
+    }
+    #a{
+        display: none;
+    }
+</style>
+<body>
+    <div id="head">
+    <div id="index">
+        <ul id="com">
+            <li>热门</li>
+            <li>同城</li>
+            <li>电影之夜</li>
+            <li>台海</li>
+            <li>抗疫</li>
+            <li>明星</li>
+            <li>搞笑</li>
+        </ul>
+    </div>
+    <!-- 这里是内容 -->
+    <div id="content">  
+     <div id="a" style="display:block;">
+         <img src="picture/微博热门.jpg">
+     </div>
+     <div id="a">
+         <img src="picture/微博同城.png">
+     </div>
+     <div id="a">
+         <img src="picture/微博电影之夜.png">
+     </div>
+      <div id="a">
+          <img src="picture/微博台海.png">
+      </div>
+      <div id="a">
+          <img src="picture/微博抗疫.png">
+      </div>
+      <div id="a">
+          <img src="picture/微博明星.png">
+      </div>
+      <div id="a">
+          <img src="picture/微博搞笑.png">
+      </div>
+    </div>
+
+<script>
+      var num =  com.children;
+      var block = document.querySelectorAll('#a');
+      for(var i = 0;i < num.length ; i++){
+          num[i].setAttribute('index',i);
+          num[i].onmouseover = function(){//鼠标移入事件
+           for(var i = 0;i < block.length ; i++){
+                 block[i].setAttribute('style','display:none');   
+           }
+           var dododo = this.getAttribute('index');
+           block[dododo].setAttribute('style','display:block')
+        }
+      }
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 里面的woc是要绑定的方法名 -->
+        <input type="button" value="v-on事件" v-on:click="woc">    <!--  v-on:click = onclick -->
+        <input type="button" value="v-on = @ 事件" @click = "woc">  <!--@click = v-on:click = onclick-->
+        <h1 @click="conon">{{ apple }}</h1>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var doing = new Vue({
+            el:"#app",
+            data:{
+                apple:'苹果',
+            },
+
+
+                                 //这里是绑定按钮事件
+            methods :{           // methods这个名字不能变
+            woc:function(){
+                alert('我在这');
+            },
+
+            conon:function(){                
+                this.apple = "好难吃";
+            }
+            }
+        })
+    </script>
+</body>
+</html>

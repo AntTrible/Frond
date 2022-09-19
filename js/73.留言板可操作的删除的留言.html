@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 实现原理
+1.建立一个单击按钮的监听事件
+2.点击了这个按钮之后
+3.获取评论区里面的文字信息
+4.然后添加到节点信息事件当中
+5.然后再li的第一个把这个东西添加上去 -->
+<style>
+    body{
+        position: relative;
+        margin: 0px auto;
+        padding: 0px; 
+    }
+ textarea{
+     width: 280px;
+     height: 120px;
+ }
+ #head{
+     width: 334px;
+     height: 126px;
+ }
+ #text{
+    width: 334px;
+    height: 280px;
+    position: absolute;
+    top: 160px;
+    left: 585px;
+ }
+ #index{
+     position: absolute;
+     top: 102px;
+     left: 286px;
+ }
+a{
+    float: right;
+}
+</style>
+<body>
+    <div id="text">
+    <div id="head">
+    <textarea rows="10" cols="20" placeholder="请输入你的留言" ></textarea>
+    <button id="index">提交</button>
+</div>
+    <div id="call">
+        <p>留言版</p>
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+
+<script>
+        var textarea = document.querySelector('textarea');
+        var button = document.querySelector('button');
+        var ul =document.querySelector('ul');
+
+        button.onclick = function(){
+            if(textarea.value == ''){
+                alert('不能回复空的文本')
+            }else{
+                var li =document.createElement('li');   //创建一个li
+                li.innerHTML = textarea.value + "<a href='javascript:;'>删除</a>";          //获取textarea里面的文本，然后添加到li里面去
+                ul.insertBefore(li,ul.children[0]);     //将li这个元素加入ul子节点中的第一个去
+                textarea.value = '';                    //然后将textarea给清空
+                
+                var a = document.querySelectorAll('a');
+                for(var i = 0 ; i < a.length ; i++){
+                    a[i].onclick  = function(){
+                        ul.removeChild(this.parentNode);               //removeChild删除节点   删除ul里面的this指的是a  删除a里面的父亲节点就是li
+                    }
+                }
+            }
+        }
+</script>
+</body>
+</html>
+ 

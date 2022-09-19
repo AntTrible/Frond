@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.pwd{
+    position: relative;
+    width: 360px;
+    height: 40px;
+}
+.inpt{
+    padding-left: 26px;
+    position: absolute;
+    top: -16px;
+    right: 0px;
+    background: url(picture/提示.png) no-repeat;
+}
+.inpt2{
+    background: url(picture/警告.png) no-repeat;
+    color: red;
+}
+.inpt3{
+    background: url(picture/发送.png) no-repeat;
+    color: green;
+}
+
+</style>
+<body>
+    
+    <div class="pwd">
+        <p class="inpt">请输入6-18位数的密码</p>
+        <input class="mi" value="请输入密码">
+    </div>
+
+
+
+    <script>
+     var doing = document.querySelector('.inpt')
+     var can =document.querySelector('.mi');
+     can.onfocus = function(){
+        if(this.value === '请输入密码') {
+            this.value = '';
+        }
+        
+
+     }
+
+     can.onblur =function(){
+        if(this.value.length <6 || this.value.length >18){
+            doing.className = 'inpt inpt2'
+            doing.innerHTML = "密码类型不对噢！"
+        }else if(this.value.length >=6 || this.value.length <=18){
+            doing.className = 'inpt inpt3'
+            doing.innerHTML = "密码类型正确啦！"
+        }
+     }
+    </script>
+</body>
+</html>

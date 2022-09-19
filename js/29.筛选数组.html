@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //定义一个新的数组,然后只能输出大于10的数;
+        var Array = [];
+        var maxArray = [];
+        for(var i =0 ; i < 10 ; i++){
+            var num = prompt('请输入你要存入的值');
+            Array[i] = num; 
+        }
+        alert('你存入的值为'+ Array)
+        for(var a = 0 ;a < 10; a++){
+            if(Array[a]>=10){
+                maxArray[maxArray.length] = Array[a];
+            }
+        }
+        alert('其中大于10的数有'+maxArray);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

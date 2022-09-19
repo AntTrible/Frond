@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+           var year = prompt('请输入要判断的年份');
+           if(year%4==0 && year%100 !=0 || year%400==0){          //当一个年能被4 和 400 除尽的时候就是闰年，所以取余为0就可以判断是闰年。
+               alert(year+'年是闰年');
+           }
+           else{
+               alert(year+'年是平年');
+           }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

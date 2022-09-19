@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var i =10;
+        function num(min,max){
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min); 
+        }
+        var num1 = num(1,50);
+
+        do{
+            var can = prompt('请猜1~50之间的数字'+'\n'+'你还有'+i+'次机会');
+            if(can > num1){
+                alert('你猜大了');
+            }else if(can < num1){
+                alert('你猜小了');
+            }else{
+                alert('恭喜你猜对了');
+                i = 0;
+                break;
+            }
+            i--;
+        }while(i !=0){
+            alert('游戏结束');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

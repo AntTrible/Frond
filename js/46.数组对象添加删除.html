@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = [1,2,3,4,5,6];
+
+        function topadd(num1){       //在开头添加数组
+            num.unshift(num1);
+            alert(num);
+        }
+
+        function afteradd(num1){    //在末尾添加数组
+            num.push(num1);
+            alert(num);
+        }
+
+        function todel(){        //删除数组开头第一个元素
+            num.shift();
+            alert(num);
+        }
+
+        function afterdel(){     //删除数组最后一个元素
+            num.pop();
+            alert(num);
+        }
+
+
+        do{
+            var can = prompt('请选择你想要的操作'+'\n'+'1.在开头添加数组'+'\n'+'2.在末尾添加数组'+'\n'+'3.在开头删除数组'+'\n'+'4.在末尾删除数组'+'\n'+'5.退出')
+            if(can == 1){
+               var num1 = prompt('请选择你要添加的数');
+               topadd(num1);
+            }else if(can == 2){
+                var num1 = prompt('请选择你要添加的数');
+                afteradd(num1);
+            }else if(can == 3){
+                todel();
+            }else if(can == 4){
+                afterdel();
+            }else{
+                alert('不存在该操作');
+            }
+
+        }while(can !=5 ){
+              alert('程序已退出');
+        }
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        position: relative;
+        margin: 0px auto;
+        padding: 0px;
+    }
+
+
+    .magiskbody{          
+        position: absolute;                           /*面具后面的绿色背景*/
+        width: 80%;
+        height: 175px;
+        border-radius: 0px 0px 5000px 0px;
+        background: #149683;
+        box-shadow: 20px 1px 22px 0 rgba(0,0,0,0.3) ;
+        z-index: 2;
+    }
+    .magisk{               /*面具图标*/
+        width: 150px;
+        height: 150px;
+        box-shadow: 7px 9px 4px 0 rgba(0,0,0,0.3) ;
+        border-radius: 100px 100px 100px 100px;
+    }
+    
+    .magiskbodyed{                                  /*面具后面的绿色背景变化后的样式*/
+        position: absolute;
+        width: 50%;
+        height: 150px;
+        background: #149683;
+    }
+
+    .magisked{                                      /*面具图标变化后的样式*/
+        width: 150px;
+        height: 150px;
+        float: left;
+    }
+
+
+
+ 
+    .lspbody{              /*lsp后面的粉色背景*/
+        position: absolute;
+        width: 50%;
+        height: 150px;
+        background: #FCD1D8;
+        top: 0px;
+        right: 0px;
+        z-index: 1;
+
+    }
+    .lsp{              /*lsp图标*/
+        width: 150px;
+        height: 150px;
+        float: right;
+    }
+
+
+    .lspbodyed{                  /*lsp变化后的样式*/
+        position: absolute;                           
+        width: 80%;
+        height: 175px;
+        border-radius: 0px 0px 0px 5000px;
+        background: #FCD1D8;
+        top: 0px;
+        right: 0px;
+        box-shadow: -20px 1px 22px 0 rgba(0,0,0,0.3) ;
+    }
+    .lsped{
+        width: 150px;
+        height: 150px;
+        box-shadow: -7px 9px 4px 0 rgba(0,0,0,0.3) ;
+        border-radius: 100px 100px 100px 100px;
+        float: right;
+
+    }
+
+
+
+
+
+
+
+
+    #magiskanlsp{                         /* 面具和lsp两个顶部主体部分 */
+        width: 100%;
+        height: 150px;
+    }
+    #magiskbackground{        /*magisk应用部分背景颜色*/
+        width: 100%;
+        height: 1500px;
+        background-color: #149683;
+        background-image: linear-gradient(90deg, #149683 0%, #fddde4 100%);
+
+
+    }
+    #magiskapplist{                /*应用列表*/
+        width: 150px;
+        height: 1450px;
+        background: #149683;
+        box-shadow: 0 0 35px 4px rgba(0,0,0,0.4) ;
+        padding: 50px 0px 0px 0px ;
+    }
+    #listapp{ /*应用列表控件*/
+        width: 132px;
+        height: 53px;
+        background: #149683;
+        border: 3px solid #797979;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.3) ;
+    }
+    #listapppicture{  /*应用列表控件里面的图片*/
+        width: 25px;
+        height: 25px;
+        margin-top: 15px;
+    }
+    #listdiv{              /*包裹着控件的div*/
+        width: 138px;
+        height: 500px;
+        margin-left: 6px;
+    }
+    #yingyongliebiao{                        /*应用列表文字的div*/
+        width: 122px;
+        height: 49px;
+        border: 1px solid black;
+        margin-top: 18px;
+        margin-left: 7px;
+        border-radius: 20px;
+        background: white;
+        font-family: "楷体";
+        box-shadow: 4px 7px 3px -2px rgba(0,0,0,0.3);
+        background: #9EB9B6;
+    }
+    #yingyongliebiao p{                     /*应用列表里面的文字*/
+       text-align: center;
+       color: white;
+       font-weight: bold;
+       font-family: "楷体";
+    }
+    #MagiskAppBackground{                         /*magisk应用背景*/
+        position: absolute;
+        width: 86%;
+        height: 655px;
+        top: 220px;
+        left: 200px;
+        border-radius: 30px;
+        box-shadow: 11px 11px 16px 2px rgba(0,0,0,0.3);
+        background-color: rgba(121,121,121,0.3);
+    }
+    #magiskapp{                                /*magisk应用的div*/
+        position: relative;
+        width: 257px;
+        height: 103px;
+        border-radius: 30px;
+        border: 3px solid #797979;
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.3);
+        margin: 30px 15px 15px 45px;
+        float: left;
+        background: white;
+    }
+    #MagiskAppPicture{
+        width: 257px;
+        height: 56.5px;
+        border-radius: 27px 27px 0px 0px ;
+        border-bottom: 1px solid #797979;
+    }
+    #MagiskAppPicture img{
+           margin: 11px 0px 0px 20px;
+           width: 35px;
+           height: 35px;
+           border-radius: 100px 100px 100px 100px;
+    }
+
+    #AppDetails{
+        width: 195px;
+        height: 45px;
+        border-radius: 0px 0px 0px 27px;
+        overflow: hidden;
+        float: left;
+    }
+    #AppDetails ul{
+        margin: 0px;
+    }
+
+    #AppDetails ul li{
+        font-size: 11px;
+    }
+
+
+    #AppDownload{
+        width: 61px;
+        height: 45px;
+        border-radius: 0px 0px 27px 0px;
+        float: right;
+        border-left: 1px solid #797979;
+    }
+    #AppDownload a img{
+        width: 21px;
+        height: 20px;
+        margin-top: 12.5px;
+        margin-left: 20px;
+    }
+    #box{
+      width: 257px;
+      height: 45px;
+      border-radius: 0px 0px 27px 27px ;
+    }
+    #text{
+        position: absolute;
+        width: 180px;
+        height: 49px;
+        top: 3px;
+        left: 60px;
+        overflow: hidden;
+    }
+    #LspBackground{
+        width: 100%;
+        height: 1500px;
+        background-color: #6fcfc4;
+        background-image: linear-gradient(90deg, #6fcfc4 0%, #fcd1d8 74%);
+
+
+    }
+    #LspAppList{                   /*lsp的应用列表*/
+        width: 150px;
+        height: 1450px;
+        background: #fcd1d8;
+        box-shadow: 0 0 35px 4px rgba(0,0,0,0.4) ;
+        padding: 50px 0px 0px 0px ;
+        float:right;
+    }
+   #LSPlistdiv{                     /*lsp包裹着应用控件的div*/
+        width: 138px;
+        height: 500px;
+        margin-left: 6px;
+   }
+   #LSPListApp{
+        width: 132px;
+        height: 53px;
+        background: #fcd1d8;
+        border: 3px solid white;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.3) ;
+   }
+   #LSPListAppPicture{          /*lsp列表里面的列表图片*/
+        width: 25px;
+        height: 25px;
+        margin-top: 15px;
+        margin-left: 4px;
+   }
+   #LspYingYongLieBiao{
+        width: 122px;
+        height: 49px;
+        border: 3px solid white;
+        margin-top: 18px;
+        margin-left: 7px;
+        border-radius: 20px;
+        font-family: "楷体";
+        box-shadow: 4px 7px 3px -2px rgba(0,0,0,0.3);
+        background: #fcd1d8;
+   }
+   #LspYingYongLieBiao p{
+       text-align: center;
+       color: white;
+       font-weight: bold;
+       font-family: "楷体";
+   }
+   #LspAppBackground{
+        position: absolute;
+        width: 86%;
+        height: 655px;
+        top: 220px;
+        left: 60px;
+        border-radius: 30px;
+        box-shadow: -11px 11px 16px 2px rgba(0,0,0,0.3);
+        background-color: rgba(121,121,121,0.3);
+   }
+   #LspApp{
+        position: relative;
+        width: 257px;
+        height: 103px;
+        border-radius: 30px;
+        border: 3px solid #797979;
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.3);
+        margin: 30px 15px 15px 45px;
+        float: right;
+        background: white;
+   }
+   #LspAppPicture{
+        width: 257px;
+        height: 56.5px;
+        border-radius: 27px 27px 0px 0px ;
+        border-bottom: 1px solid #797979;
+   }
+   #LspAppPicture img{
+        margin: 11px 0px 0px 20px;
+        width: 35px;
+        height: 35px;
+        border-radius: 100px 100px 100px 100px;
+   }
+   #Lspname{
+        position: absolute;
+        width: 173px;
+        height: 49px;
+        top: 3px;
+        left: 70px;
+        overflow: hidden;
+   }
+   #LspBox{
+      width: 257px;
+      height: 45px;
+      border-radius: 0px 0px 27px 27px ;
+   }
+   #LspAppDetails{
+        width: 195px;
+        height: 45px;
+        border-radius: 0px 0px 0px 27px;
+        overflow: hidden;
+        float: left;
+   }
+   #LspAppDetails ul{
+    margin: 0px;
+   }
+   #LspAppDetails ul li{
+    font-size: 11px;
+   }
+  
+</style>
+<body>
+
+<div id="app">
+<div id="magiskanlsp">      <!--面具和lsp两个顶部主体部分-->
+    <div v-bind:class="magiskbody">   <!--面具后面的绿色背景-->
+       <img v-bind:class="magisk" src="picture/magisk.png" v-on:click="downmagisk">    <!--面具图标-->
+    </div>
+
+    <div v-bind:class="lspbody">     <!--lsp后面的粉色背景-->
+     <img v-bind:class="lsp" src="picture/lsp.png" v-on:click="downlsp" >            <!--lsp图标-->
+    </div>
+</div>
+
+
+
+<div id="magiskbackground" v-if="magiskbackgroundsee">          <!--面具整体应用部分-->
+    <div id="magiskapplist" v-if="magiskapplistsee">            <!--应用列表-->
+<div id="listdiv">                      <!--包裹着应用列表控件-->
+    <div id="listapp">                  <!--应用列表控件-->
+    <img id="listapppicture" src="picture/列表.png" v-on:click="listapppicturesee">  <!--列表的图标-->
+    </div>
+    <div id="yingyongliebiao" v-if="yingyongliebiaosee" v-on:click="yingyongliebiaodown">
+        <P>应用列表</P>
+    </div>
+</div>
+    </div>
+
+
+<div id="MagiskAppBackground" v-if="MagiskAppBackgroundsee">          <!--应用背景-->
+    
+<div id="magiskapp">              <!--magisk面具框架23.0-->
+    <div id="MagiskAppPicture">
+        <img src="picture/magisk.png">
+    <div id="text">
+        <p>Magisk 23.0 (ehhi)</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+           Magisk官方将canary通道修改为发布模式，引入新的debug通道替代旧canary通道问题报告需要使用debug版本，canary通道可供一般情况下使用
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://wwz.lanzoum.com/ieoWT085f0sh" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--Riru (Riru-Core)-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/没有图片.png">
+    <div id="text">
+        <p>Riru (Riru-Core)</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+            安装Riru开头的模块之前，必须先安装此模块
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://wwi.lanzoup.com/iTFA708aqdra" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+
+<div id="magiskapp">              <!--多功能保后台与省电优化-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/多功能保后台与省电优化.png">
+    <div id="text">
+        <p>多功能保后台与省电优化</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+           模块通过优化内存管理，实现保后台和省电的效果，同时优化了一些vm参数，可在配置参数文件中自行修改。
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://kxxyg.lanzoux.com/b03dcol4d" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--DarkP（MIUI 13深色补全）-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/DarkP（MIUI 13深色补全）.png">
+    <div id="text">
+        <p>DarkP（MIUI 13深色补全）</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+           MIUI 13深色补全模块，修复在MIUI 13拉胯的深色模式。
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://wwc.lanzoum.com/ivTLT0br5fyd" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--小白条沉浸-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/小白条沉浸.png">
+    <div id="text">
+        <p>小白条沉浸</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+            仿iOS横屏显示小白条
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://www.123pan.com/s/JOd8Vv-qKnph" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--Fox's Magisk模块管理器-0.6.3(55)-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/Fox's Magisk模块管理器-0.6.3(55).png">
+    <div id="text">
+        <p>Fox's Magisk模块管理器-0.6.3(55)</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+            开源的第三方Magisk模块仓库 需要魔法才能查看仓库其他模块 否则只能查看本地已安装模块
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://jinnian.lanzouy.com/iMobs0bbm8xg" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--完美图标计划-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/完美图标计划.png">
+    <div id="text">
+        <p>完美图标计划(gihz)</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+            支持 在线下载
+            支持 一键安装MIUI完美图标补全Magisk模块
+            支持 图标自定义
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://wwb.lanzouw.com/i1cgx0aqa6cf" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--墓碑-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/墓碑.png">
+    <div id="text">
+        <p>墓碑</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+            类似ios墓碑机制，针对墓碑名单内的app
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://wwi.lanzoup.com/ihAxX0a2vhcd" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--内存进化lite-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/内存进化lite.png">
+    <div id="text">
+        <p>内存进化lite</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+           对内存和进程，甚至是存储做了优化，增大运行速度，提高后台能力，模块兼容性极高，与大部分模块不冲突（顶多是不生效）
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://wwu.lanzouy.com/itMCk0a0v6le" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--太极-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/太极.png">
+    <div id="text">
+        <p>太极</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+           Magisk版太极Xposed模块可以拦截系统，因此可以额外支持系统级别的Xposed模块；如边缘手势/核心破解/绿色守护/应用控制器等。
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://wwa.lanzoum.com/iFQNUw682mf" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--AdGuard Home模块-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/AdGuard Home模块.png">
+    <div id="text">
+        <p>AdGuard Home模块</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+            用于过滤广告、防DNS劫持，本机流量数据或Wifi都支持，支持订阅过滤规则，使用前需关闭私人dns，可兼容VPN、免模块、翻模块、校园网、热点共享等特殊使用环境，AdHome后台管理地址http://127.0.0.1:3000，用户名/密码root，模式切换配置文件：/data/adb/modules/AdGuardHome/mode.conf。
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://huan-2580.lanzoum.com/iGKq508oeaxa" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--华为鸿蒙推送服务-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/没有图片.png">
+    <div id="text">
+        <p>华为鸿蒙推送服务</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+            本模块可以在非EMUI系统下使用鸿蒙推送服务，需配合修改华为机型模块，全机型系统通用，整合华为应用商店、HMS Core至当前系统，初次使用请在华为应用商店登录账号即可完成推送部署
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://wwm.lanzouw.com/icphR07ygb0j" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--移除温控【正式版】-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/没有图片.png">
+    <div id="text">
+        <p>移除温控(336)</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+            通用，移除手机的温控，使手机达到更好的性能释放。联系QQ群1030167550向我反馈。
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://wwp.lanzouq.com/b01pmlv3e" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--A-SOUL Games Optimization-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/A-SOUL Games Optimization.png">
+    <div id="text">
+        <p>A-SOUL Games Optimization</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+            获取顶层应用包名，实现不同游戏不同方案 2.游戏重负载线程专属核心，不被其他游戏线程抢占 3.自适应放置方案，可判断未命名重要线程
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://wwr.lanzoui.com/iaXwB0buothc" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--Uperf (yc调度)-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/Uperf (yc调度).png">
+    <div id="text">
+        <p>Uperf (yc调度)</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+            一个Android用户态性能控制器，实现大部分内核态升频功能，并支持更多情景识别。
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://wwz.lanzoum.com/iUn7O0b1wq7i" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+<div id="magiskapp">              <!--相册功能补全-->
+    <div id="MagiskAppPicture">
+        <img src="Magisk应用商店/相册功能补全.png">
+    <div id="text">
+        <p>相册功能补全</p>
+    </div>
+     </div>
+    <div id="box">
+     <div id="AppDetails">
+     <ul>
+        <li>
+            随miui相册版本更新
+        </li>
+     </ul>
+     </div>
+     <div id="AppDownload">
+        <a href="https://h5.cloud.189.cn/share.html#/t/B3yAraYzUvia" download><img src="picture/下载.png"></a>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+</div>
+    
+</div>
+
+
+
+<div id="LspBackground" v-if="LspBackgroundsee">    <!--lsp应用整体部分-->
+
+<div id="LspAppList" v-if="LspAppList">                               <!--LSP的应用列表-->
+    <div id="LSPlistdiv">                           <!--LSP包裹着应用列表控件-->
+    <div id="LSPListApp">                           <!--应用列表控件-->
+    <img id="LSPListAppPicture" src="picture/列表(1).png" v-on:click="LSPListAppPicturedown">  <!--应用列表的图标-->
+    </div>
+    <div id="LspYingYongLieBiao" v-if="LspYingYongLieBiao" v-on:click="LspYingYongLieBiaodown">                
+    <p>应用列表</p>
+    </div>
+    </div>
+</div>
+
+<div id="LspAppBackground" v-if="LspAppBackground">                          <!--lsp应用背景-->
+
+<div id="LspApp">                                    <!--lsp应用-->
+    <div id="LspAppPicture">                             <!--lsp应用上半部分-->
+        <img src="picture/lsp.png">
+    <div id="Lspname">
+        <p>Lsponed</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                支持 Android 8.1〜12L beta2
+                需要安装 Riru 25.0.1或更高版本。
+                请在Magisk Manager中刷入使用(支持 Magisk Lite)
+                由于其团队已将管理器寄生到shell
+                故：此板块仅可以上传zip面具包
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://neverselect.lanzoul.com/ilndc0bpjs0j" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+<div id="LspApp">                                    <!--核心破解-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/核心破解.png">
+    <div id="Lspname">
+        <p>核心破解</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                核心破解，支持降级安装，禁用签名验证等功能
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://xiesicong.lanzouv.com/iPrOJ0bwjt0h" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+<div id="LspApp">                                    <!--NoActive-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/NoActive.png">
+    <div id="Lspname">
+        <p>NoActive</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                NoActive正如其名，让Android后台CPU不再活跃
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://xmmeng.lanzoub.com/ibx560bvpakd" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+<div id="LspApp">                                    <!--大圣净化-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/大圣净化.png">
+    <div id="Lspname">
+        <p>大圣净化(6z8j)</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+               「大圣净化整合了免费版「八戒助手」「悟空加速」「唐僧藏经」即云端。新增了 url拦截 和 hosts 板块、自动同步、用户规则云端备份，等加强功能。
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://wwm.lanzoum.com/iy2KN0bbzbaj" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+<div id="LspApp">                                    <!--米窗-全局小窗-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/米窗-全局小窗.png">
+    <div id="Lspname">
+        <p>米窗-全局小窗</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                米窗是一款可以在类原生系统上可以像国产系统小窗一样工作的APP。需要root和xposed.
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://nmmmea.lanzoui.com/iZn9l0bu421e" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+<div id="LspApp">                                    <!--Lucky Patcher (幸运破解器)-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/Lucky Patcher (幸运破解器).png">
+    <div id="Lspname">
+        <p>Lucky Patcher (幸运破解器)</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                幸运破解器LuckyPatcher是来自破解大神ChelpuS的作品，需要root权限可以破解一些软件或游戏，同时还可以去广告，比如Tank Riders、Reckless Racing HD、Ground Effect HD、Spirit、Aftermatch等等，不过不保证一定可以破解，所以叫做幸运破解器。
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://nmmmea.lanzoui.com/iZn9l0bu421e" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+<div id="LspApp">                                    <!--隐藏应用列表-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/隐藏应用列表.png">
+    <div id="Lspname">
+        <p>隐藏应用列表(79ee)</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                虽然“检测安装的应用是不正确的做法”，而且很蠢，但是并不是所有的插件类应用都提供了随机包名支持。在这种情况下，检测到安装了root类应用（如Fake Location、存储重定向）与检测到了root本身区别不大。（会使用检测手段的app可不会认为你是在“我就蹭蹭不进去”）
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://wwp.lanzoup.com/iI6C90b8iuve" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+<div id="LspApp">                                    <!--MiuiHomeR-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/MiuiHomeR.png">
+    <div id="Lspname">
+        <p>MiuiHomeR(h0cr)</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                这是一款针对 MIUI 桌面的自定义扩展,它是 Miuihome 使用安卓12的miuix重建的版本,需要满足 Magisk + LSPosed 环境 + 安卓12及以上系统
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://wws.lanzoub.com/iLg810buzsyj" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+
+<div id="LspApp">                                    <!--mibluetoothunlocker-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/mibluetoothunlocker.png">
+    <div id="Lspname">
+        <p>mibluetoothunlocker</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                本软件是xposed插件，可以使非小米/红米手环 在小米手机上使用蓝牙解锁功能
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://nmmmea.lanzoui.com/ibUDH0bpid4h" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+<div id="LspApp">                                    <!--哔哩漫游-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/哔哩漫游.png">
+    <div id="Lspname">
+        <p>哔哩漫游(fann)</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                支持 精简页面、海外看番、功能增强 等,海外看番需求者请及时更新到最新正式版本（因大部分解析服务器有限制最低版本号）
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://wumingt.lanzoub.com/iYQV90bh6s5i" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+<div id="LspApp">                                    <!--应用转生-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/应用转生.png">
+    <div id="Lspname">
+        <p>应用转生(b7p5)</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                应用转生，一个帮你免解锁，免刷机，免 root 使用 Xposed 框架的应用
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://syqianmo.lanzoum.com/iz7R90bkvxcd" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+<div id="LspApp">                                    <!--Thanox-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/Thanox.png">
+    <div id="Lspname">
+        <p>Thanox(i3fj)</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                Thanox基础功能可以免费使用，高级功能需要捐赠（能否正确激活与高级版本与否无任何关系）。请考虑清楚在下决定（三思，可能一般人不需要使用高级功能）。付出很多，开发很辛苦请多多理解。
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://mnjx.lanzouw.com/iKAlY0bk2xcj" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+<div id="LspApp">                                    <!--小米自动连招补丁-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/小米自动连招补丁.png">
+    <div id="Lspname">
+        <p>小米自动连招补丁</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                解除MIUI手机管家自动连招黑名单限制
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://wwd.lanzouw.com/iOBXN0aeti9g" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+
+<div id="LspApp">                                    <!--墨•状态栏歌词-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/墨•状态栏歌词.png">
+    <div id="Lspname">
+        <p>墨•状态栏歌词</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                自动获取音乐软件当前播放的歌曲，并实时将歌词显示在状态栏的一款xposed模块
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://wwb.lanzouy.com/izf0209yfr0b" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+<div id="LspApp">                                    <!--TSBattery(原QQ省电模块)-->
+    <div id="LspAppPicture">                             
+        <img src="Lsp应用商店/TSBattery(原QQ省电模块).png">
+    <div id="Lspname">
+        <p>TSBattery(原QQ省电模块)</p>
+    </div>
+    </div>
+
+<div id="LspBox">                                  <!--Lsp下半部分-->
+    <div id="LspAppDetails">
+        <ul>
+            <li>
+                顾名思义，就是让QQ在后台省电的模块（干掉部分进程）
+            </li>
+        </ul>
+    </div> 
+       <div id="AppDownload">                                                                     <!--下载连接样式是通用的-->
+            <a href="https://wwp.lanzouf.com/iOYOZ086hyvc" download><img src="picture/下载.png"></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+</div>   <!--这里是app主体-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var can = new Vue({
+        el:"#app",
+        data:{
+            MagiskAppBackgroundsee:false,        //magisk应用背景消失和隐藏
+            yingyongliebiaosee:false,            //magisk应用列表消失和隐藏
+            magiskapplistsee:false,              //magsik大的应用列表消失和隐藏
+
+            LspAppBackground:false,              //Lsp应用背景的消失和隐藏
+            LspYingYongLieBiao:false,            //Lsp应用列表的消失和隐藏
+            LspAppList:false,                    //Lsp应用列表背景的消失和隐藏
+
+            magiskbackgroundsee:true,
+            LspBackgroundsee:false,
+
+            magiskbody:"magiskbody",
+            magisk:"magisk",
+            lspbody:"lspbody",
+            lsp:"lsp",
+
+        },
+        methods:{
+            downmagisk:function(){                                //顶部magisk图标
+                this.magiskbody="magiskbody"; 
+                this.magisk="magisk";
+                this.lspbody="lspbody";
+                this.lsp="lsp";
+                this.magiskapplistsee= !this.magiskapplistsee;
+                this.magiskbackgroundsee=true;
+                this.LspBackgroundsee=false;
+                this.MagiskAppBackgroundsee=false;
+                this.yingyongliebiaosee=false;
+            },
+            downlsp:function(){                                   // 顶部lsp图标
+                this.magiskbody="magiskbodyed";
+                this.magisk="magisked";
+                this.lspbody="lspbodyed";
+                this.lsp="lsped";
+                this.magiskbackgroundsee=false;
+                this.LspBackgroundsee=true;
+                this.MagiskAppBackgroundsee=false;            
+                this.LspAppList= !this.LspAppList;
+                this.LspAppBackground=false;
+                this.LspYingYongLieBiao=false;                      
+            },
+            listapppicturesee:function(){                          //控制magsik应用列表的显示或者隐藏
+                this.yingyongliebiaosee=!this.yingyongliebiaosee;
+            },
+            yingyongliebiaodown:function(){                        //控制magisk应用背景的显示和隐藏
+                this.MagiskAppBackgroundsee = !this.MagiskAppBackgroundsee;
+            },
+            LSPListAppPicturedown:function(){
+                this.LspYingYongLieBiao=!this.LspYingYongLieBiao;
+            },
+            LspYingYongLieBiaodown:function(){
+                this.LspAppBackground=!this.LspAppBackground;
+            }
+
+        },
+    })
+</script>
+</body>
+</html>

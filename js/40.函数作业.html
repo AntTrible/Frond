@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var k = 0;
+        var j = 1;
+        var Math =[];
+        var num =[];
+        function Array(Math){                         //数组反转函数
+           for(var i = 0 ;i<Math.length-1; i++){
+            num[i] = Math[Math.length -2 -i];
+           }
+           return num;
+    }
+        function Array1(Math){
+          for(var i = 0 ;i<=Math.length-1;i++){
+              for(var k =0;k<=Math.length-i-1;k++){
+                  if(Math[k]>Math[k+1]){
+                      num = Math[k];
+                      Math[k] = Math[k+1];
+                      Math[k+1] = num;
+                  }
+              }
+          }
+          return Math;
+        }
+
+
+
+    do{
+        var onput = prompt('请选择你想要的功能'+'\n'+'1.输入数组反转数组'+'\n'+'2.输入任意数字，从大到小排列'+'\n'+'3.退出');
+        if(onput == 1){
+            do{
+                var onputnum = prompt('请输入第'+j+'个数'+'\n'+'提交');
+                if(onputnum == '' ){
+                    alert('输入的值不能为空')
+                }else{
+                    Math[k] = onputnum;
+                    k++,j++;
+                }
+            }while(onputnum != '提交'){
+                alert('该数组反转为:'+Array(Math));
+                var k = 0;
+                var j = 1;
+                var Math =[];
+                var num =[];
+            }
+        }else if(onput ==2){
+            do{
+                var onputnum = prompt('请输入第'+j+'数字'+'\n'+'提交'+'\n'+'退出');
+                if(onputnum == ''){
+                    alert('此数据非法,请重新输入');
+                }else if(onputnum == '提交'){
+                    alert('该数组从小到大排序为'+Array1(Math));
+                    onputnum = '退出';
+                }
+                else{
+                    Math[k] = onputnum;
+                    k++,j++;
+                }
+            }while(onputnum != '退出'){
+                var k = 0;
+                var j = 1;
+                var Math =[];
+                var num =[];
+            }
+        }
+    }while(onput != 3){
+        alert('程序已退出');
+    }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

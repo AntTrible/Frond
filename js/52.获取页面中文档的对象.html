@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="num">                         
+        <!-- ul是在前面加小圆点 -->
+        <li>离离原上普1</li>
+        <li>离离原上普2</li>
+        <li>离离原上普3</li>
+        <li>离离原上普4</li>
+        <li>离离原上普5</li>
+        <li>离离原上普6</li>
+    </ul>
+
+    <ol id="num1">
+        <!-- ol是在小圆点的基础上直接用数字排序 -->
+        <li>把酒问青天1</li>
+        <li>把酒问青天2</li>
+        <li>把酒问青天3</li>
+        <li>把酒问青天4</li>
+        <li>把酒问青天5</li>
+        <li>把酒问青天6</li>
+
+    </ol>
+    <script>
+        // //document(查找文档).get(获取)element(元素)Tag(标签)Name(名称)
+         var chinese = document.getElementsByTagName('li');         
+        // //查找整个文档中li，然后通过伪数组的形式传到chinese中，这样chinese就是一个数组；
+        // //如果遍历chinese这个数组则，全部打印出来;
+         console.log(chinese);          //这句话只输出了chinese这个伪数组
+         for(var i in chinese){
+             console.log(chinese[i]);
+         }
+
+        //选择特定的文档标签输出,输出指定的内容
+        var can = document.getElementsByTagName('ol')//选择ol这个标签名称，然后以伪数组的形式返回给jianpen
+        var can1  = can[0].getElementsByTagName('li')//输出文档中第1个ol里面的li数值
+        for(var i in can1){
+            console.log(can1[i]);
+        }
+
+    </script>
+</body>
+</html>

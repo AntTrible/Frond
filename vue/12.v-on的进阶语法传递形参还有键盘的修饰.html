@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="can">
+        <button v-on:click="dianwo(666)">点击传入形参</button>    <!--//onclick是键盘按键-->
+        <textarea v-on:keyup.w="up"></textarea>               <!--keyup是键盘按键-->
+
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var doing = new Vue({
+          el:"#can",
+          methods:{
+              dianwo:function(num){
+                  alert(num)
+              },
+              up:function(){
+                  alert("我参考")
+              }
+          }
+      })
+    </script>
+</body>
+</html>

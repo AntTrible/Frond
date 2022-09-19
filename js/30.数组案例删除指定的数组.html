@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var Array = [];
+        var del = [];
+        for(var i = 0 ; i < 10 ; i++){
+            var num = prompt('请输出您的数字');
+            Array[i] = num;
+        }
+        alert('您输入的数字为'+Array)
+        var delnum = prompt(Array+'请选择你要删除的数字')
+        
+        for(var f = 0 ; f<Array.length ;f++){
+            if(delnum != Array[f] ){
+                del[del.length] = Array[f];
+            }
+        }
+        alert('你输入的'+delnum+'已经去除');
+        alert('新的数组变为'+del);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

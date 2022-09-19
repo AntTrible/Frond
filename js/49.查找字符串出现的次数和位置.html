@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var color = ['red','blue','red','green','pink','red'];
+        var num = [];
+        var i = 1;
+        var k = color.indexOf('red');
+        while(k !=-1){
+             k = color.indexOf('red',k+1)
+             if(k == -1){
+                 continue;
+             }else{
+                 num.push(k);
+             }
+            i++;
+        }
+        alert('rad出现了'+i+'次'+'出现位置为'+color.indexOf('red')+','+num)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

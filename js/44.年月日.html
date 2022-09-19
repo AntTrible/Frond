@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var i = 1;
+        function time(){
+        
+        var day = new Date();
+        var year = day.getFullYear();     //年
+        var months = day.getMonth()+1     //月
+        var dates = day.getDate();        //日
+        var days = day.getDay();          //星期
+       
+        var h = day.getHours();           //时
+        h = h<10? '0'+h : h;
+        var m = day.getMinutes();         //分
+        m = h<10? '0'+m : m;
+        var s = day.getSeconds();         //秒
+        s = s<10? '0'+s : s;
+        var dayss = ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'];
+        
+        return year+'年'+months+'月'+dates+'日 '+dayss[days]+''+h+':'+m+':'+s;
+        
+    } 
+    while(i != 10){
+        alert(time());
+    }
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

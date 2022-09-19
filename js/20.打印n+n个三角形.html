@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = '';
+        var wow = prompt('请选择你要打印的星星种类(有正方形，正三角形，倒三角形)');
+        var width = prompt('请输入您要打印的星星的行数');
+        var height = prompt('请输入您要打印的星星的列数');
+        switch(wow){
+              case '正方形' :
+                for(var i = 1; i<=height ; i++){
+                      for(var a = 1; a<=width ;a++){
+                          num += '*';
+                      }
+                      num += '\n';
+                }
+                break;
+
+
+                case '倒三角形' :
+                    for(var i = 1;i<=height;i++){
+                        for(var a =1 ; a<=width ;a++){
+                            num += '*';
+                        }
+                        width--;
+                        num += '\n';
+                    }
+                break;
+                
+                case '正三角形' :
+                    var str = 1;
+                    for(var i =1 ; i<=height ; i++){
+                        for(var a = 1 ; a<=str && str<=width ; a++){
+                            num +='*';
+                        }
+                        str++;
+                        num += '\n';
+                    }
+                break;
+                default:
+                alert('没有次形状');
+
+        }
+        console.log(num);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

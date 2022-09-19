@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM机</title>
+    <script>
+        var RMB = 100;
+
+        do{
+            var num = prompt('请输入您要的操作:'+'\n'+'1.存钱'+'\n'+'2.取钱'+'\n'+'3.显示余额'+'\n'+'4.退出');
+            if(num == 1){
+                var go = prompt('请输入存的钱');
+                RMB = parseInt(go) + RMB ;
+                alert('您的余额为'+ RMB);
+            }else if(num == 2){
+                var exit = prompt('请输入要取走的钱');
+                if(parseInt(exit)>RMB){
+                    alert('您取走的钱，超过余额,请重新输入');
+                }else{
+                    RMB = RMB - parseInt(exit);
+                    alert('您的余额为'+RMB);   
+                }
+            }else if(num == 3){
+                alert('您的余额为'+RMB);
+            }
+        }
+        while(num != 4){
+            alert('正在退出');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

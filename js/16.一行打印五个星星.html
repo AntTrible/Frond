@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打印五个星星</title>
+    <script>
+        // var star = '*';
+        // var A = '' ;
+        // for(var i =1 ; i<=5 ; i++){
+        //      A=star+A ;
+        // }
+        // console.log(A);
+
+        // 用户决定打印多少个星星
+        var str = '';
+        var statr = prompt('请输入你想打印星星的数量(数量不能超过100)：');
+        if(statr<=100){
+            for(var i = 1; i<= statr ; i++){
+               str += '*';
+        }
+    }else{
+        console.log('你输入的值太大了');
+    }
+    console.log(str);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = 0;
+        var f = 0;
+        do{
+            var chinese = prompt('请选择你想要的操作'+'\n'+'1.计算两个数的和'+'\n'+'2.两个数之间的和'+'\n'+'3.退出');
+            function getnumpro(num1,num2){
+            var num = parseInt(num1)+parseInt(num2);
+            alert('这两个数的和为'+num);
+        }
+            function getnum(num3,num4){
+                for(var i=parseInt(num3) ;i<=num4;i++)
+                f +=i;
+                alert('这两个数之间的和为'+f)
+            }
+        if(chinese == 1){
+        var num1 = prompt('请输入第一个数的值');
+        var num2 = prompt('请输出第二个数的值');
+        getnumpro(num1,num2);
+        }else if(chinese == 2){
+        var num3 = prompt('请输入第一个数的值');
+        var num4 = prompt('请输出第二个数的值');
+        getnum(num3,num4);
+
+        }else if(chinese == 3){
+            alert('程序正在退出');
+        }else{
+            alert('程序不存在');
+        }
+        var num = 0;
+        var f=0;
+    }while(chinese != 3){
+         alert(已经退出程序);
+    }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

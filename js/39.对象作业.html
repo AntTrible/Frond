@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var computer ={               //这是一个电脑的对象
+            color : '黑色',
+            heft : '2.5kg',
+            brand : '联想拯救者',
+            model : 'R7000 2020款',
+            function : '看电影'+'听音乐'+'打游戏'+'打javascript',
+        }
+        var button = {                //这是一个按钮对象
+            name : '这是一个按钮',
+            broad : '20px',
+            high : '50px',
+            background : 'red',
+            onclick : '会动',
+        }
+        var car = {                   //这是一个车对象
+            name: '迈凯伦',
+            heft : '2000kg',
+            color : 'yellow',
+            model : '迈凯伦跑车',
+            function : '载人'+'耕田'+'拉货',
+        }
+        //下面开始遍历对象和选择对象输出
+        do{
+        var output = prompt('请选择你要输出的对象'+'\n'+'1.电脑对象'+'\n'+'2.按钮对象'+'\n'+'3.车对象'+'\n'+'4.退出程序');
+        if(output == 1){
+            for(var k in computer){
+                alert(computer[k]);
+            }
+        }else if(output == 2){
+            for(var k in button){
+                alert(button[k]);
+            }
+        }else if(output == 3){
+            for(var k in car){
+                alert(car[k]);
+            }
+        }else if(output > 4 || output <=0 ){
+            alert('不存在此对象');
+        }
+    }while(output != 4){
+        alert('退出程序');
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

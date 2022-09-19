@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="time">显示当前的时间</button>
+    <p>时间显示在这里噢</p>
+    
+    <script>
+        var nowtime = document.querySelector('#time');   //首先要获取元素才能操作元素
+        var down = document.querySelector('p')
+
+        nowtime.onclick = function(){
+            down.innerText = nowdatetime();
+        }
+
+        function nowdatetime(){
+            var nowdate = new Date();
+            var year = nowdate.getFullYear();   //年
+            var mon = nowdate.getMonth()+1;       //月
+            var dat = nowdate.getDate();        //日
+            var can = ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'];
+            var day = nowdate.getDay();         //星期
+            return '现在的时间是:'+year +'年'+ mon +'月'+dat+'日'+can[day];
+
+            
+        }
+    </script>
+</body>
+</html>

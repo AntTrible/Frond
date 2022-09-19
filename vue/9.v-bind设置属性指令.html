@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .hi{
+        border: 5px solid red;
+    }
+</style>
+<body>
+    <div id="app">
+        <img v-bind:src="kkk"  v-bind:title="onclicklook" v-bind:class="{hi:borde}" v-on:click="down"> <!--v-bind:class="{hi:borde}意思是hi的值由borde决定 因为在date里面设置了borde的值是false，所以hi就不显示，但是我加了一个单击事件，将flase取反就是true然后就会被stylecss渲染的有边框-->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+     var pic = new Vue({
+         el:"#app",
+         data:{
+             kkk:"素材/lsp.jpeg",
+             onclicklook:"这里是老色批",
+             borde:false,
+         },
+         methods:{
+            down:function(){    
+                this.borde = !this.borde;
+            }
+         }
+     })
+
+
+    </script>
+</body>
+</html>

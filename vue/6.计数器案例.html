@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#down {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 32px 10px 20px;
+  border: none;
+  -webkit-border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
+  font: normal 16px/normal Arial Black, Gadget, sans-serif;
+  color: #8F3F31;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #C7C7C7;
+}
+#up{
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 32px 10px 20px;
+  border: none;
+  -webkit-border-radius: 0 10px 10px 0;
+  border-radius: 0 10px 10px 0;
+  font: normal 16px/normal Arial Black, Gadget, sans-serif;
+  color: #8F3F31;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #C7C7C7;
+}
+body{
+    margin: 0px auto;
+    padding: 0px;
+}
+#num{
+    position: relative;
+    width: 220px;
+    height: 43px;
+}
+#number{
+    position: absolute;
+    height: 43px;
+    width: 100px;
+    top: 0px;
+    left: 57px;
+}
+#up{
+    float: right;
+}
+p{
+    text-align: center;
+    margin: 10px  auto;
+}
+
+</style>
+<body>
+    <div id="num">
+        <input id="down" type="button"  value="-" @click="down">
+        <div id="number">
+            <p>{{can}}</p>
+        </div>
+        <input id="up" type="button"  value="+" v-on:click="up">
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+    
+    var woc = new Vue({
+        el:"#num",
+        data:{
+            can : 0,
+        },
+        methods :{
+            down:function(){
+                if(this.can >0){
+                    this.can--;
+                }else{
+                    alert('已经最小啦');
+                }
+              
+            },
+            up:function(){
+                if(this.can <100){
+                    this.can++;
+                }else{
+                    alert('已经最大啦');
+                }
+            }
+        }
+    })
+
+
+    </script>
+</body>
+</html>

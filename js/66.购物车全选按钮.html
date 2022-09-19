@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     th {
+        background: red;
+        
+    }
+    td{
+       border-bottom: 1px solid blue;
+    }
+</style>
+<body>
+    <table class="non" cellspacing="0" cellpadding="20">  
+
+        <tr>
+          <td><input type="checkbox" name="one" id="all"></td>
+          <th>英雄</th>
+          <th>分路</th>
+          <th>职业</th>
+          <th>血量</th>
+        </tr>
+        
+        <tr>
+         <td><input type="checkbox" name="one" id="one"></td>
+          <td>妲己</td>
+          <td>中路</td>
+          <td>法师</td>
+          <td>3000</td>
+        </tr>
+        
+        <tr>
+            <td><input type="checkbox" name="one" id="one"></td>
+            <td>后裔</td>
+            <td>发育路</td>
+            <td>射手</td>
+            <td>4000</td>
+          </tr>
+        
+          <tr>
+            <td><input type="checkbox" name="one" id="one"></td>
+            <td>露娜</td>
+            <td>打野</td>
+            <td>法师</td>
+            <td>6000</td>
+          </tr>
+        
+          <tr>
+            <td><input type="checkbox" name="one" id="one"></td>
+            <td>廉颇</td>
+            <td>对抗路</td>
+            <td>战士</td>
+            <td>8000</td>
+          </tr>
+        </table>
+
+        <script>
+            var one = document.querySelectorAll('#one');
+            var all = document.querySelector('#all');
+            all.onclick =function(){                          //当我按下全选按钮后
+                for(var i = 0;i<=one.length;i++){             //他就把所有的one打勾
+                    one[i].checked = this.checked;
+                }
+            }
+            
+           for(var i = 0 ;i <=one.length ; i++){
+               one[i].onclick = function(){                   //把所有的one赋值一个单击事件
+                for(var i = 0 ;i <=one.length ; i++){         //单击后检查所有的one
+                    if(one[i].checked == true ){              //不能用=赋值运算符  要用==等价运算符
+                        all.checked = true; 
+                    }else{
+                        all.checked = false;
+                    }
+                }
+                }
+            }
+           
+               
+        </script>
+        
+</body>
+</html>

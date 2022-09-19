@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .health{
+        position: absolute;
+        top: 0px;
+        width: 1950px;
+        height: 1100px;
+        background-color: #1cb4ec;
+        background-image: linear-gradient(180deg, #1cb4ec 43%, #FFFB7D 100%);
+
+    }
+
+    .healtha{
+        position: absolute;
+        top: 0px;
+        width: 1950px;
+        height: 1100px;
+        background-color: #FFE53B;
+        background-image: linear-gradient(225deg, #FFE53B 0%, #FF2525 74%);         /*晴天*/
+
+    }
+
+    .healthb{
+        position: absolute;
+        top: 0px;
+        width: 1950px;
+        height: 1100px;
+        background-color: #FF3CAC;
+        background-image: linear-gradient(0deg, #FF3CAC 0%, #784BA0 25%, #2B86C5 100%);   /*雨天*/
+    }
+
+    .healthc{
+        position: absolute;
+        top: 0px;
+        width: 1950px;
+        height: 1100px;
+        background-color: #ffffff;
+        background-image: linear-gradient(0deg, #ffffff 0%, #737270 30%);                 /*阴天*/
+    }
+
+    .healthd{
+        position: absolute;
+        top: 0px;
+        width: 1950px;
+        height: 1100px;
+        background-color: #FFDEE9;
+        background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);               /*雪天*/
+                
+    }
+
+
+    
+   
+   
+    #whole{
+        position: absolute;
+        height: 410px;
+        margin: 100px  710px;
+    }
+    body{
+        position: relative;
+        margin: 0px auto;
+        padding: 0px;
+       
+
+    }
+    h1{
+        font-family:'楷体 Bold', '楷体';
+        color: #FFFFFF;
+        font-size:20px;
+        font-weight:700;
+        text-align: center;
+    }
+    h2{
+        font-size:80px;
+        font-weight:700;
+        color: #FFFFFF;
+        font-family:'Maiandra GD Bold', 'Maiandra GD Normal', 'Maiandra GD';
+        text-align: center;
+        margin: 0px;
+    }
+    h3{
+        font-family:'楷体 Bold', '楷体';
+        color: #FFFFFF;
+        text-align: center;
+    }
+    h4{
+        font-family:'楷体 Bold', '楷体';
+        color: #FFFFFF;
+        text-align: center;
+    }
+    input{
+       position: absolute;
+       top: 125px;
+       left: 65px;
+       height: 25px;
+       width: 280px;
+       border: 0px solid #b7b7b7;
+       border-bottom: 3px solid #D3F1FB;
+       -webkit-border-radius: 12px;
+       border-radius: 12px;
+       
+    }
+    button{
+       position: absolute;
+       top: 162px;
+       left: 130px;
+       height: 36px;
+       width: 160px;
+       background: rgb(255,255,255);
+       border: 0 solid;
+       border-bottom: 3px solid #D3F1FB;
+       -webkit-border-radius: 12px;
+       border-radius: 12px;
+    }
+    #renovate{
+        float: right;
+    }
+
+
+    
+
+</style>
+<body>
+
+<div id="cancan">
+<div v-bind:class="mystyle">
+     <div id="whole">
+
+    <div id="renovate">
+        <img src="素材/refresh-line.png" v-on:click="eliminate" v-show="look">                         <!--刷新按钮-->
+    </div>
+
+     <div id="Cityname">
+      <h1 v-for="chengshi in citys">{{ chengshi }}</h1>                                 <!--当前城市-->
+     </div>
+
+     <div id="Urbantemperature">
+      <h2 v-for="wendu in temperature">{{ wendu+"°" }}</h2>                                  <!--当前城市温度-->
+     </div>
+
+     <div id="current">
+      <h3 v-for="city in arr">{{ city.type }}</h3>                                  <!--当前城市天气-->
+      <h3 v-for="city in arr">{{ city.date }}</h3>                                  <!--当前日期-->
+     </div>
+
+     <div id="message">
+        <h4 v-for="tishi in Tips">{{ tishi }}</h4>                                  <!--当前城市提醒-->
+     </div>
+
+
+     <div id="input" v-show="nolook">
+        <input type="text" v-model="city">
+        <button v-on:click="down">查询天气</button>
+     </div>
+
+       </div>
+    </div>
+</div>
+    <!-- 官网提供的axios在线地址 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script >
+    
+    var can  = new Vue({
+        el:"#cancan",
+        data:{
+            city:"",     
+            arr:[],                    //整合数组
+            temperature:[],            //温度数组
+            citys:[],                  //城市数组
+            Tips:[],                   //提示数组
+            look:false,                //显示刷新按钮
+            nolook:true,               //显示查询框架
+            mystyle:"health",
+        },
+        methods:{
+           down:function(){
+               var that = this;
+               axios.get('http://wthrcdn.etouch.cn/weather_mini?city='+this.city).then
+               (function(response){ 
+                   that.nolook=false;
+                   that.city="";
+                   that.look=true;
+                   that.arr.push(response.data.data.forecast[0]);       //添加所有数据到数组里
+                   that.Tips.push(response.data.data.ganmao);          //添加提示标语到Tips数组里面
+                   that.citys.push(response.data.data.city);          //添加当前城市到citys数组里面
+                   that.temperature.push(response.data.data.wendu);  //添加当前温度到temperature数组里面
+                   var weather = response.data.data.forecast[0].type;
+                   if(weather == "阵雨" || weather == "雷阵雨" || weather == "雷阵雨伴有冰雹" || weather == "雨夹雪" || weather == "小雨" || weather == "中雨" || weather == "大雨"|| weather == "暴雨"|| weather == "大暴雨"|| weather == "特大暴雨"|| weather == "中到小雨"|| weather == "中到大雨"|| weather == "大到暴雨"|| weather == "暴雨到大暴雨"|| weather == "大暴雨到特大暴雨"){
+                        that.mystyle="healthb"    //雨天
+                   }else if(weather == "晴"){
+                        that.mystyle="healtha"    //晴天
+                   }else if(weather == "阵雪"|| weather == "小雪"|| weather == "中雪"|| weather == "大雪"|| weather == "暴雪"|| weather == "小到中雪"|| weather == "中到大雪"|| weather == "大到暴雪" ){
+                        that.mystyle="healthd"    //雪天
+                   }else if(weather == "多云"|| weather == "阴天" ||weather == "阴"){
+                        that.mystyle="healthc"    //阴天
+                   } 
+                    
+
+ 
+
+               }
+               ,
+               function(err){
+                   console.log(err)
+
+               })
+           },
+
+           eliminate:function(){
+            this.mystyle="health"
+            this.nolook=true;
+            this.look=false;
+            this.arr=[];                   //整合数组
+            this.temperature=[];           //温度数组
+            this.citys=[];                 //城市数组
+            this.Tips=[];                  //提示数组
+           }
+        }
+    })
+    </script>
+</html>

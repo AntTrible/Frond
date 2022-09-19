@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+            margin: 0px auto;
+            padding: 0px;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+        }
+        button{
+            padding: 34px 13px 34px 13px;
+            border: none;
+            color: rgba(255,255,255,0.9);
+            font: normal 16px/normal "Times New Roman", Times, serif;
+            display: inline-block;
+            filter:opacity(0.4);
+        }
+        button:hover{
+            filter:opacity(0.8);
+        }
+        #up{
+            position: absolute;
+            top: 150px;
+            left: 0px;
+        }
+        #down{
+           position: absolute;
+           top: 150px;
+           left: 265px;
+        }
+        #shop{
+         width: 300px;
+         height: 295px;   
+     
+        }
+
+    </style>
+</head>
+      <div id="shop">
+        <div id="phone">
+        
+        
+        <p>小米手机</p>
+       <button id="down"  v-show="nonolook" v-on:click="down" >></button>
+       <img v-bind:src="picture[xiaomi]" v-bind:title="miphone[xiaomi]">
+       <button id="up" v-show="nolook" v-on:click="up"><</button>
+
+
+      </div>
+      </div>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var look = new Vue({
+          el:"#shop",
+          data:{
+              picture:[
+              "素材/手机1.png",
+              "素材/手机2.png",
+              "素材/手机4.png",
+              "素材/手机3.png",
+              "素材/手机5.png",
+              "素材/手机6.png",
+              "素材/手机7.png",
+              "素材/手机8.png",
+              "素材/手机9.png",
+              "素材/手机10.png",
+              ],
+             xiaomi:0, 
+             nolook:false,
+             nonolook:true,
+             miphone:[
+                 "小米12s系列",
+                 "小米12s黑色",
+                 "小米12s绿色",
+                 "小米12s蓝色",
+                 "小米12s红色",
+                 "红米k50系列",
+                 "红米k50银色",
+                 "红米k50黑色",
+                 "红米k50激光色",
+                 "红米k50绿色",
+             ]
+          },
+        methods:{
+            down:function(){
+                if(this.xiaomi < this.picture.length-1){
+                    this.xiaomi++;
+                    this.nolook=true;
+                }else{
+                    this.nonolook=false;
+                }
+                
+            },
+            up:function(){
+                if(this.xiaomi < this.picture.length && this.xiaomi > 0){
+                    this.xiaomi--;
+                }else{
+                    this.nolook=false;
+                    this.nonolook=true;
+                }
+                
+            }
+           
+           
+        }
+      })
+    </script>
+</body>
+</html>
