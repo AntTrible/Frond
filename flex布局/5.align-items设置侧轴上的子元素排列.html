@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0px auto;
+        padding: 0px;
+    }
+    div {
+        display: flex;
+        width: 100%;
+        height: 500px;
+        background: pink;
+        
+        align-items: flex-start;   /*沿着侧轴从上到下*/
+
+        align-items: flex-end;    /*沿着侧轴从下到上*/
+
+        align-items: center;      /*跟侧轴居中对齐*/
+
+        align-items: stretch;     /*拉伸，将子元素的高度拉伸到父元素的底部*/
+    }
+    #one{
+        width:150px;
+        height: 150px;   /*使用align-items:strectch的时候需要把高度取消，要不然无法拉伸子元素的高度*/
+        background: red;
+    }
+</style>
+<body>
+    <div>
+       <div id="one">1</div>
+       <div id="one">2</div>
+       <div id="one">3</div>
+    </div>
+</body>
+</html>

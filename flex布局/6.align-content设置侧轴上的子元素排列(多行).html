@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0px auto;
+        padding: 0px;
+    }
+    div {
+        display: flex;
+        width: 800px;
+        height: 500px;
+        background: pink;
+        flex-wrap: wrap;
+        
+        align-content: flex-start;   /*设置子元素在侧轴的方向上从头部开始排列*/
+
+        align-content: flex-end;     /*设置子元素在侧轴的方向上从底部开始排列*/
+
+        align-content: center;       /*设置子元素在侧轴的方向上居中排列(多行的情况下)*/
+
+        align-content:space-around ; /*设置子元素平分侧轴上剩余的空间*/
+
+        align-content: space-between;  /*设置子元素先把侧轴两边填满，再平分中间的空间*/
+
+        align-content: space-evenly;   /*使得侧轴上的子元素所有控件距离都相等*/
+
+        align-content: stretch;        /*拉伸将子元素的高度拉伸到和父元素一样(需要把高度的设定取消)*/
+       
+    }
+    #one{
+        width:150px;
+        height: 150px;
+        background: red;
+
+    }
+</style>
+<body>
+    <div>
+       <div id="one">1</div>
+       <div id="one">2</div>
+       <div id="one">3</div>
+       <div id="one">4</div>
+       <div id="one">5</div>
+       <div id="one">6</div>
+       <div id="one">7</div>
+    </div>
+</body>
+</html>

@@ -10,6 +10,9 @@
     span{
         color: red;
     }
+    li{
+        font-size:20px;
+    }
 </style>
 <body>
     <div id="study">
@@ -55,6 +58,87 @@
             </li>
         </ul>
 
+        <h1><span>flex-wrap</span>设置子元素是否换行</h1>
+        <ul>
+            <li>
+                nowrap(默认值):<span>默认值不换行</span>
+            </li>
+            
+            <li>
+                flex-start:<span>换行</span>
+            </li>
+            
+           
+        </ul>
+
+        <h1><span>align-items</span>设置侧轴上的子元素排列方式(单行)</h1>
+        <ul>
+
+            <li>
+                flex-start:<span>默认值：从上到下</span>
+            </li>
+
+            <li>
+                flex-end:<span>从下到上</span>
+            </li>
+
+            <li>
+                center:<span>挤在一起居中</span>
+            </li>
+            
+            <li>
+                stretch:<span>拉伸</span>
+            </li>
+            
+           
+           
+        </ul>
+
+        <h1><span>align-content</span>设置侧轴上的子元素排列方式(多行 相当于justify-content的那样)</h1>
+        <ul>
+
+            <li>
+                flex-start:<span>默认值：在侧轴的头部开始排列</span>
+            </li>
+
+            <li>
+                flex-end:<span>在侧轴的尾部开始排列</span>
+            </li>
+
+            <li>
+                center:<span>在侧轴中间显示</span>
+            </li>
+            
+            <li>
+                space-around:<span> 子项在侧轴平分剩余空间 </span>
+            </li>
+
+            <li>
+                space-between:<span> 先将两边贴边再平分中间的剩余空间 </span>
+            </li>
+
+            <li>
+                space-evenly:<span> 使得上下两边以及控件之间的距离都相等 </span>
+            </li>
+
+            <li>
+                stretch:<span> 设置子项元素高度平分父元素高度 </span>
+            </li>
+            
+           
+           
+        </ul>
+
+        <h1><span>flex(子元素标签)</span>设置子元素的占用大小</h1>
+        <ul>
+
+            <li>
+                flex:<span>flex: + num(数字)表示占用的大小</span>
+                
+            </li>
+           
+           
+        </ul>
         
 
     </div>
