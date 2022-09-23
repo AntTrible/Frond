@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">   
+
+</head>
+<body>
+    <div class="container">
+            <div class="row">   <!--col-md-push-(number)列排序-->
+                <div class="col-md-1 col-md-push-6" style="background: red;">1</div> <!--自由移动网格栅格系统中的块级元素 col-md-push-1 表示往右边移动多少格子-->
+                <div class="col-md-1 col-md-push-1" style="background: rgb(0, 170, 255);">2</div>  <!--如果前方有块级元素的话则会遮挡前面的元素，因为代码是从上往下运行的-->
+                <div class="col-md-1" style="background: rgb(0, 255, 183);">3</div>
+                <div class="col-md-1" style="background: rgb(0, 8, 255);">4</div>
+                <div class="col-md-1" style="background: rgb(0, 225, 255);">5</div>
+                <div class="col-md-1" style="background: rgb(0, 187, 255);">6</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">                                              <!--列嵌套 可以在col-md-(num)里面再嵌套一个 但是也要按照12块级元素的设置排序-->
+                    <div class="col-md-1" style="background: red;">1</div>
+                    <div class="col-md-1" style="background:orange;">2</div>
+                    <div class="col-md-1" style="background: yellow;">3</div>
+                    <div class="col-md-1" style="background: green;">4</div>
+                    <div class="col-md-1" style="background: Cyan;">5</div>
+                    <div class="col-md-1" style="background: blue;">6</div>
+                    <div class="col-md-6" style="background: purple;">7</div>   
+                </div>
+
+
+                <div class="col-md-6" style="background: rgb(156, 103, 103);">6</div>
+            </div>
+    </div>
+
+    
+</body>
+</html>
