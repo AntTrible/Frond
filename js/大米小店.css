@@ -1,0 +1,2355 @@
+body{
+    padding: 0px;
+    margin: 0px auto;
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
+}
+#MiShopHead{/*小米商城顶部*/
+height: 40px;
+font-size: 12px;
+color: #b0b0b0;
+background: #333;
+}
+#MiShopHeadText{/*小米商城顶部文字框架*/
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#MiShopHeadTextXiaoMiGuanWang{   /*小米商城官网文字框架*/
+    float: left;
+}
+#MiShopHeadTextXiaoMiGuanWang a{ /*小米商城官网文字样式*/ 
+    color: #b0b0b0;
+    line-height: 40px;
+    display: inline-block;
+    text-decoration: none;
+}
+#MiShopHeadTextXiaoMiGuanWang a:hover{/*小米商城官网文字鼠标经过样式*/
+    color: #FFFFFF;
+    line-height: 40px;
+    display: inline-block;
+    text-decoration: none;
+}
+#MiShopHeadTextXiaoMiGuanWang span{/*小米商城官网文字旁边的|样式*/
+    margin: 0.3em;
+    color: #424242;
+}
+
+
+#MiShopHeadTextGouWuChe{           /*小米商城顶部购物车模块*/
+position: relative;
+float: right;
+width: 120px;
+height: 40px;
+margin-left: 15px;
+transition: all .2s;
+font-size: 12px;
+background: #424242;
+}
+
+#MiShopHeadTextGouWuChe img{/*小米商城购物车图片*/
+ width: 20px;
+ height: 20.2px;
+ margin-right: 4px;
+ font-size: 20px;
+ line-height: 20px;
+ vertical-align: -5px;
+}
+#MiShopHeadTextGouWuChe a{/*小米商城购物车样式*/
+position: relative;
+z-index: 32;
+display: block;
+height: 40px;
+line-height: 40px;
+text-align: center;
+color: #b0b0b0;
+background: #424242;
+text-decoration: none;
+}
+#MiShopHeadTextGouWuChe a:hover{
+font-weight: bold;
+position: relative;
+z-index: 32;
+display: block;
+height: 40px;
+line-height: 40px;
+text-align: center;
+color: #ff6700;
+background: #FFFFFF;
+text-decoration: none;
+}
+#MiShopHeadTextDengLu{/*小米商城登录模块样式*/
+position: relative;
+float: right;
+height: 40px;
+line-height: 40px;
+}
+#MiShopHeadTextDengLu a{/*小米商城登录文字*/
+    color: #b0b0b0;
+    line-height: 40px;
+    text-decoration: none;
+}
+#MiShopHeadTextDengLu a:hover{/*小米商城登录文字鼠标经过样式*/
+    color: #FFFFFF;
+    line-height: 40px;
+    text-decoration: none;
+}
+#MiShopHeadTextDengLu span{/*小米商城登录旁边的|样式*/
+    margin: 0.3em;
+    color: #424242;
+}
+#MiPngDiv{            /*小米顶部图标框架*/
+    height: 100px;
+}
+#MiContainer{     /*小米图标内容框架*/
+width: 1226px;
+height: 100px;
+margin-right: auto;
+margin-left: auto;
+}
+#Milogo a{   /* 小米图标*/
+float: left;
+width: 62px;
+margin-top: 22px;
+}
+#MiPhone{
+float: left;
+width: 850px;
+}
+#MiPhoneUl{
+    position: relative;
+    z-index: 10;
+    float: left;
+    width: 825px;
+    height: 88px;
+    margin: 0;
+    padding: 12px 0 0 30px;
+    list-style-type: none;
+    font-size: 16px;
+}
+#MiPhone li{
+    float: left;
+}
+#MiPhone a{
+display: block;
+padding: 26px 10px 38px;
+color: #333;
+transition: color .2s;
+text-decoration: none;
+}
+#MiPhone a:hover{
+display: block;
+padding: 26px 10px 38px;
+color: #ff6700;
+transition: color .2s;
+text-decoration: none;
+}
+
+#MiHide{
+    float: left;
+    width: 127px;
+    height: 88px;
+    padding-right: 15px;
+}
+#MiHide span{
+    font-size: 16px;
+}
+.link-category{
+    display: block;
+    padding: 26px 0 38px;
+    text-align: right;
+    color: #333;
+    visibility: hidden;
+}
+
+#MiSearch{     /*小米商城搜索*/
+    float: right;
+    width: 296px;
+    height: 75px;
+    margin-top: 25px;
+}
+#MiSearch input{
+    border: 1px solid #e0e0e0;
+    right: 51px;
+    width: 223px;
+    height: 48px;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 48px;
+    float: right;
+}
+#MiSearch a{
+    width: 52px;
+    height: 46px;
+    float: right;
+    border: 1px solid #e0e0e0;
+}
+#MiSearch a:hover{
+    width: 52px;
+    height: 47px;
+    float: right;
+   background: #ff6700;
+}
+#MiSearch a img{
+    width: 20px;
+    height: 20px;
+    margin-left: 17px;
+    margin-top: 13px;
+}
+#MiContainerPhone{           /*小米手机动态显示界面*/
+    height: 229px;
+    box-shadow: 0px 3px 4px rgba(0,0,0,.18);
+    border-top: 1px solid #e0e0e0;
+    background-color: white;
+    display: block;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    
+
+}
+#MiPhoneContainer{
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.children-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 12px;
+}
+.first{
+position: relative;
+float: left;
+width: 180px;
+padding: 35px 12px 0;
+text-align: center;
+}
+
+.first:before {
+position: absolute;
+left: 0;
+top: 35px;
+z-index: 1;
+width: 1px;
+height: 100px;
+content: "";
+background-color: #e0e0e0;
+}
+
+.first a {
+    text-decoration: none;
+    color: #757575;
+    background-color: rgba(0,0,0,0);
+}
+
+.one{
+position: relative;
+float: left;
+width: 180px;
+padding: 35px 12px 0;
+text-align: center;
+}
+
+.one a{
+text-decoration: none;
+color: #757575;
+background-color: rgba(0,0,0,0);
+}
+
+#MiPhonePicture{
+width: 160px;
+height: 110px;
+margin: 0 auto 16px;
+text-align: center;
+}
+#MiPhonePicture img{
+width: 160px;
+height: 110px;
+}
+#title{
+    color: #333;
+    margin: 0px;
+    line-height: 20px;
+}
+.price{
+    margin: 0px;
+    line-height: 20px;
+    color: #ff6700;
+}
+#RedmiPhoneContainer{  /*红米手机*/
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#MiTvContainer{        /*小米电视*/
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#Mibooks{             /*小米笔记本*/
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#MiPad{               /*小米平板*/
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+#Mihomehold{          /*小米家电*/
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#MiWifi{            /*小米路由器*/
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#MiMiddle{
+    position: relative;
+    width: 1226px;
+    height:460px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#MiDetails{
+    position: absolute;
+    width: 234px;
+    height: 460px;
+    float: left;
+    z-index: 2;
+}
+#MiDetailsUl{
+    height: 420px;
+    border: 0;
+    color: #fff;
+    background: rgba(105,101,101,.6);
+    margin: 0;
+    padding: 20px 0;
+    list-style-type: none;
+}
+#MiDetailsUlLi{
+    position: relative;
+    color: #fff;
+}
+#MiDetailsUlLiA{
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    height: 42px;
+    line-height: 42px;
+    background-color: rgba(0,0,0,0);
+    color: #fff;
+    text-decoration: none;
+}
+#MiDetailsUlLiA:hover{
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    height: 42px;
+    line-height: 42px;
+    background-color: rgba(0,0,0,0);
+    color: #fff;
+    text-decoration: none;
+    background: #ff6700;
+}
+#MiDetailsUlLiImg{
+    position: absolute;
+    top: 7px;
+    right: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #e0e0e0;
+    width: 26px;
+    height: 26px;
+}
+
+#MiLoopPicture img {                /*轮播图里面的图片*/
+    width: 1226px;
+    height: 460px;
+    float: right;
+}
+#MiLoopPictureLeft img{             /*轮播图变换按钮*/
+    position: absolute;
+    width: 41px;
+    height: 69px;
+    z-index: 1;
+    top: 195.5px;
+    left: 234px;
+}
+#MiLoopPictureRight img{
+    position: absolute;
+    width: 41px;
+    height: 69px;
+    z-index: 1;
+    top: 195.5px;
+    right: 0px;
+}
+#MiPhoneClassification{
+    position: absolute;
+    height: 460px;
+    left: 234px;
+    z-index: 2;
+}
+
+
+#Phone{                             /*手机分类*/
+    position: absolute;
+    border: 1px solid #e0e0e0;
+    border-left-color: rgb(224, 224, 224);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    height: 460px;
+    width: 992px;
+}
+#Phone-one-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Phone-one-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Phone-one-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Phone-one-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Phone-one-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Phone-one-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+#Phone-two-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Phone-two-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Phone-two-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Phone-two-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Phone-two-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Phone-two-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+#Phone-three-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Phone-three-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Phone-three-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Phone-three-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Phone-three-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Phone-three-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+#Phone-four-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Phone-four-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Phone-four-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Phone-four-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Phone-four-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Phone-four-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+#TV{                                         /*电视分类*/
+    position: absolute;
+    border: 1px solid #e0e0e0;
+    border-left-color: rgb(224, 224, 224);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    height: 460px;
+    width: 992px;
+}
+#TV-one-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#TV-one-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#TV-one-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#TV-one-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#TV-one-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#TV-one-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+#TV-two-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#TV-two-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#TV-two-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#TV-two-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#TV-two-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#TV-two-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+#TV-three-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#TV-three-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#TV-three-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#TV-three-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#TV-three-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#TV-three-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+#TV-four-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#TV-four-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#TV-four-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#TV-four-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#TV-four-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#TV-four-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+#Pad{                                         /*平板和笔记本分类*/
+    position: absolute;
+    border: 1px solid #e0e0e0;
+    border-left-color: rgb(224, 224, 224);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    height: 460px;
+    width: 992px;
+}
+
+#Pad-one-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Pad-one-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Pad-one-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Pad-one-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Pad-one-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Pad-one-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+#Pad-two-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Pad-two-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Pad-two-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Pad-two-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Pad-two-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Pad-two-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+#Pad-three-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Pad-three-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Pad-three-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Pad-three-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Pad-three-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Pad-three-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+#Pad-four-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Pad-four-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Pad-four-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Pad-four-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Pad-four-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Pad-four-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+#Watch{                                         /*手表分类*/
+    position: absolute;
+    border: 1px solid #e0e0e0;
+    border-left-color: rgb(224, 224, 224);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    height: 460px;
+    width: 744px;
+}
+
+#Watch-one-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Watch-one-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Watch-one-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Watch-one-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Watch-one-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Watch-one-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+#Watch-two-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Watch-two-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Watch-two-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Watch-two-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Watch-two-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Watch-two-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+#Watch-three-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Watch-three-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Watch-three-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Watch-three-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Watch-three-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Watch-three-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+#MusicSound{                                         /*耳机分类*/
+    position: absolute;
+    border: 1px solid #e0e0e0;
+    border-left-color: rgb(224, 224, 224);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    height: 460px;
+    width: 992px;
+}
+
+#MusicSound-one-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#MusicSound-one-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#MusicSound-one-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#MusicSound-one-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#MusicSound-one-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#MusicSound-one-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+#MusicSound-two-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#MusicSound-two-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#MusicSound-two-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#MusicSound-two-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#MusicSound-two-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#MusicSound-two-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+
+#MusicSound-three-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#MusicSound-three-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#MusicSound-three-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#MusicSound-three-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#MusicSound-three-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#MusicSound-three-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+#MusicSound-four-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#MusicSound-four-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#MusicSound-four-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#MusicSound-four-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#MusicSound-four-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#MusicSound-four-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+
+
+#HomeHold{                                         /*家电分类*/
+    position: absolute;
+    border: 1px solid #e0e0e0;
+    border-left-color: rgb(224, 224, 224);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    height: 460px;
+    width: 992px;
+}
+
+
+
+#HomeHold-one-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#HomeHold-one-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#HomeHold-one-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#HomeHold-one-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#HomeHold-one-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#HomeHold-one-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+#HomeHold-two-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#HomeHold-two-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#HomeHold-two-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#HomeHold-two-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#HomeHold-two-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#HomeHold-two-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+#HomeHold-three-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#HomeHold-three-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#HomeHold-three-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#HomeHold-three-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#HomeHold-three-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#HomeHold-three-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+#HomeHold-four-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#HomeHold-four-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#HomeHold-four-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#HomeHold-four-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#HomeHold-four-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#HomeHold-four-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+
+
+#WIFI{                                            /*路由器分类*/
+    position: absolute;
+    border: 1px solid #e0e0e0;
+    border-left-color: rgb(224, 224, 224);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    height: 460px;
+    width: 744px;
+}
+
+
+#WIFI-one-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#WIFI-one-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#WIFI-one-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#WIFI-one-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#WIFI-one-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#WIFI-one-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+#WIFI-two-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#WIFI-two-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#WIFI-two-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#WIFI-two-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#WIFI-two-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#WIFI-two-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+#WIFI-three-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#WIFI-three-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#WIFI-three-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#WIFI-three-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#WIFI-three-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#WIFI-three-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+#Battery{                                            /*电源分类*/
+    position: absolute;
+    border: 1px solid #e0e0e0;
+    border-left-color: rgb(224, 224, 224);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    height: 460px;
+    width: 496px;
+}
+
+
+
+
+#Battery-one-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Battery-one-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Battery-one-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Battery-one-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Battery-one-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Battery-one-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+#Battery-two-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Battery-two-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Battery-two-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Battery-two-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Battery-two-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Battery-two-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+
+#Baby{                                            /*儿童分类*/
+    position: absolute;
+    border: 1px solid #e0e0e0;
+    border-left-color: rgb(224, 224, 224);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    height: 460px;
+    width: 744px;
+}
+
+
+#Baby-one-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Baby-one-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Baby-one-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Baby-one-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Baby-one-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Baby-one-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+#Baby-two-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Baby-two-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Baby-two-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Baby-two-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Baby-two-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Baby-two-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+#Baby-three-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Baby-three-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Baby-three-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Baby-three-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Baby-three-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Baby-three-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+#Life{                                      /*生活分类*/
+    position: absolute;
+    border: 1px solid #e0e0e0;
+    border-left-color: rgb(224, 224, 224);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    height: 460px;
+    width: 744px;
+}
+
+
+
+#Life-one-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Life-one-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Life-one-list-li-a{
+  
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Life-one-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Life-one-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Life-one-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+#Life-two-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Life-two-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Life-two-list-li-a{
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Life-two-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Life-two-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Life-two-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+ 
+#Life-three-list{
+    width: 248px;
+    float: left;
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+#Life-three-list-li{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+#Life-three-list-li-a{
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+   -webkit-transition: color .2s;
+   transition: color .2s;
+   text-decoration: none;
+}
+#Life-three-list-li-a-img{
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: 0;
+}
+#Life-three-list-li-a-span{
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#Life-three-list-li-a-span:hover{
+    color: #ff6700;
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#Mitail {  /*小米商城底部*/
+    width: 1226px;
+    height: 170px;
+    margin-top: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#MiService{
+    width: 234px;
+    float: left;
+    min-height: 1px;
+}
+#MiService-ul{
+    width: 228px;
+    height: 170px;
+    margin: 0;
+    padding: 3px;
+    list-style-type: none;
+    font-size: 12px;
+    text-align: center;
+    background: #5f5750;
+}
+#MiService-ul-li{
+    position: relative;
+    float: left;
+    width: 70px;
+    height: 82px;
+    padding: 0 3px;
+}
+#MiService-ul-li::after{
+    top: 6px;
+    left: 0;
+    width: 1px;
+    height: 70px;
+    position: absolute;
+    content: "";
+    background: #665e57;
+}
+
+#MiService-ul-li::before{
+    top: -1px;
+    left: 6px;
+    width: 64px;
+    height: 1px;
+    position: absolute;
+    content: "";
+    background: #665e57;
+}
+
+
+
+#MiService-ul-li-a{
+    display: block;
+    padding-top: 18px;
+    text-overflow: ellipsis;
+    color: #fff;
+    opacity: .7;
+    text-decoration: none;
+}
+#MiService-ul-li-a-img{
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 4px;
+}
+#MiServiceRight{
+    width: 978px;
+    float: left;
+    margin-left: 14px;
+    min-height: 1px;
+}
+#MiServiceRight-ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+#MiServiceRight-ul::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+#MiServiceRight-ul-li{
+    margin-left: 10px;
+    float: left;
+    width: 316px;
+    height: 170px;
+}
+#MiServiceRight-ul-li-a{
+    display: block;
+    height: 170px;
+    text-decoration: none;
+    color: #757575;
+}
+#MiServiceRight-ul-li-a{
+    display: block;
+    width: 316px;
+    height: 170px;
+}
