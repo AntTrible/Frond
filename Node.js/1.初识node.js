@@ -1,0 +1,1 @@
+console.log("初识node.js");    /* 使用cmd命令打开 node 1.初识node.js*/
