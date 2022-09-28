@@ -1,0 +1,49 @@
+/* 
+CSS3的主要新特性：
+1）选择器
+2）阴影
+3）形状转换（2D <-> 3D）
+4）变形
+5）动画（过渡动画、帧动画）
+6）边框
+7）多重背景
+8）反射
+9）文字
+10）颜色函数（rgba/hsl/hsla）
+11）滤镜（filter）
+12）弹性布局
+13）多列布局
+14）栅格布局    在BootStrap用到过就是分成12块的栅格网格布局
+15）盒模型
+16）Web字体
+17）媒体查询 
+*/
+
+
+/*css3新增的属性*/
+body{
+    /*new边框属性*/
+    border-color: red; /*新增边框属性，为边框设置多种颜色*/
+}
+
+body{
+    /*new背景属性*/
+    background-size: 80px 60px;  /*background-size新增的背景属性：指定背景图片的尺寸*/
+}
+
+body{
+    /*文字效果*/
+    text-shadow: none; /*文本阴影*/
+    word-wrap: break-word;/*自动换行*/
+}
+
+body{
+    /*动画效果*/
+    transform: matrix3d();/*变换效果*/
+    animation: alternate; /*动画效果*/
+}
+
+body{
+    /*过度效果*/
+    transition: none;
+}
