@@ -1,0 +1,87 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uni_modules/uview-ui/components/u-$1/u-$1.vue"
+	},
+	
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle":"custom"
+			}
+		},
+		{                            
+			"path": "pages/cake/cake",
+			"style": {
+				"navigationBarTitleText": "蛋糕"
+			}
+		},
+		{                            
+			"path": "pages/bread/bread",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{                            
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{                            
+			"path": "pages/food/food",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{                            
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "商品详情"
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#f1f1f1",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {
+
+	},
+	"tabBar": {
+		"color": "#d8d8d8",
+		"selectedColor": "#444",
+		"list":[
+			{
+				"text":"蛋糕",
+				"pagePath":"pages/cake/cake",
+				"iconPath":"static/首页未选中.png",
+				"selectedIconPath":"static/首页选中.png"
+			},
+			{
+				"text":"面包",
+				"pagePath":"pages/bread/bread",
+				"iconPath":"static/用户未选中.png",
+				"selectedIconPath":"static/用户选中.png"
+			},
+			{
+				"text":"小食",
+				"pagePath":"pages/food/food",
+				"iconPath":"static/分类未选中.png",
+				"selectedIconPath":"static/分类选中.png"
+			}
+
+		]
+	}
+}
