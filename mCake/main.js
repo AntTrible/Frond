@@ -16,6 +16,12 @@ Vue.component('home-title',HomeTitle)
 import GoodItem from 'components/good-item.vue'
 Vue.component('good-item',GoodItem)
 
+//挂载全局异步请求方法
+import * as request from 'utils/request.js'
+for(let key in request){
+  Vue.prototype[key] = request[key]
+}
+
 
 Vue.config.productionTip = false
 App.mpType = 'app'

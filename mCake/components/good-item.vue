@@ -7,10 +7,10 @@
                <view class="info flex align-center justify-between">
                    <view class="">
                       <view class="fs-28">
-                        草莓蛋糕
+                        RTX 3060
                         </view>
                         <view class="fs-16">
-                        caomeidangao
+                        xianka
                         </view>
                     </view>
 
@@ -20,7 +20,7 @@
                 </view> 
                    <view class="fs-18">
                       <text class="fs-14">￥</text>
-                      218.00
+                      2180.00
                    </view>
                </view>
         </view>

@@ -1,10 +1,12 @@
 <template>
-  <view>
+  <scroll-view :scroll-into-view="topItem" scroll-with-animation class="scroll-cont" scroll-y="true" @scroll="handleScroll">
+    <view>
+        <view id="top"></view>
     <nav-custom></nav-custom>
     <swiper class="banner" :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" indicator-active-color="#51DDD0">
-    	<swiper-item v-for="(item,index) in 3">
+    	<swiper-item v-for="(item,index) in banner" :key="item.objectId" @click="handleBanner(item.link)">
     		<view class="swiper-item" >
-                <img src="../../static/img/华硕放价.png">
+                <image :src="item.img"></image>
             </view>
     	</swiper-item>
     </swiper>
@@ -25,23 +27,78 @@
     <view class="flex flex-wrap padding-sm justify-between">
         <good-item v-for="(item,index) in 4"></good-item>
     </view>
+    <view class="back-top " v-if="isShow" @click="handleBackTop">
+        <text class="iconfont icon-fanhuidingbu"></text>
+    </view>
     
   </view>
+  </scroll-view>
 </template>
 
 <script>
-import GoodItem from '../../components/good-item.vue'
-import HomeTitle from '../../components/home-title.vue'
-import navCustom from '../../components/nav-custom.vue'
-export default {
-  components: { navCustom, HomeTitle, GoodItem },
+ import {$http} from '../../utils/request.js'
+export default{
+    data() {
+        return {
+            isShow:false,
+            topItem:'' , //返回顶部标记点
+            banner:[]
+        }
+    },
+    methods: {
+       handleScroll:function(ev){
+            console.log(ev);
+            let {scrollTop}  = ev.detail;
+            this.isShow = scrollTop>500;
+            this.topItem = '';
+       },
+       handleBackTop:function(){
+        this.topItem = 'top';
+       },
+       
+       handleBanner:function(link){
+        console.log("测试触发按键");
+        uni.navigateTo({
+            url:`./banner-ad?link=${link}`
+        })
+       }
+    },
+    onLoad() {
+        // //方法1
+        //     uni.request({
+        //         url:'https://rzpofyyx.lc-cn-n1-shared.com/1.1/classes/classify',
+        //         method:'GET',
+        //         header:{
+        //             "X-LC-Id": "RzPoFYYXWgF3DjgxcIuAsgVG-gzGzoHsz",
+        //             "X-LC-Key": "o4oBu6cmLRhQILGbhilgtNQJ" ,
+        //             "Content-Type": "application/json" 
+        //         },
+        //         success:(res) =>{
+        //             console.log(res);
+        //         }
+        //     })
 
+        // //方法2
+        //  $http('/1.1/classes/classify').then(res=>{
+        //     console.log(res);
+        //  })
+
+        // //方法3
+        // this.$get('/1.1/classes/classify').then(res=>{
+        //     console.log(res);
+        // })
+
+        this.$get('/1.1/classes/banner').then(res=>{
+            console.log(res);
+            this.banner = res.results;
+        })
+    }
 }
 </script>
 
 <style lang="scss">
 .banner{
-    height: 800upx;
+    height: 1000upx;
     swiper-item{
         height: 1000upx;
     }
@@ -59,5 +116,23 @@ export default {
 .classify{
     height: 380upx;
     width: 100%;
+}
+.back-top{
+    height: 100upx;
+    width: 100upx;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10upx 4upx rgba(0,0,0,0.4);
+    position: fixed;
+    bottom: 40upx;
+    right: 20upx;
+    text-align: center;
+    line-height: 100upx;
+}
+.icon-fanhuidingbu{
+    font-size: 60upx;
+}
+.scroll-cont{
+    height: 100vh;
 }
 </style>
