@@ -6,17 +6,19 @@ Page({
    */
   data: {
      background:{},//轮播图
-     singer:{}//歌手
+     singer:{},//歌手
+     newMusiclist:{}
   },
 
 
-  //获取banner
+  //获取banner轮播图
   getbanner:function(){
     wx.request({
       url:'http://localhost:3000/banner',
       dataType:"json",
 
       success:(result) =>{
+        console.log("这个是轮播图")
         console.log(result.data.banners)
         //设置给background
         this.setData({
@@ -26,7 +28,6 @@ Page({
     })
   },
 
-
   //获取歌手
   getsinger:function(){
     wx.request({
@@ -34,6 +35,7 @@ Page({
       dataType:"json",
 
       success:(result) =>{
+        console.log("这个是热门歌手")
         console.log(result.data.artists)
         //设置给background
         this.setData({
@@ -43,6 +45,44 @@ Page({
     })
   },
 
+  //获取新音乐
+  getNewMusic:function(){
+      wx.request({
+        url:'http://localhost:3000/personalized/newsong',
+        dataType:"json",
+        
+        success:(result) =>{
+          console.log("这个是新音乐");
+          console.log(result.data.result)
+          //设置给newMusiclist
+          this.setData({
+             newMusiclist:result.data.result
+          })
+        }
+      })
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -50,6 +90,7 @@ Page({
     
         this.getbanner()//轮播图
         this.getsinger()//歌手
+        this.getNewMusic()//获取新音乐
 
   },
 
