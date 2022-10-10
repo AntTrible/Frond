@@ -1,6 +1,5 @@
 <!--首页-->
-<!--banner-->
-
+<!--banner轮播图-->
 <swiper indicator-dots="true"
         indicator-color="rgba(255,255,255,0.5)"
         indicator-active-color="rgba(194,12,12,1)"
@@ -16,25 +15,36 @@
     </block>
 </swiper>
 
+
+
+
 <view class="title">热门歌手</view>
 <view class="hotlist">
-   <block wx:for="{{singer}}" wx:key="this">
-   <view class="item">
+   <block wx:for="{{singer}}" wx:key="this" wx:for-index="in">
+   <view class="item" data-index="{{in}}" bindtap="hotlink">
       <image src="{{item.picUrl}}"></image>
       <text>{{item.name}}</text>
    </view>
    </block>
 </view>
 
+
+
+
+
+
+
 <view class="title">最新音乐</view>
 <view class="musicbox">
+   <block wx:for="{{newMusiclist}}" wx:key="this" wx:for-index="in">
    <view class="item">
       <view class="txtbox">
-         <text class="mname">青花瓷</text>
-         <text class="name">周杰伦*-七里香</text>
+         <text class="mname">{{item.name}}</text>
+         <text class="name">{{item.song.artists[0].name}}</text>
       </view>
-      <view class="playimg">
+      <view class="playimg" bindtap="playlink" data-index="{{in}}">
          <image src="/image/播放.png"></image>
       </view>
    </view>
+</block>
 </view>

@@ -56,7 +56,7 @@ swiper-item image{
 .hotlist .item image{
     width: 200rpx;
     height: 200rpx;
-    border-radius: 20rpx;
+    border-radius: 40rpx;
 }
 
 .hotlist .item text{
@@ -92,6 +92,10 @@ swiper-item image{
 
 .item .txtbox .mname{
     font-size: 35rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 600rpx;
 }
 
 .item .txtbox .name{

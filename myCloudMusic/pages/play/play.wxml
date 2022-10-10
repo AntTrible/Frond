@@ -1,0 +1,38 @@
+<image mode="widthFix" class="bg" src="{{music.al.picUrl}}"></image>
+<view class="musicName">{{music.name}}</view>
+
+
+<!--轮播组件-->
+<swiper>
+    <swiper-item class="imgbox">
+         <image src="{{music.al.picUrl}}"></image>
+    </swiper-item>
+    <swiper-item>
+        <!--滑动组件-->
+        <scroll-view scroll-y="false">
+            <block wx:for="{{lrcdata}}" wx:key="this">
+            <view>{{item[1]}}</view>
+            </block>
+        </scroll-view>
+    </swiper-item>
+</swiper>
+<!--播放模式-->
+<view class="playmode">
+    <image src="/image/循环.png"></image>
+</view>
+<!--进度条-->
+<view class="timebox">
+    <view>00:00</view>
+    <slider block-size="12"></slider>
+    <view>03:20</view>
+</view>
+
+<!--底部按钮-->
+<view class="footer">
+    <image src="/image/上一首(1).png"></image>
+    <image bindtap="playdate" src="/image/{{action.method==='play'?'歌曲暂停':'歌曲播放'}}.png"></image>
+    <image src="/image/下一首(1).png"></image>
+</view>
+
+<audio src="http://music.163.com/song/media/outer/url?id={{musicid}}.mp3" 
+action="{{action}}"></audio>
