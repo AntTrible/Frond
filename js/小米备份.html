@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大米小店</title>
+    <link rel="stylesheet" type="text/css" href="./大米小店.css">
+</head>
+<body>
+<div id="app" >
+<div id="Mihead">           <!--小米商城顶部整体-->
+    <div id="MiShopHead">   <!--小米商城顶部-->
+    <div id ="MiShopHeadText"> <!--小米商城顶部文字框架-->
+    <div id="MiShopHeadTextXiaoMiGuanWang"><!--小米顶部文字小米官网-->
+
+    <a href="//www.mi.com/">小米官网</a>
+    <span>|</span>
+
+    <a href="//www.mi.com/shop">小米商城</a>
+    <span>|</span>
+
+    <a href="//www.miui.com/">MIUI</a>
+    <span>|</span>
+
+    <a href="//iot.mi.com/">loT</a>
+    <span>|</span>
+
+    <a href="//i.mi.com/">云服务</a>
+    <span>|</span>
+
+    <a href="//airstar.com/home">天星数科</a>
+    <span>|</span>
+
+    <a href="//youpin.mi.com/">有品</a>
+    <span>|</span>
+
+    <a href="//xiaoai.mi.com/">小爱开放平台</a>
+    <span>|</span>
+
+    <a href="//qiye.mi.com/">企业团购</a>
+    <span>|</span>
+
+    <a href="//www.mi.com/aptitude/list/?id=88/">资质证照</a>
+    <span>|</span>
+
+    <a href="//www.mi.com/aptitude/list/">协议规则</a>
+    <span>|</span>
+
+    <a href="//www.mi.com/appdownload/">下载app</a>
+    <span>|</span>
+
+    <a href="javascript:;">Select Location</a>
+
+    </div>
+
+    <div id="MiShopHeadTextGouWuChe"><!--小米顶部购物车样式-->
+    <a href="//www.mi.com/shop/buy/cart">
+        <img src="picture/小米商城购物车.png">
+        购物车
+        <span>(0)</span>
+    </a>
+    </div>
+
+    <div id="MiShopHeadTextDengLu"><!--小米顶部登录模块-->
+       <a href="https://account.xiaomi.com/fe/service/login/password?_qrsize=180&sid=mi_eshop&qs=%253Fcallback%253Dhttp%25253A%25252F%25252Forder.mi.com%25252Flogin%25252Fcallback%25253Ffollowup%25253Dhttps%2525253A%2525252F%2525252Fwww.mi.com%2525252Fshop%252526sign%25253DODA5NjU3ZjZkYjkxMWE3ZjVkYTE5M2MxMDNlYmJkYzJhZGFjNzBhYg%25252C%25252C%2526sid%253Dmi_eshop%2526_qrsize%253D180&callback=http%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttps%253A%252F%252Fwww.mi.com%252Fshop%26sign%3DODA5NjU3ZjZkYjkxMWE3ZjVkYTE5M2MxMDNlYmJkYzJhZGFjNzBhYg%2C%2C&_sign=yBTYxCh0uB6YSglhQfg4uoP%2BRz4%3D&serviceParam=%7B%22checkSafePhone%22%3Afalse%2C%22checkSafeAddress%22%3Afalse%2C%22lsrp_score%22%3A0.0%7D&showActiveX=false&theme=&needTheme=false&bizDeviceType=&_locale=zh_CN">登录</a>
+       <span>|</span>
+
+       <a href="https://cn.account.xiaomi.com/fe/service/register?source=&region=CN&sid=mi_eshop&qs=sid%3Dmi_eshop&callback=https%3A%2F%2Forder.mi.com%2Flogin%2Fcallback&_locale=zh_CN&_uRegion=CN">注册</a>
+       <span>|</span>
+
+       <a href="https://www.mi.com/shop/user/message">消息通知</a>
+    </div>
+    </div>
+    </div>
+    <div id="MiPngDiv" v-on:mouseover="MiPngDiv">     <!--小米顶部图标框架和小米手机展示框架-->
+    <div id="MiContainer">        <!--小米图标内容框架-->
+    <div id="Milogo">
+        <a href="//www.mi,com" title="小米官网"><img src="picture/小米logo.png"></a>
+    </div>
+    <div id="MiPhone">   <!--小米手机内容-->
+    <ul id="MiPhoneUl">
+    <li id="MiHide">
+    
+
+    </li>
+    <li>
+        <a href="javascript:;">
+            <span v-on:mouseover="XiaomiPhone">Xiaomi手机</span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;">
+            <span v-on:mouseover="RedmiPhone">Redmi手机</span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;">
+            <span v-on:mouseover="XiaomiTv">电视</span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;">
+            <span v-on:mouseover="XiaomiBook">笔记本</span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;">
+            <span v-on:mouseover="XiaomiPad">平板</span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;">
+            <span v-on:mouseover="XiaomiHomeHold">家电</span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;">
+            <span v-on:mouseover="XiaomiWIFI">路由器</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.mi.com/service">
+            <span>服务中心</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.xiaomi.cn/">
+            <span>社区</span>
+        </a>
+    </li>
+    </ul>
+    </div>
+    <div id="MiSearch">  <!--小米商城的搜索-->
+    <a>
+        <img src="picture/小米商城搜索.png" >
+    </a>
+    <input type="search" placeholder="小米12s">
+    
+    </div>
+    </div>
+
+<div id="MiContainerPhone" v-if="MiContainerPhone"  >      <!--小米产品动态显示界面-->
+
+
+    <div id="MiPhoneContainer" v-if="MiPhoneContainer" > <!--小米手机界面-->
+    <ul class="children-list" >  <!--小米手机的第一个ul放的是小米mix fold2-->
+     <li class="one">
+      <a href="https://www.mi.com/xiaomimixfold2" > 
+      <div id="MiPhonePicture" >
+         <img  src="picture/小米flod2.jpg" >
+      </div>
+      <div id="title">Xiaomi MIX Fold 2</div >
+      <p class="price">8999元起</p >
+      </a>
+     </li>
+
+     <li class="first">
+        <a href="https://www.mi.com/mi12s-ultra">
+        <div id="MiPhonePicture">
+           <img src="picture/小米12s ultra.jpg">
+        </div>
+        <div id="title">Xiaomi 12S Ultra</div>
+        <p class="price">5999元起</p>
+        </a>
+       </li>
+
+       <li class="first">
+        <a href="https://www.mi.com/mi12s-pro">
+        <div id="MiPhonePicture">
+           <img src="picture/小米12s Pro.jpg">
+        </div>
+        <div id="title">Xiaomi 12S Pro</div>
+        <p class="price">4699元起</p>
+        </a>
+       </li>
+
+       <li class="first">
+        <a href="https://www.mi.com/mi12s">
+        <div id="MiPhonePicture">
+           <img src="picture/小米12s.jpg">
+        </div>
+        <div id="title">Xiaomi 12S</div>
+        <p class="price">3999元起</p>
+        </a>
+       </li>
+
+       <li class="first">
+        <a href="https://www.mi.com/mi12pro-dimensity">
+        <div id="MiPhonePicture">
+           <img src="picture/小米12 pro天机版.jpg">
+        </div>
+        <div id="title">Xiaomi 12 Pro 天玑版</div>
+        <p class="price">3999元起</p>
+        </a>
+       </li>
+
+       <li class="first">
+        <a href="https://www.mi.com/xiaomicivi1s">
+        <div id="MiPhonePicture">
+           <img src="picture/小米civi 1s.jpg">
+        </div>
+        <div id="title">Xiaomi Civi 1S</div>
+        <p class="price">2299元起</p>
+        </a>
+       </li>
+    </ul>
+    </div>
+
+    <div id="RedmiPhoneContainer" v-if="RedmiPhoneContainer"> <!--红米手机界面-->
+        <ul class="children-list">  <!--红米手机的第一个ul放的是红米K50至尊版-->
+            <li class="one">
+             <a href="https://www.mi.com/shop/buy/detail?product_id=16326">
+             <div id="MiPhonePicture">
+                <img src="picture/红米k50 至尊版.jpg">
+             </div>
+             <div id="title">Redmi K50 至尊版</div>
+             <p class="price">2999元起</p>
+             </a>
+            </li>
+       
+            <li class="first">
+               <a href="https://www.mi.com/redminote11t-pro">
+               <div id="MiPhonePicture">
+                  <img src="picture/Redmi Note 11T Pro+.jpg">
+               </div>
+               <div id="title">Redmi Note 11T Pro+</div>
+               <p class="price">1999元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/redminote11t-pro">
+               <div id="MiPhonePicture">
+                  <img src="picture/Redmi Note 11T Pro.jpg">
+               </div>
+               <div id="title">Redmi Note 11T Pro</div>
+               <p class="price">1599元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/redminote11-se">
+               <div id="MiPhonePicture">
+                  <img src="picture/Redmi Note 11SE.jpg">
+               </div>
+               <div id="title">Redmi Note 11SE</div>
+               <p class="price">999元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/redmi10a">
+               <div id="MiPhonePicture">
+                  <img src="picture/Redmi10A.jpg">
+               </div>
+               <div id="title">Redmi10A</div>
+               <p class="price">699元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/redmik50pro">
+               <div id="MiPhonePicture">
+                  <img src="picture/Redmi K50 pro.jpg">
+               </div>
+               <div id="title">Redmi K50 Pro</div>
+               <p class="price">2999元起</p>
+               </a>
+              </li>
+           </ul>
+    </div>
+
+    <div id="MiTvContainer" v-if="MiTvContainer">   <!--小米电视界面-->
+        <ul class="children-list">  <!--小米电视第一个放的是Redmi X55-->
+            <li class="one">
+             <a href="https://www.mi.com/shop/buy/detail?product_id=15100">
+             <div id="MiPhonePicture">
+                <img src="picture/Redmi X55 2022.jpg">
+             </div>
+             <div id="title">Redmi X55 2022</div>
+             <p class="price">2299元起</p>
+             </a>
+            </li>
+       
+            <li class="first">
+               <a href="https://www.mi.com/shop/buy/detail?product_id=15101">
+               <div id="MiPhonePicture">
+                  <img src="picture/Redmi X65 2022.jpg">
+               </div>
+               <div id="title">Redmi X65 2022</div>
+               <p class="price">2999元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/mitv6/65oled">
+               <div id="MiPhonePicture">
+                  <img src="picture/小米电视6 65 OLED 65.jpg">
+               </div>
+               <div id="title">小米电视6 65 OLED 65</div>
+               <p class="price">6699元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/mitv/oled77">
+               <div id="MiPhonePicture">
+                  <img src="picture/小米电视 大师 77 OLED 77.jpg">
+               </div>
+               <div id="title">小米电视 大师 77 OLED 77</div>
+               <p class="price">17999元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/mitv-great/hyaline">
+               <div id="MiPhonePicture">
+                  <img src="picture/小米透明OLED电视 55.jpg">
+               </div>
+               <div id="title">小米透明OLED电视 55</div>
+               <p class="price">49999元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/shop/buy/detail?product_id=12049">
+               <div id="MiPhonePicture">
+                  <img src="picture/小米电视 大师 65英寸OLED.jpg">
+               </div>
+               <div id="title">小米电视 大师 65英寸OLED</div>
+               <p class="price">8999元起</p>
+               </a>
+              </li>
+           </ul>
+    </div>
+
+    <div id="Mibooks" v-if="Mibooks">         <!--小米笔记本-->
+        <ul class="children-list">  <!--小米笔记本第一个放的是红米G-->
+            <li class="one">
+             <a href="https://www.mi.com/shop/buy/detail?product_id=10050002">
+             <div id="MiPhonePicture">
+                <img src="picture/Redmi G Pro 游戏本 2022.jpg">
+             </div>
+             <div id="title">Redmi G Pro 游戏本 2022</div>
+             <p class="price">8999元起</p>
+             </a>
+            </li>
+       
+            <li class="first">
+               <a href="https://www.mi.com/redmibook/2022/amd/redmi-g">
+               <div id="MiPhonePicture">
+                  <img src="picture/Redmi G Pro 游戏本 2022 锐龙版.jpg">
+               </div>
+               <div id="title">Redmi G Pro 游戏本 2022 锐龙版</div>
+               <p class="price">8799元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/shop/buy/detail?product_id=10000420">
+               <div id="MiPhonePicture">
+                  <img src="picture/Xiaomi Book Pro 14 锐龙版.jpg">
+               </div>
+               <div id="title">Xiaomi Book Pro 14 锐龙版</div>
+               <p class="price">6599元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/shop/buy/detail?product_id=10000412">
+               <div id="MiPhonePicture">
+                  <img src="picture/Redmi G 游戏本 2022.jpg">
+               </div>
+               <div id="title">Redmi G 游戏本 2022</div>
+               <p class="price">6299元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/shop/buy/detail?product_id=10000403">
+               <div id="MiPhonePicture">
+                  <img src="picture/Xiaomi Book Pro 14 2022.jpg">
+               </div>
+               <div id="title">Xiaomi Book Pro 14 2022</div>
+               <p class="price">6499元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/shop/buy/detail?product_id=10000404">
+               <div id="MiPhonePicture">
+                  <img src="picture/Xiaomi Book Pro 16 2022.jpg">
+               </div>
+               <div id="title">Xiaomi Book Pro 16 2022</div>
+               <p class="price">7399元起</p>
+               </a>
+              </li>
+           </ul>
+    </div>
+
+    <div id="MiPad" v-if="MiPad">           <!--小米平板-->
+        <ul class="children-list">  <!--小米平板第一个放的是小米平板5-->
+            <li class="one">
+             <a href="https://www.mi.com/xiaomipad5pro-124">
+             <div id="MiPhonePicture">
+                <img src="picture/小米平板5 Pro 12.4.jpg">
+             </div>
+             <div id="title">小米平板5 Pro 12.4</div>
+             <p class="price">2799元起</p>
+             </a>
+            </li>
+       
+            <li class="first">
+               <a href="https://www.mi.com/xiaomipad5">
+               <div id="MiPhonePicture">
+                  <img src="picture/小米平板5.jpg">
+               </div>
+               <div id="title">小米平板5</div>
+               <p class="price">3349元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/xiaomipad5pro5G">
+               <div id="MiPhonePicture">
+                  <img src="picture/小米平板5 Pro 5G.jpg">
+               </div>
+               <div id="title">小米平板5 Pro 5G</div>
+               <p class="price">6599元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/xiaomipad5pro">
+               <div id="MiPhonePicture">
+                  <img src="picture/小米平板5 Pro.jpg">
+               </div>
+               <div id="title">小米平板5 Pro</div>
+               <p class="price">2299元起</p>
+               </a>
+              </li>
+           </ul>
+    </div>
+
+    <div id="Mihomehold" v-if="Mihomehold">       <!--小米家电-->
+        <ul class="children-list">  <!--小米家电第一个放的是空调-->
+            <li class="one">
+             <a href="https://www.mi.com/shop/buy/detail?product_id=13607">
+             <div id="MiPhonePicture">
+                <img src="picture/巨省电  米家空调 1.5匹 新1级能效 睡眠版.jpg">
+             </div>
+             <div id="title">巨省电  米家空调 1.5匹 新1级能效 睡眠版</div>
+             <p class="price">2199元起</p>
+             </a>
+            </li>
+       
+            <li class="first">
+               <a href="https://www.mi.com/shop/buy/detail?product_id=14306">
+               <div id="MiPhonePicture">
+                  <img src="picture/巨省电 新1级立式3匹（鎏金款）.jpg">
+               </div>
+               <div id="title">巨省电 新1级立式3匹（鎏金款）</div>
+               <p class="price">5099元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/shop/buy/detail?product_id=12961">
+               <div id="MiPhonePicture">
+                  <img src="picture/米家扫拖机器人 1T.jpg">
+               </div>
+               <div id="title">米家扫拖机器人 1T</div>
+               <p class="price">999元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/washer-dryer-10">
+               <div id="MiPhonePicture">
+                  <img src="picture/米家互联网洗烘一体机.jpg">
+               </div>
+               <div id="title">米家互联网洗烘一体机</div>
+               <p class="price">1499元起</p>
+               </a>
+              </li>
+
+              <li class="first">
+                <a href="https://www.mi.com/shop/buy/detail?product_id=9509">
+                <div id="MiPhonePicture">
+                   <img src="picture/Redmi全自动波轮洗衣机1A 8kg.jpg">
+                </div>
+                <div id="title">Redmi全自动波轮洗衣机1A 8kg</div>
+                <p class="price">599元起</p>
+                </a>
+               </li>
+           </ul>
+    </div>
+
+    <div id="MiWifi" v-if="MiWifi">           <!--小米路由器-->
+        <ul class="children-list">  <!--小米家电第一个放的是空调-->
+            <li class="one">
+             <a href="https://www.mi.com/rm5400">
+             <div id="MiPhonePicture">
+                <img src="picture/Redmi电竞路由器AX5400.jpg">
+             </div>
+             <div id="title">Redmi电竞路由器AX5400</div>
+             <p class="price">599元起</p>
+             </a>
+            </li>
+       
+            <li class="first">
+               <a href="https://www.mi.com/r6000">
+               <div id="MiPhonePicture">
+                  <img src="picture/小米路由器AX6000.jpg">
+               </div>
+               <div id="title">小米路由器AX6000</div>
+               <p class="price">549元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/shop/buy/detail?product_id=13877">
+               <div id="MiPhonePicture">
+                  <img src="picture/小米路由器AX9000.jpg">
+               </div>
+               <div id="title">小米路由器AX9000</div>
+               <p class="price">1299元起</p>
+               </a>
+              </li>
+       
+              <li class="first">
+               <a href="https://www.mi.com/miwifihome">
+               <div id="MiPhonePicture">
+                  <img src="picture/Xiaomi HomeWiFi 三频 Mesh 路由器.jpg">
+               </div>
+               <div id="title">Xiaomi HomeWiFi 三频 Mesh 路由器</div>
+               <p class="price">1499元起</p>
+               </a>
+              </li>
+
+              <li class="first">
+                <a href="https://www.mi.com/miwifi4ac">
+                <div id="MiPhonePicture">
+                   <img src="picture/小米路由器4A 千兆版.jpg">
+                </div>
+                <div id="title">小米路由器4A 千兆版</div>
+                <p class="price">129元起</p>
+                </a>
+               </li>
+
+               
+              <li class="first">
+                <a href="https://www.mi.com/shop/search?keyword=%E8%B7%AF%E7%94%B1">
+                <div id="MiPhonePicture">
+                   <img src="picture/查看全部小米路由器.jpg">
+                </div>
+                <div id="title">查看全部<br/>小米路由器</div>
+                <p class="price"></p>
+                </a>
+               </li>
+           </ul>
+    </div>
+
+</div>
+    </div>
+</div>
+
+<div id="MiMiddle" v-on:mouseover="MiMiddle">         <!--小米中间部分-->
+
+<div id="MiDetails">                                  <!--小米产品分类页面-->
+
+   <ul id="MiDetailsUl">
+        <li id="MiDetailsUlLi" @mouseover="MovePhone">        <!--鼠标移入手机分类事件-->             
+        <a href="javascript:;" id="MiDetailsUlLiA">
+                手机
+        </a>
+        <img id="MiDetailsUlLiImg" src="picture/箭头_列表向右(1).png">
+        </li>
+
+        <li id="MiDetailsUlLi" @mouseover="MoveTV">                     <!--鼠标移入电视分类事件-->    
+            <a href="javascript:;" id="MiDetailsUlLiA">
+                电视
+            </a>
+            <img id="MiDetailsUlLiImg" src="picture/箭头_列表向右(1).png">
+        </li>
+
+        <li id="MiDetailsUlLi" @mouseover="MovePad">                      <!--鼠标移入平板分类事件-->   
+            <a href="javascript:;" id="MiDetailsUlLiA">
+                笔记本&nbsp;平板
+            </a>
+            <img id="MiDetailsUlLiImg" src="picture/箭头_列表向右(1).png">
+        </li>
+
+        <li id="MiDetailsUlLi" @mouseover="MoveWatch">                      <!--鼠标移入手表分类事件-->   
+            <a href="javascript:;" id="MiDetailsUlLiA">
+                出行&nbsp;穿戴
+            </a>
+            <img id="MiDetailsUlLiImg" src="picture/箭头_列表向右(1).png">
+        </li>
+
+        <li id="MiDetailsUlLi" @mouseover="MoveSound" >                         <!--鼠标移入音箱分类事件-->   
+            <a href="javascript:;" id="MiDetailsUlLiA">
+                耳机&nbsp音箱
+            </a>
+            <img id="MiDetailsUlLiImg" src="picture/箭头_列表向右(1).png">
+        </li>
+
+        <li id="MiDetailsUlLi" @mouseover="MoveHomeHold">                     <!--鼠标移入HomeHold分类事件--> 
+            <a href="javascript:;" id="MiDetailsUlLiA">
+                家电
+            </a>
+            <img id="MiDetailsUlLiImg" src="picture/箭头_列表向右(1).png">
+        </li>
+
+        <li id="MiDetailsUlLi" @mouseover="MoveWIFI">                      <!--鼠标移入WIFI分类事件--> 
+            <a href="javascript:;" id="MiDetailsUlLiA">
+                智能&nbsp;路由器
+            </a>
+            <img id="MiDetailsUlLiImg" src="picture/箭头_列表向右(1).png">
+        </li>
+
+        <li id="MiDetailsUlLi" @mouseover="MoveBattery">                      <!--鼠标移入电源分类事件--> 
+            <a href="javascript:;" id="MiDetailsUlLiA">
+                电源&nbsp;配件
+            </a>
+            <img id="MiDetailsUlLiImg" src="picture/箭头_列表向右(1).png">
+        </li>
+
+        <li id="MiDetailsUlLi" @mouseover="MoveBaby">                 <!--鼠标移入儿童分类事件-->      
+            <a href="javascript:;" id="MiDetailsUlLiA">
+                健康&nbsp;儿童
+            </a>
+            <img id="MiDetailsUlLiImg" src="picture/箭头_列表向右(1).png">
+        </li>
+
+        <li id="MiDetailsUlLi" @mouseover="MoveLife">                       <!--鼠标移入生活分类事件-->   
+            <a href="javascript:;" id="MiDetailsUlLiA">
+                生活&nbsp;箱包
+            </a>
+            <img id="MiDetailsUlLiImg" src="picture/箭头_列表向右(1).png">
+        </li>
+   </ul>
+
+
+
+</div>
+
+<div id="MiLoopPicture">                              <!--小米产品轮播图-->
+    <a v-bind:href="Mihref[Mihrefnum]">
+        <img v-bind:src="LoopPicture[LoopPicturenum]" @mouseover="MoveImg">
+    </a>
+    <div id="MiLoopPictureLeft">
+        <img v-bind:src="left"  @mouseover="MiLoopPictureLeft" @mouseout="MoveLeft" @click="LeftDown">
+    </div>
+
+    <div id="MiLoopPictureRight">
+        <img v-bind:src="right" @mouseover="MiLoopPictureRight" @mouseout="MoveRight" @click="RightDown">
+    </div>
+</div>
+
+<div id="MiPhoneClassification">                      <!--小米产品分类详情-->
+    <div id="Phone" v-if="Phone">                                  <!--手机分类-->
+        <ul id="Phone-one-list">
+              <li id="Phone-one-list-li">
+                   <a id="Phone-one-list-li-a" href="https://www.mi.com/xiaomimixfold2">
+                        <img id="Phone-one-list-li-a-img" src="MiPhone/Xiaomi Mix Fold 2.jpg" height="40" width="40">
+                        <span id="Phone-one-list-li-a-span">Xiaomi Mix Fold 2</span>
+                   </a>
+              </li>
+
+              <li id="Phone-one-list-li">
+                <a id="Phone-one-list-li-a" href="https://www.mi.com/shop/buy/detail?product_id=16326">
+                     <img id="Phone-one-list-li-a-img" src="MiPhone/Redmi K50 至尊版.jpg" height="40" width="40">
+                     <span id="Phone-one-list-li-a-span">Redmi K50 至尊版</span>
+                </a>
+           </li>
+
+              <li id="Phone-one-list-li">
+                <a id="Phone-one-list-li-a" href="https://www.mi.com/mi12s-ultra">
+                    <img id="Phone-one-list-li-a-img" src="MiPhone/Xiaomi 12S Ultra.jpg" height="40" width="40">
+                    <span id="Phone-one-list-li-a-span">Xiaomi 12S Ultra</span>
+                </a>
+            </li>
+
+             <li id="Phone-one-list-li">
+                <a id="Phone-one-list-li-a" href="https://www.mi.com/mi12s-pro">
+                    <img id="Phone-one-list-li-a-img" src="MiPhone/Xiaomi 12S Pro.jpg" height="40" width="40">
+                    <span id="Phone-one-list-li-a-span">Xiaomi 12S Pro</span>
+                </a>
+            </li>
+
+            <li id="Phone-one-list-li">
+                <a id="Phone-one-list-li-a" href="https://www.mi.com/mi12s">
+                    <img id="Phone-one-list-li-a-img" src="MiPhone/Xiaomi 12S.jpg" height="40" width="40">
+                    <span id="Phone-one-list-li-a-span">Xiaomi 12S</span>
+                </a>
+            </li>
+
+            <li id="Phone-one-list-li">
+                <a id="Phone-one-list-li-a" href="https://www.mi.com/mi12pro-dimensity">
+                    <img id="Phone-one-list-li-a-img" src="MiPhone/Xiaomi 12 Pro 天玑版.jpg" height="40" width="40">
+                    <span id="Phone-one-list-li-a-span">Xiaomi 12 Pro 天玑版</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul id="Phone-two-list">
+            <li id="Phone-two-list-li">
+                <a id="Phone-two-list-li-a" href="https://www.mi.com/redminote11t-pro">
+                     <img id="Phone-two-list-li-a-img" src="MiPhone/Note 11T Pro+.jpg" height="40" width="40">
+                     <span id="Phone-two-list-li-a-span">Note 11T Pro+</span>
+                </a>
+           </li>
+
+           <li id="Phone-two-list-li">
+            <a id="Phone-two-list-li-a" href="https://www.mi.com/redminote11t-pro">
+                 <img id="Phone-two-list-li-a-img" src="MiPhone/Note 11T Pro.jpg" height="40" width="40">
+                 <span id="Phone-two-list-li-a-span">Note 11T Pro</span>
+            </a>
+            </li>
+
+          <li id="Phone-two-list-li">
+             <a id="Phone-two-list-li-a" href="https://www.mi.com/redminote11-se">
+                <img id="Phone-two-list-li-a-img" src="MiPhone/Note 11SE.jpg" height="40" width="40">
+               <span id="Phone-two-list-li-a-span">Note 11SE</span>
+            </a>
+         </li>  
+
+        <li id="Phone-two-list-li">
+              <a id="Phone-two-list-li-a" href="https://www.mi.com/xiaomicivi1s">
+                <img id="Phone-two-list-li-a-img" src="MiPhone/Xiaomi Civi 1S.jpg" height="40" width="40">
+                <span id="Phone-two-list-li-a-span">Xiaomi Civi 1S</span>
+             </a>
+        </li>        
+
+        <li id="Phone-two-list-li">
+            <a id="Phone-two-list-li-a" href="https://www.mi.com/blackshark5pro">
+                <img id="Phone-two-list-li-a-img" src="MiPhone/黑鲨5 Pro.jpg" height="40" width="40">
+                <span id="Phone-two-list-li-a-span">黑鲨5 Pro</span>
+            </a>
+        </li>
+
+        <li id="Phone-two-list-li">
+            <a id="Phone-two-list-li-a" href="https://www.mi.com/blackshark5">
+                <img id="Phone-two-list-li-a-img" src="MiPhone/黑鲨5.jpg" height="40" width="40">
+                <span id="Phone-two-list-li-a-span">黑鲨5</span>
+            </a>
+        </li>
+        </ul>
+
+        <ul id="Phone-three-list">
+            <li id="Phone-three-list-li">
+                <a id="Phone-three-list-li-a" href="https://www.mi.com/redmi10a">
+                     <img id="Phone-three-list-li-a-img" src="MiPhone/Redmi 10A.jpg" height="40" width="40">
+                     <span id="Phone-three-list-li-a-span">Redmi 10A</span>
+                </a>
+           </li>
+
+           <li id="Phone-three-list-li">
+                <a id="Phone-three-list-li-a" href="https://www.mi.com/redmik50pro">
+                     <img id="Phone-three-list-li-a-img" src="MiPhone/Redmi K50 Pro.jpg" height="40" width="40">
+                     <span id="Phone-three-list-li-a-span">Redmi K50 Pro</span>
+                </a>
+           </li>
+
+           <li id="Phone-three-list-li">
+                <a id="Phone-three-list-li-a" href="https://www.mi.com/redmik50">
+                     <img id="Phone-three-list-li-a-img" src="MiPhone/Redmi K50.jpg" height="40" width="40">
+                     <span id="Phone-three-list-li-a-span">Redmi K50</span>
+                </a>
+           </li>
+
+           <li id="Phone-three-list-li">
+                <a id="Phone-three-list-li-a" href="https://www.mi.com/redmik40s">
+                     <img id="Phone-three-list-li-a-img" src="MiPhone/Redmi K40S.jpg" height="40" width="40">
+                     <span id="Phone-three-list-li-a-span">Redmi K40S</span>
+                </a>
+           </li>
+
+           <li id="Phone-three-list-li">
+                <a id="Phone-three-list-li-a" href="https://www.mi.com/redmik50g">
+                     <img id="Phone-three-list-li-a-img" src="MiPhone/Redmi K50  电竞版.jpg" height="40" width="40">
+                     <span id="Phone-three-list-li-a-span">Redmi K50 电竞版</span>
+                </a>
+           </li>
+
+           <li id="Phone-three-list-li">
+                <a id="Phone-three-list-li-a" href="https://www.mi.com/mi12pro">
+                     <img id="Phone-three-list-li-a-img" src="MiPhone/Xiaomi 12 Pro.jpg" height="40" width="40">
+                     <span id="Phone-three-list-li-a-span">Xiaomi 12 Pro</span>
+                </a>
+           </li>
+        </ul>
+        
+        <ul id="Phone-four-list">
+            <li id="Phone-four-list-li">
+                <a id="Phone-four-list-li-a" href="https://www.mi.com/mi12">
+                     <img id="Phone-four-list-li-a-img" src="MiPhone/Xiaomi 12.jpg" height="40" width="40">
+                     <span id="Phone-four-list-li-a-span">Xiaomi 12</span>
+                </a>
+           </li>
+
+            <li id="Phone-four-list-li">
+                <a id="Phone-four-list-li-a" href="https://www.mi.com/mi12x">
+                     <img id="Phone-four-list-li-a-img" src="MiPhone/Xiaomi 12X.jpg" height="40" width="40">
+                     <span id="Phone-four-list-li-a-span">Xiaomi 12X</span>
+                </a>
+           </li>
+
+            <li id="Phone-four-list-li">
+                <a id="Phone-four-list-li-a" href="https://www.mi.com/mi11le-5g-ne">
+                     <img id="Phone-four-list-li-a-img" src="MiPhone/Xiaomi 11 青春活力版.jpg" height="40" width="40">
+                     <span id="Phone-four-list-li-a-span">Xiaomi 11 青春活力版</span>
+                </a>
+           </li>
+
+            <li id="Phone-four-list-li">
+                <a id="Phone-four-list-li-a" href="https://www.mi.com/redminote11pro">
+                     <img id="Phone-four-list-li-a-img" src="MiPhone/Note 11 Pro 系列.jpg" height="40" width="40">
+                     <span id="Phone-four-list-li-a-span">Note 11 Pro 系列</span>
+                </a>
+           </li>
+
+            <li id="Phone-four-list-li">
+                <a id="Phone-four-list-li-a" href="https://www.mi.com/redminote11-4g">
+                     <img id="Phone-four-list-li-a-img" src="MiPhone/Note 11 4G .jpg" height="40" width="40">
+                     <span id="Phone-four-list-li-a-span">Note 11 4G</span>
+                </a>
+           </li>
+
+            <li id="Phone-four-list-li">
+                <a id="Phone-four-list-li-a" href="https://www.mi.com/redminote11">
+                     <img id="Phone-four-list-li-a-img" src="MiPhone/Note 11 5G .jpg" height="40" width="40">
+                     <span id="Phone-four-list-li-a-span">Note 11 5G</span>
+                </a>
+           </li>
+
+        </ul>
+
+    </div>
+
+    <div id="TV" v-if="TV">                                     <!--电视分类-->
+        <ul id="TV-one-list">
+            <li id="TV-one-list-li">
+                 <a id="TV-one-list-li-a" href="https://www.mi.com/shop/buy?product_id=15101">
+                      <img id="TV-one-list-li-a-img" src="TV/Redmi X65 2022款.jpg" height="40" width="40">
+                      <span id="TV-one-list-li-a-span">Redmi X65 2022款</span>
+                 </a>
+            </li>
+
+             <li id="TV-one-list-li">
+                 <a id="TV-one-list-li-a" href="https://www.mi.com/shop/buy?product_id=15502">
+                      <img id="TV-one-list-li-a-img" src="TV/小米拍拍4K高清投屏器.jpg" height="40" width="40">
+                      <span id="TV-one-list-li-a-span">小米拍拍4K高清投屏器</span>
+                 </a>
+            </li>
+
+            <li id="TV-one-list-li">
+                <a id="TV-one-list-li-a" href="https://www.mi.com/shop/buy?product_id=15100">
+                     <img id="TV-one-list-li-a-img" src="TV/Redmi X55 2022款.jpg" height="40" width="40">
+                     <span id="TV-one-list-li-a-span">Redmi X55 2022款</span>
+                </a>
+           </li>
+
+            <li id="TV-one-list-li">
+                 <a id="TV-one-list-li-a" href="https://www.mi.com/mitv6/55oled">
+                      <img id="TV-one-list-li-a-img" src="TV/小米电视6 55“ OLED.jpg" height="40" width="40">
+                      <span id="TV-one-list-li-a-span">小米电视6 55“ OLED</span>
+                 </a>
+            </li>
+
+            <li id="TV-one-list-li">
+                <a id="TV-one-list-li-a" href="https://www.mi.com/mitv6/65oled">
+                     <img id="TV-one-list-li-a-img" src="TV/小米电视6 65“ OLED.jpg" height="40" width="40">
+                     <span id="TV-one-list-li-a-span">小米电视6 65“ OLED</span>
+                </a>
+           </li>
+
+            <li id="TV-one-list-li">
+                 <a id="TV-one-list-li-a" href="https://www.mi.com/mitv/oled77">
+                      <img id="TV-one-list-li-a-img" src="TV/小米电视 大师 77” OLED.jpg" height="40" width="40">
+                      <span id="TV-one-list-li-a-span">小米电视 大师 77” OLED</span>
+                 </a>
+            </li>
+        </ul>
+
+        <ul id="TV-two-list">
+            <li id="TV-two-list-li">
+                <a id="TV-two-list-li-a" href="https://www.mi.com/mitv6/55">
+                     <img id="TV-two-list-li-a-img" src="TV/小米电视6.jpg" height="40" width="40">
+                     <span id="TV-two-list-li-a-span">小米电视6 至尊版 55 英寸</span>
+                </a>
+           </li>
+
+           <li id="TV-two-list-li">
+                <a id="TV-two-list-li-a" href="https://www.mi.com/mitv6/65">
+                     <img id="TV-two-list-li-a-img" src="TV/小米电视6.jpg" height="40" width="40">
+                     <span id="TV-two-list-li-a-span">小米电视6 至尊版 65 英寸</span>
+                </a>
+           </li>
+
+           <li id="TV-two-list-li">
+                <a id="TV-two-list-li-a" href="https://www.mi.com/mitv6/75">
+                     <img id="TV-two-list-li-a-img" src="TV/小米电视6.jpg" height="40" width="40">
+                     <span id="TV-two-list-li-a-span">小米电视6 至尊版 75 英寸</span>
+                </a>
+           </li>
+
+           <li id="TV-two-list-li">
+                <a id="TV-two-list-li-a" href="https://www.mi.com/mitv/es43">
+                     <img id="TV-two-list-li-a-img" src="TV/小米电视ES.jpg" height="40" width="40">
+                     <span id="TV-two-list-li-a-span">小米电视 ES43 2022款</span>
+                </a>
+           </li>
+
+           <li id="TV-two-list-li">
+                <a id="TV-two-list-li-a" href="https://www.mi.com/mitv/es55">
+                     <img id="TV-two-list-li-a-img" src="TV/小米电视ES.jpg" height="40" width="40">
+                     <span id="TV-two-list-li-a-span">小米电视 ES55 2022款</span>
+                </a>
+           </li>
+
+           <li id="TV-two-list-li">
+                <a id="TV-two-list-li-a" href="https://www.mi.com/mitv/es65">
+                     <img id="TV-two-list-li-a-img" src="TV/小米电视ES.jpg" height="40" width="40">
+                     <span id="TV-two-list-li-a-span">小米电视 ES65 2022款</span>
+                </a>
+           </li>
+        </ul>
+
+        <ul id="TV-three-list">
+            <li id="TV-three-list-li">
+                <a id="TV-three-list-li-a" href="https://www.mi.com/mitv/es75">
+                     <img id="TV-three-list-li-a-img" src="TV/小米电视 ES75 2022款.jpg" height="40" width="40">
+                     <span id="TV-three-list-li-a-span">小米电视 ES75 2022款</span>
+                </a>
+           </li>
+
+           <li id="TV-three-list-li">
+                <a id="TV-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%85%A8%E9%9D%A2%E5%B1%8F%E7%94%B5%E8%A7%86Pro">
+                     <img id="TV-three-list-li-a-img" src="TV/金属全面屏电视.jpg" height="40" width="40">
+                     <span id="TV-three-list-li-a-span">金属全面屏电视</span>
+                </a>
+           </li>
+
+           <li id="TV-three-list-li">
+                <a id="TV-three-list-li-a" href="https://www.mi.com/shop/buy?product_id=12049">
+                     <img id="TV-three-list-li-a-img" src="TV/大师电视65 英寸OLED (1).jpg" height="40" width="40">
+                     <span id="TV-three-list-li-a-span">大师电视65 英寸OLED</span>
+                </a>
+           </li>
+
+           <li id="TV-three-list-li">
+                <a id="TV-three-list-li-a" href="https://www.mi.com/shop/buy?product_id=11843">
+                     <img id="TV-three-list-li-a-img" src="TV/小米电视4A 60英寸.jpg" height="40" width="40">
+                     <span id="TV-three-list-li-a-span">小米电视4A 60英寸</span>
+                </a>
+           </li>
+
+           <li id="TV-three-list-li">
+                <a id="TV-three-list-li-a" href="https://www.mi.com/shop/buy?product_id=12158">
+                     <img id="TV-three-list-li-a-img" src="TV/Redmi 智能电视 X55.jpg" height="40" width="40">
+                     <span id="TV-three-list-li-a-span">Redmi 智能电视 X55</span>
+                </a>
+           </li>
+
+           <li id="TV-three-list-li">
+                <a id="TV-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%85%A8%E9%9D%A2%E5%B1%8F%E7%94%B5%E8%A7%86">
+                     <img id="TV-three-list-li-a-img" src="TV/小米全面屏电视.jpg" height="40"  width="40">
+                     <span id="TV-three-list-li-a-span">小米全面屏电视</span>
+                </a>
+           </li>
+        </ul>
+
+        <ul id="TV-four-list">
+            <li id="TV-four-list-li">
+                <a id="TV-four-list-li-a" href="https://www.mi.com/shop/buy?product_id=11345">
+                     <img id="TV-four-list-li-a-img" src="TV/米家激光投影仪.jpg" height="40" width="40">
+                     <span id="TV-four-list-li-a-span">米家激光投影仪</span>
+                </a>
+           </li>
+
+           <li id="TV-four-list-li">
+                <a id="TV-four-list-li-a" href="https://www.mi.com/redmitv/98">
+                     <img id="TV-four-list-li-a-img" src="TV/Redmi MAX 98英寸.jpg" height="40" width="40">
+                     <span id="TV-four-list-li-a-span">Redmi MAX 98英寸</span>
+                </a>
+           </li>
+
+           <li id="TV-four-list-li">
+                <a id="TV-four-list-li-a" href="https://www.mi.com/mitv5/75/">
+                     <img id="TV-four-list-li-a-img" src="TV/小米电视5 75英寸.jpg" height="40" width="40">
+                     <span id="TV-four-list-li-a-span">小米电视5 75英寸</span>
+                </a>
+           </li>
+
+           <li id="TV-four-list-li">
+                <a id="TV-four-list-li-a" href="https://www.mi.com/shop/buy?product_id=10764">
+                     <img id="TV-four-list-li-a-img" src="TV/小米电视4A 70英寸.jpg" height="40" width="40">
+                     <span id="TV-four-list-li-a-span">小米电视4A 70英寸</span>
+                </a>
+           </li>
+
+           <li id="TV-four-list-li">
+                <a id="TV-four-list-li-a" href="https://www.mi.com/shop/buy?product_id=8993">
+                     <img id="TV-four-list-li-a-img" src="TV/小米电视4S 75英寸.jpg" height="40" width="40">
+                     <span id="TV-four-list-li-a-span">小米电视4S 75英寸.jpg</span>
+                </a>
+           </li>
+
+           <li id="TV-four-list-li">
+                <a id="TV-four-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%BF%80%E5%85%89%E6%8A%95%E5%BD%B1">
+                     <img id="TV-four-list-li-a-img" src="TV/激光投影电视.jpg" height="40" width="40">
+                     <span id="TV-four-list-li-a-span">激光投影电视</span>
+                </a>
+           </li>
+        </ul>
+    </div>
+
+    <div id="Pad" v-if="Pad">                                    <!--平板分类-->
+        <ul id="Pad-one-list">
+            <li id="Pad-one-list-li">
+                 <a id="Pad-one-list-li-a" href="https://www.mi.com/redmibook/prointel-g">
+                      <img id="Pad-one-list-li-a-img" src="PadandBook/Redmi G Pro 游戏本.jpg" height="40" width="40">
+                      <span id="Pad-one-list-li-a-span">Redmi G Pro 游戏本</span>
+                 </a>
+            </li>
+
+            <li id="Pad-one-list-li">
+                <a id="Pad-one-list-li-a" href="https://www.mi.com/redmibook/2022/amd/redmi-g">
+                     <img id="Pad-one-list-li-a-img" src="PadandBook/Redmi G Pro 游戏本 2022 锐龙版.jpg" height="40" width="40">
+                     <span id="Pad-one-list-li-a-span">Redmi G Pro 游戏本 2022 锐龙版</span>
+                </a>
+           </li>
+
+           <li id="Pad-one-list-li">
+                 <a id="Pad-one-list-li-a" href="https://www.mi.com/xiaomipad5pro-124">
+                      <img id="Pad-one-list-li-a-img" src="PadandBook/小米平板5 Pro 12.4.jpg" height="40" width="40">
+                      <span id="Pad-one-list-li-a-span">小米平板5 Pro 12.4</span>
+                 </a>
+            </li>
+
+            <li id="Pad-one-list-li">
+                 <a id="Pad-one-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000412">
+                      <img id="Pad-one-list-li-a-img" src="PadandBook/Redmi G 游戏本 2022.jpg" height="40" width="40">
+                      <span id="Pad-one-list-li-a-span">Redmi G 游戏本 2022</span>
+                 </a>
+            </li>
+
+            <li id="Pad-one-list-li">
+                 <a id="Pad-one-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000376">
+                      <img id="Pad-one-list-li-a-img" src="PadandBook/Redmi Book Pro 14 2022.jpg" height="40" width="40">
+                      <span id="Pad-one-list-li-a-span">Redmi Book Pro 14 2022</span>
+                 </a>
+            </li>
+
+            <li id="Pad-one-list-li">
+                 <a id="Pad-one-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000377">
+                      <img id="Pad-one-list-li-a-img" src="PadandBook/Redmi Book Pro 15 2022.jpg" height="40" width="40">
+                      <span id="Pad-one-list-li-a-span">Redmi Book Pro 15 2022</span>
+                 </a>
+            </li>
+        </ul>
+
+        <ul id="Pad-two-list">
+            <li id="Pad-two-list-li">
+                <a id="Pad-two-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000321">
+                     <img id="Pad-two-list-li-a-img" src="PadandBook/RedmiBook Pro 14 增强版.jpg" height="40" width="40">
+                     <span id="Pad-two-list-li-a-span">RedmiBook Pro 14 增强版</span>
+                </a>
+           </li>
+
+           <li id="Pad-two-list-li">
+                <a id="Pad-two-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000361">
+                     <img id="Pad-two-list-li-a-img" src="PadandBook/小米笔记本 Pro 14 锐龙版.jpg" height="40" width="40">
+                     <span id="Pad-two-list-li-a-span">小米笔记本 Pro 14 锐龙版</span>
+                </a>
+           </li>
+
+           <li id="Pad-two-list-li">
+                <a id="Pad-two-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000320">
+                     <img id="Pad-two-list-li-a-img" src="PadandBook/RedmiBook Pro 15 增强版.jpg" height="40" width="40">
+                     <span id="Pad-two-list-li-a-span">RedmiBook Pro 15 增强版</span>
+                </a>
+           </li>
+
+           <li id="Pad-two-list-li">
+                <a id="Pad-two-list-li-a" href="https://www.mi.com/mibook/14prox">
+                     <img id="Pad-two-list-li-a-img" src="PadandBook/小米笔记本 Pro X 14.jpg" height="40" width="40">
+                     <span id="Pad-two-list-li-a-span">小米笔记本 Pro X 14</span>
+                </a>
+           </li>
+
+           <li id="Pad-two-list-li">
+                <a id="Pad-two-list-li-a" href="https://www.mi.com/redmibook/game-intel">
+                     <img id="Pad-two-list-li-a-img" src="PadandBook/Redmi G 2021 Intel版.jpg" height="40" width="40">
+                     <span id="Pad-two-list-li-a-span">Redmi G 2021 Intel版</span>
+                </a>
+           </li>
+
+           <li id="Pad-two-list-li">
+                <a id="Pad-two-list-li-a" href="https://www.mi.com/redmibook/game-amd">
+                     <img id="Pad-two-list-li-a-img" src="PadandBook/Redmi G 2021 AMD版.jpg" height="40" width="40">
+                     <span id="Pad-two-list-li-a-span">Redmi G 2021 AMD版</span>
+                </a>
+           </li>
+        </ul>
+
+        <ul id="Pad-three-list">
+            <li id="Pad-three-list-li">
+                <a id="Pad-three-list-li-a" href="https://www.mi.com/xiaomipad5">
+                     <img id="Pad-three-list-li-a-img" src="PadandBook/小米平板5.jpg" height="40" width="40">
+                     <span id="Pad-three-list-li-a-span">小米平板5</span>
+                </a>
+           </li>
+
+            <li id="Pad-three-list-li">
+                <a id="Pad-three-list-li-a" href="https://www.mi.com/xiaomipad5pro">
+                     <img id="Pad-three-list-li-a-img" src="PadandBook/小米平板5 Pro.jpg" height="40" width="40">
+                     <span id="Pad-three-list-li-a-span">小米平板5 Pro</span>
+                </a>
+           </li>
+
+            <li id="Pad-three-list-li">
+                <a id="Pad-three-list-li-a" href="https://www.mi.com/xiaomipad5pro5G">
+                     <img id="Pad-three-list-li-a-img" src="PadandBook/小米平板5 Pro 5G.jpg" height="40" width="40">
+                     <span id="Pad-three-list-li-a-span">小米平板5 Pro 5G</span>
+                </a>
+           </li>
+
+            <li id="Pad-three-list-li">
+                <a id="Pad-three-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000319">
+                     <img id="Pad-three-list-li-a-img" src="PadandBook/小米笔记本 Pro 14 增强版.jpg" height="40" width="40">
+                     <span id="Pad-three-list-li-a-span">小米笔记本 Pro 14 增强版</span>
+                </a>
+           </li>
+
+            <li id="Pad-three-list-li">
+                <a id="Pad-three-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000318">
+                     <img id="Pad-three-list-li-a-img" src="PadandBook/小米笔记本 Pro 14 增强版.jpg" height="40" width="40">
+                     <span id="Pad-three-list-li-a-span">小米笔记本 Pro 14 增强版</span>
+                </a>
+           </li>
+
+            <li id="Pad-three-list-li">
+                <a id="Pad-three-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000301">
+                     <img id="Pad-three-list-li-a-img" src="PadandBook/小米笔记本 Pro X 15.jpg" height="40" width="40">
+                     <span id="Pad-three-list-li-a-span">小米笔记本 Pro X 15</span>
+                </a>
+           </li>
+
+
+           
+        </ul>
+
+        <ul id="Pad-four-list">
+            <li id="Pad-four-list-li">
+                <a id="Pad-four-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000297">
+                     <img id="Pad-four-list-li-a-img" src="PadandBook/RedmiBook Pro 14 锐龙版.jpg" height="40" width="40">
+                     <span id="Pad-four-list-li-a-span">RedmiBook Pro 14 锐龙版</span>
+                </a>
+           </li>
+
+           <li id="Pad-four-list-li">
+                <a id="Pad-four-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000298">
+                     <img id="Pad-four-list-li-a-img" src="PadandBook/RedmiBook Pro 15 锐龙版.jpg" height="40" width="40">
+                     <span id="Pad-four-list-li-a-span">RedmiBook Pro 15 锐龙版</span>
+                </a>
+           </li>
+
+           <li id="Pad-four-list-li">
+                <a id="Pad-four-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000299">
+                     <img id="Pad-four-list-li-a-img" src="PadandBook/小米笔记本 Pro 15 锐龙版.jpg" height="40" width="40">
+                     <span id="Pad-four-list-li-a-span">小米笔记本 Pro 15 锐龙版</span>
+                </a>
+           </li>
+
+           <li id="Pad-four-list-li">
+                <a id="Pad-four-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000284">
+                     <img id="Pad-four-list-li-a-img" src="PadandBook/小米笔记本Pro 15.jpg" height="40" width="40">
+                     <span id="Pad-four-list-li-a-span">小米笔记本Pro 15</span>
+                </a>
+           </li>
+
+           <li id="Pad-four-list-li">
+                <a id="Pad-four-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000285">
+                     <img id="Pad-four-list-li-a-img" src="PadandBook/小米笔记本Pro 14.jpg" height="40" width="40">
+                     <span id="Pad-four-list-li-a-span">小米笔记本Pro 14</span>
+                </a>
+           </li>
+
+           <li id="Pad-four-list-li">
+                <a id="Pad-four-list-li-a" href="https://www.mi.com/shop/buy?product_id=10000253">
+                     <img id="Pad-four-list-li-a-img" src="PadandBook/RedmiBook Air 13.jpg" height="40" width="40">
+                     <span id="Pad-four-list-li-a-span">RedmiBook Air 13</span>
+                </a>
+           </li>
+        </ul>
+    </div>
+
+    <div id="Watch" v-if="Watch">                                  <!--手表分类-->
+        <ul id="Watch-one-list">
+            <li id="Watch-one-list-li">
+                 <a id="Watch-one-list-li-a" href="https://www.mi.com/xiaomiwatchs1pro">
+                      <img id="Watch-one-list-li-a-img" src="Watch/Xiaomi Watch S1 Pro.jpg" height="40" width="40">
+                      <span id="Watch-one-list-li-a-span">Xiaomi Watch S1 Pro</span>
+                 </a>
+            </li>
+
+            <li id="Watch-one-list-li">
+                 <a id="Watch-one-list-li-a" href="https://www.mi.com/shouhuan7pro">
+                      <img id="Watch-one-list-li-a-img" src="Watch/小米手环7 Pro.jpg" height="40" width="40">
+                      <span id="Watch-one-list-li-a-span">小米手环7 Pro</span>
+                 </a>
+            </li>
+
+            <li id="Watch-one-list-li">
+                 <a id="Watch-one-list-li-a" href="https://www.mi.com/shouhuan7nfc">
+                      <img id="Watch-one-list-li-a-img" src="Watch/小米手环7 NFC版.jpg" height="40" width="40">
+                      <span id="Watch-one-list-li-a-span">小米手环7 NFC版</span>
+                 </a>
+            </li>
+
+            <li id="Watch-one-list-li">
+                 <a id="Watch-one-list-li-a" href="https://www.mi.com/shouhuan7">
+                      <img id="Watch-one-list-li-a-img" src="Watch/小米手环7.jpg" height="40" width="40">
+                      <span id="Watch-one-list-li-a-span">小米手环7</span>
+                 </a>
+            </li>
+
+            <li id="Watch-one-list-li">
+                 <a id="Watch-one-list-li-a" href="https://www.mi.com/xiaomiwatchs1">
+                      <img id="Watch-one-list-li-a-img" src="Watch/Xiaomi Watch S1.jpg" height="40" width="40">
+                      <span id="Watch-one-list-li-a-span">Xiaomi Watch S1</span>
+                 </a>
+            </li>
+
+            <li id="Watch-one-list-li">
+                 <a id="Watch-one-list-li-a" href="https://www.mi.com/xiaomiwatchcolor2">
+                      <img id="Watch-one-list-li-a-img" src="Watch/Xiaomi Watch Color 2.jpg" height="40" width="40">
+                      <span id="Watch-one-list-li-a-span">Xiaomi Watch Color 2</span>
+                 </a>
+            </li>
+        </ul>
+
+        <ul id="Watch-two-list">
+            <li id="Watch-two-list-li">
+                <a id="Watch-two-list-li-a" href="https://www.mi.com/redmiwatch2">
+                     <img id="Watch-two-list-li-a-img" src="Watch/Redmi 手表 2.jpg" height="40" width="40">
+                     <span id="Watch-two-list-li-a-span">Redmi 手表 2</span>
+                </a>
+           </li>
+
+           <li id="Watch-two-list-li">
+                <a id="Watch-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%B9%B3%E8%A1%A1%E8%BD%A6">
+                     <img id="Watch-two-list-li-a-img" src="Watch/平衡车.jpg" height="40" width="40">
+                     <span id="Watch-two-list-li-a-span">平衡车</span>
+                </a>
+           </li>
+
+           <li id="Watch-two-list-li">
+                <a id="Watch-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%BB%91%E6%9D%BF%E8%BD%A6">
+                     <img id="Watch-two-list-li-a-img" src="Watch/滑板车.jpg" height="40" width="40">
+                     <span id="Watch-two-list-li-a-span">滑板车</span>
+                </a>
+           </li>
+
+           <li id="Watch-two-list-li">
+                <a id="Watch-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E8%87%AA%E8%A1%8C%E8%BD%A6">
+                     <img id="Watch-two-list-li-a-img" src="Watch/自行车.jpg" height="40" width="40">
+                     <span id="Watch-two-list-li-a-span">自行车</span>
+                </a>
+           </li>
+
+
+           <li id="Watch-two-list-li">
+                <a id="Watch-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E8%BD%A6%E8%BD%BD%E5%85%85%E7%94%B5%E5%99%A8">
+                     <img id="Watch-two-list-li-a-img" src="Watch/车载充电器.jpg" height="40" width="40">
+                     <span id="Watch-two-list-li-a-span">车载充电器</span>
+                </a>
+           </li>
+
+           
+           <li id="Watch-two-list-li">
+                <a id="Watch-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%99%BA%E8%83%BD%E8%AE%B0%E5%BD%95%E4%BB%AA">
+                     <img id="Watch-two-list-li-a-img" src="Watch/智能记录仪.jpg" height="40" width="40">
+                     <span id="Watch-two-list-li-a-span">智能记录仪</span>
+                </a>
+           </li>
+        </ul>
+
+        <ul id="Watch-three-list">
+            <li id="Watch-three-list-li">
+                <a id="Watch-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%85%85%E6%B0%94%E5%AE%9D">
+                     <img id="Watch-three-list-li-a-img" src="Watch/充气宝.jpg" height="40" width="40">
+                     <span id="Watch-three-list-li-a-span">充气宝</span>
+                </a>
+           </li>
+
+           <li id="Watch-three-list-li">
+                <a id="Watch-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%9F%B3%E8%8B%B1%E8%A1%A8">
+                     <img id="Watch-three-list-li-a-img" src="Watch/石英表.jpg" height="40" width="40">
+                     <span id="Watch-three-list-li-a-span">石英表</span>
+                </a>
+           </li>
+        </ul>
+    </div>
+
+    <div id="MusicSound" v-if="MusicSound">                             <!--耳机分类-->
+        <ul id="MusicSound-one-list">
+            <li id="MusicSound-one-list-li">
+                 <a id="MusicSound-one-list-li-a" href="https://www.mi.com/xiaomibuds4pro">
+                      <img id="MusicSound-one-list-li-a-img" src="MusicSound/Xiaomi Buds 4 Pro.jpg" height="40" width="40">
+                      <span id="MusicSound-one-list-li-a-span">Xiaomi Buds 4 Pro</span>
+                 </a>
+            </li>
+
+            <li id="MusicSound-one-list-li">
+                 <a id="MusicSound-one-list-li-a" href="https://www.mi.com/redmibuds4pro">
+                      <img id="MusicSound-one-list-li-a-img" src="MusicSound/Redmi Buds 4 Pro.jpg" height="40" width="40">
+                      <span id="MusicSound-one-list-li-a-span">Redmi Buds 4 Pro</span>
+                 </a>
+            </li>
+
+            <li id="MusicSound-one-list-li">
+                 <a id="MusicSound-one-list-li-a" href="https://www.mi.com/redmibuds4">
+                      <img id="MusicSound-one-list-li-a-img" src="MusicSound/Redmi Buds 4.jpg" height="40" width="40">
+                      <span id="MusicSound-one-list-li-a-span">Redmi Buds 4</span>
+                 </a>
+            </li>
+
+            <li id="MusicSound-one-list-li">
+                 <a id="MusicSound-one-list-li-a" href="https://www.mi.com/xiaomibuds3pro">
+                      <img id="MusicSound-one-list-li-a-img" src="MusicSound/Xiaomi 真无线降噪耳机 3 Pro.jpg" height="40" width="40">
+                      <span id="MusicSound-one-list-li-a-span">Xiaomi 真无线降噪耳机 3 Pro</span>
+                 </a>
+            </li>
+
+            <li id="MusicSound-one-list-li">
+                 <a id="MusicSound-one-list-li-a" href="https://www.mi.com/xiaomibuds3">
+                      <img id="MusicSound-one-list-li-a-img" src="MusicSound/Xiaomi 真无线降噪耳机 3.jpg" height="40" width="40">
+                      <span id="MusicSound-one-list-li-a-span">Xiaomi 真无线降噪耳机 3</span>
+                 </a>
+            </li>
+
+            <li id="MusicSound-one-list-li">
+                 <a id="MusicSound-one-list-li-a" href="https://www.mi.com/shop/buy?product_id=14903">
+                      <img id="MusicSound-one-list-li-a-img" src="MusicSound/Redmi Buds 3.jpg" height="40" width="40">
+                      <span id="MusicSound-one-list-li-a-span">Redmi Buds 3</span>
+                 </a>
+            </li>
+        </ul>
+
+        <ul id="MusicSound-two-list">
+            <li id="MusicSound-two-list-li">
+                <a id="MusicSound-two-list-li-a" href="https://www.mi.com/shop/buy?product_id=2201900014">
+                     <img id="MusicSound-two-list-li-a-img" src="MusicSound/Air2 se.jpg" height="40" width="40">
+                     <span id="MusicSound-two-list-li-a-span">Air2 se</span>
+                </a>
+           </li>
+
+           <li id="MusicSound-two-list-li">
+                <a id="MusicSound-two-list-li-a" href="https://www.mi.com/shop/buy?product_id=15217">
+                     <img id="MusicSound-two-list-li-a-img" src="MusicSound/Redmi Buds 3 青春版.jpg" height="40" width="40">
+                     <span id="MusicSound-two-list-li-a-span">Redmi Buds 3 青春版</span>
+                </a>
+           </li>
+
+           <li id="MusicSound-two-list-li">
+                <a id="MusicSound-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%B0%8F%E7%B1%B3%E5%B0%8F%E7%88%B1%E9%9F%B3%E7%AE%B1">
+                     <img id="MusicSound-two-list-li-a-img" src="MusicSound/小米小爱音箱.jpg" height="40" width="40">
+                     <span id="MusicSound-two-list-li-a-span">小米小爱音箱</span>
+                </a>
+           </li>
+
+           <li id="MusicSound-two-list-li">
+                <a id="MusicSound-two-list-li-a" href="https://www.mi.com/shop/search?keyword=Redmi%E5%B0%8F%E7%88%B1%E8%A7%A6%E5%B1%8F">
+                     <img id="MusicSound-two-list-li-a-img" src="MusicSound/Redmi小爱触屏音箱 8.jpg" height="40" width="40">
+                     <span id="MusicSound-two-list-li-a-span">Redmi小爱触屏音箱 8</span>
+                </a>
+           </li>
+
+           <li id="MusicSound-two-list-li">
+                <a id="MusicSound-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%B0%8F%E7%B1%B3%E5%B0%8F%E7%88%B1%E9%9F%B3%E7%AE%B1%20Pro">
+                     <img id="MusicSound-two-list-li-a-img" src="MusicSound/小爱音箱 Pro .jpg" height="40" width="40">
+                     <span id="MusicSound-two-list-li-a-span">小爱音箱 Pro </span>
+                </a>
+           </li>
+
+           <li id="MusicSound-two-list-li">
+                <a id="MusicSound-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%B0%8F%E7%B1%B3%E5%B0%8F%E7%88%B1%E8%A7%A6%E5%B1%8F%E9%9F%B3%E7%AE%B1">
+                     <img id="MusicSound-two-list-li-a-img" src="MusicSound/小米小爱触屏音箱.jpg" height="40" width="40">
+                     <span id="MusicSound-two-list-li-a-span">小米小爱触屏音箱</span>
+                </a>
+           </li>
+        </ul>
+
+        <ul id="MusicSound-three-list">
+            <li id="MusicSound-three-list-li">
+                <a id="MusicSound-three-list-li-a" href="https://www.mi.com/shop/search?keyword=Redmi%E5%B0%8F%E7%88%B1%E9%9F%B3%E7%AE%B1Play">
+                     <img id="MusicSound-three-list-li-a-img" src="MusicSound/Redmi音箱.jpg" height="40" width="40">
+                     <span id="MusicSound-three-list-li-a-span">Redmi音箱</span>
+                </a>
+           </li>
+
+            <li id="MusicSound-three-list-li">
+                <a id="MusicSound-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%B0%8F%E7%B1%B3%E5%B0%8F%E7%88%B1%E9%9F%B3%E7%AE%B1%20Play">
+                     <img id="MusicSound-three-list-li-a-img" src="MusicSound/小米小爱音箱 Play.jpg" height="40" width="40">
+                     <span id="MusicSound-three-list-li-a-span">小米小爱音箱 Play</span>
+                </a>
+           </li>
+
+            <li id="MusicSound-three-list-li">
+                <a id="MusicSound-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%B0%8F%E7%88%B1%E8%A7%A6%E5%B1%8F%E9%9F%B3%E7%AE%B1Pro8">
+                     <img id="MusicSound-three-list-li-a-img" src="MusicSound/小爱触屏音箱Pro 8.jpg" height="40" width="40">
+                     <span id="MusicSound-three-list-li-a-span">小爱触屏音箱Pro 8</span>
+                </a>
+           </li>
+
+            <li id="MusicSound-three-list-li">
+                <a id="MusicSound-three-list-li-a" href="https://www.mi.com/shop/search?keyword=Xiaomi%20Sound">
+                     <img id="MusicSound-three-list-li-a-img" src="MusicSound/Xiaomi Sound.jpg" height="40" width="40">
+                     <span id="MusicSound-three-list-li-a-span">Xiaomi Sound</span>
+                </a>
+           </li>
+
+            <li id="MusicSound-three-list-li">
+                <a id="MusicSound-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%BA%BF%E6%8E%A7%E8%80%B3%E6%9C%BA">
+                     <img id="MusicSound-three-list-li-a-img" src="MusicSound/线控耳机.jpg" height="40" width="40">
+                     <span id="MusicSound-three-list-li-a-span">线控耳机</span>
+                </a>
+           </li>
+
+            <li id="MusicSound-three-list-li">
+                <a id="MusicSound-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E8%93%9D%E7%89%99%E8%80%B3%E6%9C%BA">
+                     <img id="MusicSound-three-list-li-a-img" src="MusicSound/蓝牙耳机.jpg" height="40" width="40">
+                     <span id="MusicSound-three-list-li-a-span">蓝牙耳机</span>
+                </a>
+           </li>
+        </ul>
+
+        <ul id="MusicSound-four-list">
+            <li id="MusicSound-four-list-li">
+                <a id="MusicSound-four-list-li-a" href="https://www.mi.com/shop/search?keyword=%E8%93%9D%E7%89%99%E9%9F%B3%E7%AE%B1">
+                     <img id="MusicSound-four-list-li-a-img" src="MusicSound/蓝牙音箱.jpg" height="40" width="40">
+                     <span id="MusicSound-four-list-li-a-span">蓝牙音箱</span>
+                </a>
+           </li>
+
+            <li id="MusicSound-four-list-li">
+                <a id="MusicSound-four-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%B0%8F%E7%B1%B3AI%E9%9F%B3%E7%AE%B1">
+                     <img id="MusicSound-four-list-li-a-img" src="MusicSound/小米AI音箱.jpg" height="40" width="40">
+                     <span id="MusicSound-four-list-li-a-span">小米AI音箱</span>
+                </a>
+           </li>
+
+            <li id="MusicSound-four-list-li">
+                <a id="MusicSound-four-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%B0%8F%E7%B1%B3%E5%B0%8F%E7%88%B1%E9%9F%B3%E7%AE%B1HD">
+                     <img id="MusicSound-four-list-li-a-img" src="MusicSound/小米小爱音箱HD.jpg" height="40" width="40">
+                     <span id="MusicSound-four-list-li-a-span">小米小爱音箱HD</span>
+                </a>
+           </li>
+        </ul>
+    </div>
+
+    <div id="HomeHold" v-if="HomeHold">                               <!--家电分类-->
+        <ul id="HomeHold-one-list">
+            <li id="HomeHold-one-list-li">
+                 <a id="HomeHold-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%A3%81%E6%8C%82%E7%A9%BA%E8%B0%83">
+                      <img id="HomeHold-one-list-li-a-img" src="HomeHold/壁挂空调.jpg" height="40" width="40">
+                      <span id="HomeHold-one-list-li-a-span">壁挂空调</span>
+                 </a>
+            </li>
+
+             <li id="HomeHold-one-list-li">
+                 <a id="HomeHold-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%AB%8B%E5%BC%8F%E7%A9%BA%E8%B0%83">
+                      <img id="HomeHold-one-list-li-a-img" src="HomeHold/立式空调.jpg" height="40" width="40">
+                      <span id="HomeHold-one-list-li-a-span">立式空调</span>
+                 </a>
+            </li>
+
+             <li id="HomeHold-one-list-li">
+                 <a id="HomeHold-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%86%B0%E7%AE%B1">
+                      <img id="HomeHold-one-list-li-a-img" src="HomeHold/冰箱.jpg" height="40" width="40">
+                      <span id="HomeHold-one-list-li-a-span">冰箱</span>
+                 </a>
+            </li>
+
+             <li id="HomeHold-one-list-li">
+                 <a id="HomeHold-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%BB%9A%E7%AD%92%E6%B4%97%E8%A1%A3%E6%9C%BA">
+                      <img id="HomeHold-one-list-li-a-img" src="HomeHold/滚筒洗衣机.jpg" height="40" width="40">
+                      <span id="HomeHold-one-list-li-a-span">滚筒洗衣机</span>
+                 </a>
+            </li>
+
+             <li id="HomeHold-one-list-li">
+                 <a id="HomeHold-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%B3%A2%E8%BD%AE%E6%B4%97%E8%A1%A3%E6%9C%BA">
+                      <img id="HomeHold-one-list-li-a-img" src="HomeHold/波轮洗衣机.jpg" height="40" width="40">
+                      <span id="HomeHold-one-list-li-a-span">波轮洗衣机</span>
+                 </a>
+            </li>
+
+             <li id="HomeHold-one-list-li">
+                 <a id="HomeHold-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%87%80%E6%B0%B4%E5%99%A8">
+                      <img id="HomeHold-one-list-li-a-img" src="HomeHold/净水器.jpg" height="40" width="40">
+                      <span id="HomeHold-one-list-li-a-span">净水器</span>
+                 </a>
+            </li>
+
+            
+        </ul>
+
+        <ul id="HomeHold-two-list">
+            <li id="HomeHold-two-list-li">
+                <a id="HomeHold-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%BE%AE%E6%B3%A2%E7%82%89%20%20%E7%94%B5%E7%83%A4%E7%AE%B1">
+                     <img id="HomeHold-two-list-li-a-img" src="HomeHold/微蒸烤.jpg" height="40" width="40">
+                     <span id="HomeHold-two-list-li-a-span">微蒸烤</span>
+                </a>
+           </li>
+
+           <li id="HomeHold-two-list-li">
+                <a id="HomeHold-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%83%9F%E7%81%B6">
+                     <img id="HomeHold-two-list-li-a-img" src="HomeHold/烟灶.jpg" height="40" width="40">
+                     <span id="HomeHold-two-list-li-a-span">烟灶</span>
+                </a>
+           </li>
+
+           <li id="HomeHold-two-list-li">
+                <a id="HomeHold-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%B4%97%E7%A2%97%E6%9C%BA">
+                     <img id="HomeHold-two-list-li-a-img" src="HomeHold/洗碗机.jpg" height="40" width="40">
+                     <span id="HomeHold-two-list-li-a-span">洗碗机</span>
+                </a>
+           </li>
+
+           <li id="HomeHold-two-list-li">
+                <a id="HomeHold-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%89%AB%E5%9C%B0%E6%9C%BA%E5%99%A8%E4%BA%BA">
+                     <img id="HomeHold-two-list-li-a-img" src="HomeHold/扫地机器人.jpg" height="40" width="40">
+                     <span id="HomeHold-two-list-li-a-span">扫地机器人</span>
+                </a>
+           </li>
+
+           <li id="HomeHold-two-list-li">
+                <a id="HomeHold-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%90%B8%E5%B0%98%E5%99%A8">
+                     <img id="HomeHold-two-list-li-a-img" src="HomeHold/吸尘器.jpg" height="40" width="40">
+                     <span id="HomeHold-two-list-li-a-span">吸尘器</span>
+                </a>
+           </li>
+
+           <li id="HomeHold-two-list-li">
+                <a id="HomeHold-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%A9%BA%E6%B0%94%E5%87%80%E5%8C%96%E5%99%A8">
+                     <img id="HomeHold-two-list-li-a-img" src="HomeHold/空气净化器.jpg" height="40" width="40">
+                     <span id="HomeHold-two-list-li-a-span">空气净化器</span>
+                </a>
+           </li>
+        </ul>
+
+        <ul id="HomeHold-three-list">
+            <li id="HomeHold-three-list-li">
+                <a id="HomeHold-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%94%B5%E9%A5%AD%E7%85%B2%20%E7%94%B5%E5%8E%8B%E5%8A%9B%E9%94%85">
+                     <img id="HomeHold-three-list-li-a-img" src="HomeHold/电饭煲.jpg" height="40" width="40">
+                     <span id="HomeHold-three-list-li-a-span">电饭煲</span>
+                </a>
+           </li>
+
+            <li id="HomeHold-three-list-li">
+                <a id="HomeHold-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%94%B5%E7%A3%81%E7%82%89">
+                     <img id="HomeHold-three-list-li-a-img" src="HomeHold/电磁炉.jpg" height="40" width="40">
+                     <span id="HomeHold-three-list-li-a-span">电磁炉</span>
+                </a>
+           </li>
+
+            <li id="HomeHold-three-list-li">
+                <a id="HomeHold-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%94%B5%E6%B0%B4%E5%A3%B6%20%E7%94%B5%E7%85%AE%E5%A3%B6%20%E6%BB%A4%E6%B0%B4%E5%A3%B6">
+                     <img id="HomeHold-three-list-li-a-img" src="HomeHold/水壶.jpg" height="40" width="40">
+                     <span id="HomeHold-three-list-li-a-span">水壶</span>
+                </a>
+           </li>
+
+            <li id="HomeHold-three-list-li">
+                <a id="HomeHold-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E8%90%BD%E5%9C%B0%E9%A3%8E%E6%89%87">
+                     <img id="HomeHold-three-list-li-a-img" src="HomeHold/落地风扇.jpg" height="40" width="40">
+                     <span id="HomeHold-three-list-li-a-span">落地风扇</span>
+                </a>
+           </li>
+
+            <li id="HomeHold-three-list-li">
+                <a id="HomeHold-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%8A%95%E5%BD%B1%E4%BB%AA">
+                     <img id="HomeHold-three-list-li-a-img" src="HomeHold/投影仪.jpg" height="40" width="40">
+                     <span id="HomeHold-three-list-li-a-span">投影仪</span>
+                </a>
+           </li>
+
+            <li id="HomeHold-three-list-li">
+                <a id="HomeHold-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%81%AF%E5%85%B7">
+                     <img id="HomeHold-three-list-li-a-img" src="HomeHold/灯具.jpg" height="40" width="40">
+                     <span id="HomeHold-three-list-li-a-span">灯具</span>
+                </a>
+           </li>
+        </ul>
+
+        <ul id="HomeHold-four-list">
+            <li id="HomeHold-four-list-li">
+                <a id="HomeHold-four-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%8F%92%E7%BA%BF%E6%9D%BF">
+                     <img id="HomeHold-four-list-li-a-img" src="HomeHold/插线板.jpg" height="40" width="40">
+                     <span id="HomeHold-four-list-li-a-span">插线板</span>
+                </a>
+           </li>
+
+           <li id="HomeHold-four-list-li">
+                <a id="HomeHold-four-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%96%B0%E9%A3%8E%E6%9C%BA">
+                     <img id="HomeHold-four-list-li-a-img" src="HomeHold/新风机.jpg" height="40" width="40">
+                     <span id="HomeHold-four-list-li-a-span">新风机</span>
+                </a>
+           </li>
+
+           <li id="HomeHold-four-list-li">
+                <a id="HomeHold-four-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%94%B5%E6%9A%96%E5%99%A8">
+                     <img id="HomeHold-four-list-li-a-img" src="HomeHold/电暖器.jpg" height="40" width="40">
+                     <span id="HomeHold-four-list-li-a-span">电暖器</span>
+                </a>
+           </li>
+
+           <li id="HomeHold-four-list-li">
+                <a id="HomeHold-four-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%96%99%E7%90%86%E6%9C%BA">
+                     <img id="HomeHold-four-list-li-a-img" src="HomeHold/料理机.jpg" height="40" width="40">
+                     <span id="HomeHold-four-list-li-a-span">料理机</span>
+                </a>
+           </li>
+        </ul>
+    </div>
+
+    <div id="WIFI" v-if="WIFI">                                   <!--路由器分类-->
+        <ul id="WIFI-one-list">
+            <li id="WIFI-one-list-li">
+                 <a id="WIFI-one-list-li-a" href="https://www.mi.com/cyberdog">
+                      <img id="WIFI-one-list-li-a-img" src="WIFI/CyberDog.jpg" height="40" width="40">
+                      <span id="WIFI-one-list-li-a-span">CyberDog</span>
+                 </a>
+            </li>
+
+             <li id="WIFI-one-list-li">
+                 <a id="WIFI-one-list-li-a" href="https://www.mi.com/mjmike">
+                      <img id="WIFI-one-list-li-a-img" src="WIFI/MIJIA K歌麦克风.jpg" height="40" width="40">
+                      <span id="WIFI-one-list-li-a-span">MIJIA K歌麦克风</span>
+                 </a>
+            </li>
+
+             <li id="WIFI-one-list-li">
+                 <a id="WIFI-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%89%93%E5%8D%B0%E6%9C%BA">
+                      <img id="WIFI-one-list-li-a-img" src="WIFI/打印机.jpg" height="40" width="40">
+                      <span id="WIFI-one-list-li-a-span">打印机</span>
+                 </a>
+            </li>
+
+             <li id="WIFI-one-list-li">
+                 <a id="WIFI-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%96%B7%E5%A2%A8%E6%89%93%E5%8D%B0%E6%9C%BA%E5%A2%A8%E6%B0%B4">
+                      <img id="WIFI-one-list-li-a-img" src="WIFI/喷墨打印机.jpg" height="40" width="40">
+                      <span id="WIFI-one-list-li-a-span">喷墨打印机</span>
+                 </a>
+            </li>
+
+             <li id="WIFI-one-list-li">
+                 <a id="WIFI-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%96%B7%E5%A2%A8%E6%89%93%E5%8D%B0%E6%9C%BA%E5%A2%A8%E6%B0%B4">
+                      <img id="WIFI-one-list-li-a-img" src="WIFI/喷墨打印机墨水.jpg" height="40" width="40">
+                      <span id="WIFI-one-list-li-a-span">喷墨打印机墨水</span>
+                 </a>
+            </li>
+
+             <li id="WIFI-one-list-li">
+                 <a id="WIFI-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8">
+                      <img id="WIFI-one-list-li-a-img" src="WIFI/小米路由器.jpg" height="40" width="40">
+                      <span id="WIFI-one-list-li-a-span">小米路由器</span>
+                 </a>
+            </li>
+        </ul>
+
+        <ul id="WIFI-two-list">
+            <li id="WIFI-two-list-li">
+                <a id="WIFI-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%99%BA%E8%83%BD%E5%AE%B6%E5%BA%AD">
+                     <img id="WIFI-two-list-li-a-img" src="WIFI/智能家庭.jpg" height="40" width="40">
+                     <span id="WIFI-two-list-li-a-span">智能家庭</span>
+                </a>
+           </li>
+
+            <li id="WIFI-two-list-li">
+                <a id="WIFI-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%AF%B9%E8%AE%B2%E6%9C%BA">
+                     <img id="WIFI-two-list-li-a-img" src="WIFI/对讲机.jpg" height="40" width="40">
+                     <span id="WIFI-two-list-li-a-span">对讲机</span>
+                </a>
+           </li>
+
+            <li id="WIFI-two-list-li">
+                <a id="WIFI-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%91%84%E5%83%8F%E6%9C%BA">
+                     <img id="WIFI-two-list-li-a-img" src="WIFI/摄像机.jpg" height="40" width="40">
+                     <span id="WIFI-two-list-li-a-span">摄像机</span>
+                </a>
+           </li>
+
+            <li id="WIFI-two-list-li">
+                <a id="WIFI-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%99%BA%E8%83%BD%E9%97%A8%E9%94%81">
+                     <img id="WIFI-two-list-li-a-img" src="WIFI/智能门锁.jpg" height="40" width="40">
+                     <span id="WIFI-two-list-li-a-span">智能门锁</span>
+                </a>
+           </li>
+
+            <li id="WIFI-two-list-li">
+                <a id="WIFI-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E8%A7%86%E9%A2%91%E9%97%A8%E9%93%83">
+                     <img id="WIFI-two-list-li-a-img" src="WIFI/视频门铃.jpg" height="40" width="40">
+                     <span id="WIFI-two-list-li-a-span">视频门铃</span>
+                </a>
+           </li>
+
+            <li id="WIFI-two-list-li">
+                <a id="WIFI-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%B0%8F%E7%88%B1%E8%80%81%E5%B8%88">
+                     <img id="WIFI-two-list-li-a-img" src="WIFI/小爱老师.jpg" height="40" width="40">
+                     <span id="WIFI-two-list-li-a-span">小爱老师</span>
+                </a>
+           </li>
+        </ul>
+
+        <ul id="WIFI-three-list">
+            <li id="WIFI-three-list-li">
+                <a id="WIFI-three-list-li-a" href="https://www.mi.com/shop/search?keyword=Redmi%E8%B7%AF%E7%94%B1%E5%99%A8">
+                     <img id="WIFI-three-list-li-a-img" src="WIFI/Redmi路由器.jpg" height="40" width="40">
+                     <span id="WIFI-three-list-li-a-span">Redmi路由器</span>
+                </a>
+           </li>
+
+           <li id="WIFI-three-list-li">
+                <a id="WIFI-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%B0%8F%E7%88%B1%E9%9F%B3%E7%AE%B1">
+                     <img id="WIFI-three-list-li-a-img" src="WIFI/小爱音箱.jpg" height="40" width="40">
+                     <span id="WIFI-three-list-li-a-span">小爱音箱</span>
+                </a>
+           </li>
+        </ul>
+    </div>
+
+    <div id="Battery" v-if="Battery">                                <!--电源分类-->
+        <ul id="Battery-one-list">
+            <li id="Battery-one-list-li">
+                 <a id="Battery-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%A7%BB%E5%8A%A8%E7%94%B5%E6%BA%90">
+                      <img id="Battery-one-list-li-a-img" src="Battery/移动电源.jpg" height="40" width="40">
+                      <span id="Battery-one-list-li-a-span">移动电源</span>
+                 </a>
+            </li>
+
+             <li id="Battery-one-list-li">
+                 <a id="Battery-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%95%B0%E6%8D%AE%E7%BA%BF">
+                      <img id="Battery-one-list-li-a-img" src="Battery/数据线.jpg" height="40" width="40">
+                      <span id="Battery-one-list-li-a-span">数据线</span>
+                 </a>
+            </li>
+
+             <li id="Battery-one-list-li">
+                 <a id="Battery-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%85%85%E7%94%B5%E5%99%A8">
+                      <img id="Battery-one-list-li-a-img" src="Battery/充电器.jpg" height="40" width="40">
+                      <span id="Battery-one-list-li-a-span">充电器</span>
+                 </a>
+            </li>
+
+             <li id="Battery-one-list-li">
+                 <a id="Battery-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%94%B5%E6%B1%A0">
+                      <img id="Battery-one-list-li-a-img" src="Battery/电池.jpg" height="40" width="40">
+                      <span id="Battery-one-list-li-a-span">电池</span>
+                 </a>
+            </li>
+
+             <li id="Battery-one-list-li">
+                 <a id="Battery-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E8%87%AA%E6%8B%8D%E6%9D%86">
+                      <img id="Battery-one-list-li-a-img" src="Battery/自拍杆.jpg" height="40" width="40">
+                      <span id="Battery-one-list-li-a-span">自拍杆</span>
+                 </a>
+            </li>
+
+             <li id="Battery-one-list-li">
+                 <a id="Battery-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%89%8B%E6%9C%BA%E5%A3%B3">
+                      <img id="Battery-one-list-li-a-img" src="Battery/手机壳.jpg" height="40" width="40">
+                      <span id="Battery-one-list-li-a-span">手机壳</span>
+                 </a>
+            </li>
+        </ul>
+
+        <ul id="Battery-two-list">
+            <li id="Battery-two-list-li">
+                <a id="Battery-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%89%8B%E6%9C%BA%E8%B4%B4%E8%86%9C">
+                     <img id="Battery-two-list-li-a-img" src="Battery/手机贴膜.jpg" height="40" width="40">
+                     <span id="Battery-two-list-li-a-span">手机贴膜</span>
+                </a>
+           </li>
+
+            <li id="Battery-two-list-li">
+                <a id="Battery-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%97%A0%E7%BA%BF%E5%85%85%E7%94%B5%E5%99%A8">
+                     <img id="Battery-two-list-li-a-img" src="Battery/无线充电器.jpg" height="40" width="40">
+                     <span id="Battery-two-list-li-a-span">无线充电器</span>
+                </a>
+           </li>
+
+            <li id="Battery-two-list-li">
+                <a id="Battery-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%B9%B3%E6%9D%BF%E9%85%8D%E4%BB%B6">
+                     <img id="Battery-two-list-li-a-img" src="Battery/平板配件.jpg" height="40" width="40">
+                     <span id="Battery-two-list-li-a-span">平板配件</span>
+                </a>
+           </li>
+
+            <li id="Battery-two-list-li">
+                <a id="Battery-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E9%BB%91%E9%B2%A8%E9%85%8D%E4%BB%B6">
+                     <img id="Battery-two-list-li-a-img" src="Battery/黑鲨配件.jpg" height="40" width="40">
+                     <span id="Battery-two-list-li-a-span">黑鲨配件</span>
+                </a>
+           </li>
+
+            <li id="Battery-two-list-li">
+                <a id="Battery-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%85%B6%E4%BB%96%E7%94%B5%E6%BA%90%E9%85%8D%E4%BB%B6">
+                     <img id="Battery-two-list-li-a-img" src="Battery/其他配件.jpg" height="40" width="40">
+                     <span id="Battery-two-list-li-a-span">其他配件</span>
+                </a>
+           </li>
+        </ul>
+    </div>
+
+    <div id="Baby" v-if="Baby">                                   <!--儿童分类-->
+        <ul id="Baby-one-list">
+            <li id="Baby-one-list-li">
+                 <a id="Baby-one-list-li-a" href="https://www.mi.com/shop/buy?product_id=15025">
+                      <img id="Baby-one-list-li-a-img" src="Baby/米家跑步机.jpg" height="40" width="40">
+                      <span id="Baby-one-list-li-a-span">米家跑步机</span>
+                 </a>
+            </li>
+
+             <li id="Baby-one-list-li">
+                 <a id="Baby-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%B4%97%E6%89%8B%E6%9C%BA">
+                      <img id="Baby-one-list-li-a-img" src="Baby/洗手机.jpg" height="40" width="40">
+                      <span id="Baby-one-list-li-a-span">洗手机</span>
+                 </a>
+            </li>
+
+             <li id="Baby-one-list-li">
+                 <a id="Baby-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%89%83%E9%A1%BB%E5%88%80">
+                      <img id="Baby-one-list-li-a-img" src="Baby/剃须刀.jpg" height="40" width="40">
+                      <span id="Baby-one-list-li-a-span">剃须刀</span>
+                 </a>
+            </li>
+
+             <li id="Baby-one-list-li">
+                 <a id="Baby-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%B1%B3%E5%AE%B6%E4%BF%AE%E5%89%AA%E5%99%A8">
+                      <img id="Baby-one-list-li-a-img" src="Baby/修剪器.jpg" height="40" width="40">
+                      <span id="Baby-one-list-li-a-span">修剪器</span>
+                 </a>
+            </li>
+
+             <li id="Baby-one-list-li">
+                 <a id="Baby-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%89%99%E5%88%B7">
+                      <img id="Baby-one-list-li-a-img" src="Baby/牙刷.jpg" height="40" width="40">
+                      <span id="Baby-one-list-li-a-span">牙刷</span>
+                 </a>
+            </li>
+
+             <li id="Baby-one-list-li">
+                 <a id="Baby-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%90%B9%E9%A3%8E%E6%9C%BA">
+                      <img id="Baby-one-list-li-a-img" src="Baby/吹风机.jpg" height="40" width="40">
+                      <span id="Baby-one-list-li-a-span">吹风机</span>
+                 </a>
+            </li>
+        </ul>
+
+        <ul id="Baby-two-list">
+            <li id="Baby-two-list-li">
+                <a id="Baby-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E4%BD%93%E9%87%8D%E7%A7%A4">
+                     <img id="Baby-two-list-li-a-img" src="Baby/体重秤.jpg" height="40" width="40">
+                     <span id="Baby-two-list-li-a-span">体重秤</span>
+                </a>
+           </li>
+
+           <li id="Baby-two-list-li">
+                <a id="Baby-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E4%BD%93%E8%84%82%E7%A7%A4">
+                     <img id="Baby-two-list-li-a-img" src="Baby/体脂秤.jpg" height="40" width="40">
+                     <span id="Baby-two-list-li-a-span">体脂秤</span>
+                </a>
+           </li>
+
+           <li id="Baby-two-list-li">
+                <a id="Baby-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%97%A9%E6%95%99%E5%90%AF%E6%99%BA">
+                     <img id="Baby-two-list-li-a-img" src="Baby/早教启智.jpg" height="40" width="40">
+                     <span id="Baby-two-list-li-a-span">早教启智</span>
+                </a>
+           </li>
+
+           <li id="Baby-two-list-li">
+                <a id="Baby-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%9B%8A%E6%99%BA%E7%A7%AF%E6%9C%A8">
+                     <img id="Baby-two-list-li-a-img" src="Baby/益智积木.jpg" height="40" width="40">
+                     <span id="Baby-two-list-li-a-span">益智积木</span>
+                </a>
+           </li>
+
+           <li id="Baby-two-list-li">
+                <a id="Baby-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%84%BF%E7%AB%A5%E6%89%8B%E8%A1%A8">
+                     <img id="Baby-two-list-li-a-img" src="Baby/儿童手表.jpg" height="40" width="40">
+                     <span id="Baby-two-list-li-a-span">儿童手表</span>
+                </a>
+           </li>
+
+           <li id="Baby-two-list-li">
+                <a id="Baby-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%84%BF%E7%AB%A5%E6%BB%91%E6%9D%BF%E8%BD%A6">
+                     <img id="Baby-two-list-li-a-img" src="Baby/儿童滑板车.jpg" height="40" width="40">
+                     <span id="Baby-two-list-li-a-span">儿童滑板车</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul id="Baby-three-list">
+            <li id="Baby-three-list-li">
+                <a id="Baby-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%8A%98%E5%8F%A0%E5%A9%B4%E5%84%BF%E6%8E%A8%E8%BD%A6">
+                     <img id="Baby-three-list-li-a-img" src="Baby/婴儿推车.jpg" height="40" width="40">
+                     <span id="Baby-three-list-li-a-span">婴儿推车</span>
+                </a>
+           </li>
+
+            <li id="Baby-three-list-li">
+                <a id="Baby-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%A9%B4%E5%84%BF%E7%90%86%E5%8F%91%E5%99%A8">
+                     <img id="Baby-three-list-li-a-img" src="Baby/理发器.jpg" height="40" width="40">
+                     <span id="Baby-three-list-li-a-span">理发器</span>
+                </a>
+           </li>
+
+            <li id="Baby-three-list-li">
+                <a id="Baby-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%B1%B3%E5%AE%B6%E8%B5%B0%E6%AD%A5%E6%9C%BA">
+                     <img id="Baby-three-list-li-a-img" src="Baby/走步机.jpg" height="40" width="40">
+                     <span id="Baby-three-list-li-a-span">走步机</span>
+                </a>
+           </li>
+
+            <li id="Baby-three-list-li">
+                <a id="Baby-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%99%BA%E8%83%BD%E9%81%A5%E6%8E%A7%E8%BD%A6">
+                     <img id="Baby-three-list-li-a-img" src="Baby/智能遥控车.jpg" height="40" width="40">
+                     <span id="Baby-three-list-li-a-span">智能遥控车</span>
+                </a>
+           </li>
+        </ul>
+
+    </div>
+
+    <div id="Life" v-if="Life">                                   <!--生活分类-->
+        <ul id="Life-one-list">
+            <li id="Life-one-list-li">
+                 <a id="Life-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%B0%8F%E7%B1%B3%E5%B0%8F%E8%83%8C%E5%8C%85">
+                      <img id="Life-one-list-li-a-img" src="Life/小背包.jpg" height="40" width="40">
+                      <span id="Life-one-list-li-a-span">小背包</span>
+                 </a>
+            </li>
+
+            <li id="Life-one-list-li">
+                <a id="Life-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%8F%8C%E8%82%A9%E5%8C%85">
+                     <img id="Life-one-list-li-a-img" src="Life/双肩包.jpg" height="40" width="40">
+                     <span id="Life-one-list-li-a-span">双肩包</span>
+                </a>
+           </li>
+
+             <li id="Life-one-list-li">
+                 <a id="Life-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E8%83%B8%E5%8C%85">
+                      <img id="Life-one-list-li-a-img" src="Life/胸包.jpg" height="40" width="40">
+                      <span id="Life-one-list-li-a-span">胸包</span>
+                 </a>
+            </li>
+
+              <li id="Life-one-list-li">
+                 <a id="Life-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%97%85%E8%A1%8C%E7%AE%B1">
+                      <img id="Life-one-list-li-a-img" src="Life/旅行箱.jpg" height="40" width="40">
+                      <span id="Life-one-list-li-a-span">旅行箱</span>
+                 </a>
+            </li>
+
+              <li id="Life-one-list-li">
+                 <a id="Life-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E8%BF%90%E5%8A%A8%E9%9E%8B">
+                      <img id="Life-one-list-li-a-img" src="Life/运动鞋.jpg" height="40" width="40">
+                      <span id="Life-one-list-li-a-span">运动鞋</span>
+                 </a>
+            </li>
+
+              <li id="Life-one-list-li">
+                 <a id="Life-one-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%9C%BC%E9%95%9C">
+                      <img id="Life-one-list-li-a-img" src="Life/眼镜.jpg" height="40" width="40">
+                      <span id="Life-one-list-li-a-span">眼镜</span>
+                 </a>
+            </li>
+        </ul>
+
+        <ul id="Life-two-list">
+            <li id="Life-two-list-li">
+                <a id="Life-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E5%BA%8A%E5%9E%AB">
+                     <img id="Life-two-list-li-a-img" src="Life/床垫.jpg" height="40" width="40">
+                     <span id="Life-two-list-li-a-span">床垫</span>
+                </a>
+           </li>
+
+            <li id="Life-two-list-li">
+                <a id="Life-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%9E%95%E5%A4%B4">
+                     <img id="Life-two-list-li-a-img" src="Life/枕头.jpg" height="40" width="40">
+                     <span id="Life-two-list-li-a-span">枕头</span>
+                </a>
+           </li>
+
+            <li id="Life-two-list-li">
+                <a id="Life-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E8%9E%BA%E4%B8%9D%E5%88%80">
+                     <img id="Life-two-list-li-a-img" src="Life/螺丝刀.jpg" height="40" width="40">
+                     <span id="Life-two-list-li-a-span">螺丝刀</span>
+                </a>
+           </li>
+
+            <li id="Life-two-list-li">
+                <a id="Life-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E4%BF%9D%E6%B8%A9%E6%9D%AF">
+                     <img id="Life-two-list-li-a-img" src="Life/保温杯.jpg" height="40" width="40">
+                     <span id="Life-two-list-li-a-span">保温杯</span>
+                </a>
+           </li>
+
+            <li id="Life-two-list-li">
+                <a id="Life-two-list-li-a" href="https://www.mi.com/shop/buy?product_id=6124">
+                     <img id="Life-two-list-li-a-img" src="Life/伞.jpg" height="40" width="40">
+                     <span id="Life-two-list-li-a-span">伞</span>
+                </a>
+           </li>
+
+            <li id="Life-two-list-li">
+                <a id="Life-two-list-li-a" href="https://www.mi.com/shop/search?keyword=%E9%A9%B1%E8%9A%8A%E5%99%A8">
+                     <img id="Life-two-list-li-a-img" src="Life/驱蚊器.jpg" height="40" width="40">
+                     <span id="Life-two-list-li-a-span">驱蚊器</span>
+                </a>
+           </li>
+        </ul>
+
+        <ul id="Life-three-list">
+            <li id="Life-three-list-li">
+                <a id="Life-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E6%AF%9B%E5%B7%BE">
+                     <img id="Life-three-list-li-a-img" src="Life/毛巾浴巾.jpg" height="40" width="40">
+                     <span id="Life-three-list-li-a-span">毛巾/浴巾</span>
+                </a>
+            </li>
+
+            <li id="Life-three-list-li">
+                <a id="Life-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%B1%B3%E5%85%94">
+                     <img id="Life-three-list-li-a-img" src="Life/米兔.jpg" height="40" width="40">
+                     <span id="Life-three-list-li-a-span">米兔</span>
+                </a>
+            </li>
+
+            <li id="Life-three-list-li">
+                <a id="Life-three-list-li-a" href="https://www.mi.com/shop/search?keyword=%E7%AC%94">
+                     <img id="Life-three-list-li-a-img" src="Life/笔.jpg" height="40" width="40">
+                     <span id="Life-three-list-li-a-span">笔</span>
+                </a>
+            </li>
+
+        </ul>
+        
+    </div>
+</div>
+
+</div>
+
+
+<div id="Mitail" v-on:mouseover="Mitail">                   <!--小米底部-->
+    <div id="MiService">            <!--小米服务模块-->
+        <ul id="MiService-ul">
+            <li id="MiService-ul-li">
+                  <a id="MiService-ul-li-a" href="https://api.jr.mi.com/activity/scene/scenePCsearch.html?from=search">
+                      <img id="MiService-ul-li-a-img" src="picture/保障服务.jpg">
+                      保障服务
+                  </a>
+            </li>
+
+            <li id="MiService-ul-li">
+                  <a id="MiService-ul-li-a" href="https://qiye.mi.com/">
+                      <img id="MiService-ul-li-a-img" src="picture/企业团购.jpg">
+                     企业团购
+                  </a>
+            </li>
+
+            <li id="MiService-ul-li">
+                  <a id="MiService-ul-li-a" href="https://www.mi.com/shop/order/fcode">
+                      <img id="MiService-ul-li-a-img" src="picture/F码通道.jpg">
+                      F码通道
+                  </a>
+            </li>
+
+            <li id="MiService-ul-li">
+                  <a id="MiService-ul-li-a" href="https://10046.mi.com/">
+                      <img id="MiService-ul-li-a-img" src="picture/米粉卡.jpg">
+                      米粉卡
+                  </a>
+            </li>
+
+            <li id="MiService-ul-li">
+                  <a id="MiService-ul-li-a" href="https://www.mi.com/a/h/16769.html">
+                      <img id="MiService-ul-li-a-img" src="picture/以旧换新.jpg">
+                      以旧换新
+                  </a>
+            </li>
+
+            <li id="MiService-ul-li">
+                  <a id="MiService-ul-li-a" href="https://recharge.10046.mi.com/?userId=1206988617">
+                      <img id="MiService-ul-li-a-img" src="picture/话费充值.jpg">
+                      话费充值
+                  </a>
+            </li>            
+        </ul>
+    </div>
+
+    <div id="MiServiceRight">
+        <ul id="MiServiceRight-ul">
+            <li id="MiServiceRight-ul-li">
+                <a id="MiServiceRight-ul-li-a" href="https://www.mi.com/xiaomimixfold2">
+                    <img id="MiServiceRight-ul-li-a" src="picture/小米底部宣传图Xiaomi flod2.jpg">
+                </a>
+            </li>
+
+            <li id="MiServiceRight-ul-li">
+                <a id="MiServiceRight-ul-li-a" href="https://www.mi.com/mi12s-pro">
+                    <img id="MiServiceRight-ul-li-a" src="picture/Xiaomi底部宣传图Xiaomi 12s Pro.jpg">
+                </a>
+            </li>
+
+            <li id="MiServiceRight-ul-li">
+                <a id="MiServiceRight-ul-li-a" href="https://www.mi.com/xiaomiwatchs1">
+                    <img id="MiServiceRight-ul-li-a" src="picture/小米底部宣传图Xiaomi Watch S1.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./大米小店.vue"></script>
+</body>
+</html>

@@ -329,4 +329,4 @@ var can  = new Vue({
         this.Life=true;              //生活显示
       }
     },
-})
+}).$mount('#app')

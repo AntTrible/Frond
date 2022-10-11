@@ -6,9 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>大米小店</title>
     <link rel="stylesheet" type="text/css" href="./大米小店.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 </head>
+<style>
+  @import url("//unpkg.com/element-ui@2.15.10/lib/theme-chalk/index.css");
+  .el-carousel__item h3 {
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 150px;
+    margin: 0;
+  }
+
+  
+
+</style>
 <body>
+     <script src="//unpkg.com/vue@2/dist/vue.js"></script>
+     <script src="//unpkg.com/element-ui@2.15.10/lib/index.js"></script>
 <div id="app" >
+ 
+
 <div id="Mihead">           <!--小米商城顶部整体-->
     <div id="MiShopHead">   <!--小米商城顶部-->
     <div id ="MiShopHeadText"> <!--小米商城顶部文字框架-->
@@ -646,18 +663,39 @@
 
 </div>
 
-<div id="MiLoopPicture">                              <!--小米产品轮播图-->
-    <a v-bind:href="Mihref[Mihrefnum]">
-        <img v-bind:src="LoopPicture[LoopPicturenum]" @mouseover="MoveImg">
-    </a>
-    <div id="MiLoopPictureLeft">
-        <img v-bind:src="left"  @mouseover="MiLoopPictureLeft" @mouseout="MoveLeft" @click="LeftDown">
-    </div>
 
-    <div id="MiLoopPictureRight">
-        <img v-bind:src="right" @mouseover="MiLoopPictureRight" @mouseout="MoveRight" @click="RightDown">
-    </div>
+
+
+<div id="MiLoopPicture">                              <!--小米产品轮播图-->
+       <template>
+          <div class="block">
+            <el-carousel  height="460px">
+              <el-carousel-item >
+                <h3 class="small"><image src="picture/轮播图k50.jpg" width="1226px" height="460px"></image></h3>
+                
+              </el-carousel-item>
+              <el-carousel-item >
+                <h3 class="small"><image src="picture/轮播图小米flod2.jpg" width="1226px" height="460px"></image></h3>
+                
+              </el-carousel-item>
+              <el-carousel-item >
+                <h3 class="small"><image src="picture/小米会议宝.jpg" width="1226px" height="460px"> </image></h3>
+                
+              </el-carousel-item>
+              <el-carousel-item>
+                <h3 class="small"><image src="picture/小米电暖器.jpg" width="1226px" height="460px"></image></h3>
+              </el-carousel-item>
+
+              <el-carousel-item>
+               <h3 class="small"><image src="picture/小米智能晾衣机子.jpg" width="1226px" height="460px"></image></h3>
+             </el-carousel-item>
+            </el-carousel>
+          </div>
+        </template>  
 </div>
+
+
+
 
 <div id="MiPhoneClassification">                      <!--小米产品分类详情-->
     <div id="Phone" v-if="Phone">                                  <!--手机分类-->
@@ -2058,7 +2096,6 @@
 
 </div>
 
-
 <div id="Mitail" v-on:mouseover="Mitail">                   <!--小米底部-->
     <div id="MiService">            <!--小米服务模块-->
         <ul id="MiService-ul">
@@ -2129,7 +2166,10 @@
     </div>
 </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
 <script src="./大米小店.vue"></script>
+
 </body>
 </html>
