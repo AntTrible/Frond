@@ -16,6 +16,8 @@ background: #333;
     margin-left: auto;
 }
 #MiShopHeadTextXiaoMiGuanWang{   /*小米商城官网文字框架*/
+    width: 78%;
+    background: #333;
     float: left;
 }
 #MiShopHeadTextXiaoMiGuanWang a{ /*小米商城官网文字样式*/ 
@@ -41,7 +43,6 @@ position: relative;
 float: right;
 width: 120px;
 height: 40px;
-margin-left: 15px;
 transition: all .2s;
 font-size: 12px;
 background: #424242;
@@ -83,6 +84,10 @@ position: relative;
 float: right;
 height: 40px;
 line-height: 40px;
+background: #333;
+right: 1px;
+width: 149px;
+
 }
 #MiShopHeadTextDengLu a{/*小米商城登录文字*/
     color: #b0b0b0;
@@ -204,7 +209,7 @@ text-decoration: none;
     display: block;
     position: absolute;
     z-index: 3;
-    width: 100%;
+    width: 298%;
     
 
 }
